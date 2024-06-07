@@ -1,0 +1,16 @@
+<svg width="82.000000" height="82.000000" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip45_4269">
+			<rect id="icon" width="82.000000" height="82.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<g clip-path="url(#clip45_4269)">
+		<rect id="Medico/Line/Stethoscope" width="82.000000" height="82.000000" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector" d="M45 13L47.05 13C49.82 13 51.21 13 52.08 13.84C52.1 13.86 52.13 13.89 52.15 13.91C53 14.78 53 16.16 53 18.93L53 49.11C53 54.66 53 57.42 51.3 59.17C51.26 59.22 51.21 59.26 51.17 59.3C49.42 61 46.66 61 41.12 61L33 61L24.87 61C19.33 61 16.57 61 14.82 59.3C14.78 59.26 14.73 59.22 14.69 59.17C13 57.42 13 54.66 13 49.11L13 18.93C13 16.16 13 14.78 13.84 13.91C13.86 13.89 13.89 13.86 13.91 13.84C14.78 13 16.16 13 18.94 13L23 13M27 17C24.78 17 23 15.2 23 13C23 10.79 24.78 9 27 9C29.21 9 31 10.79 31 13C31 15.2 29.21 17 27 17ZM41 17C38.78 17 37 15.2 37 13C37 10.79 38.78 9 41 9C43.21 9 45 10.79 45 13C45 15.2 43.21 17 41 17ZM33 61C33 81 67 83 67 61L67 45" stroke="#3DA6D3" stroke-opacity="1.000000" stroke-width="7.000000"/>
+		<path id="Vector" d="M67 45C63.68 45 61 42.31 61 39C61 35.68 63.68 33 67 33C70.31 33 73 35.68 73 39C73 42.31 70.31 45 67 45Z" stroke="#3DA6D3" stroke-opacity="1.000000" stroke-width="7.000000"/>
+		<path id="Vector" d="M67.03 38.96L67.03 39L67 39L67 38.96L67.03 38.96Z" stroke="#FFFFFF" stroke-opacity="1.000000" stroke-width="7.000000" stroke-linejoin="round"/>
+	</g>
+</svg>

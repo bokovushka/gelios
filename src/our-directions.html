@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/head.html',{
+"title":"Напрямки"
+})
+
+<body class="home-page">
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<section class="nav-breadcrumb mt-8 mb-8">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<nav aria-label="breadcrumb" class="breadcrumb-nav">
+								<ol class="breadcrumb mb-0">
+									<li class="breadcrumb-item">
+										<a href="index.html">
+											<svg class="i-home">
+												<use xlink:href="img/icons/icons.svg#i-home"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="breadcrumb-item active" aria-current="page">Напрямки</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="our-directions bg-blue mb-24">
+				<div class="container">
+					<div class="row py-12">
+						<div class="col-3 text-white">
+							<div class="h2 font-weight-bolder mb-5">Наші напрямки</div>
+							<div class="h5 font-weight-bold mb-5">Передові медичні технології діагностики, лікування та реабілітації пацієнтів усіх вікових груп.</div>
+							<a href="##" class="btn btn-outline-white font-weight-bold">Усі напрямки</a>
+						</div>
+						<div class="col-9">
+							<div class="directions row">
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Аналізи</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Офтальмологія</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Стаціонар</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Сертифікати нарколога, психіатра</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<a href="##" class="link">
+											<span>Функціональна діагностика</span>
+											<div class="i-link"></div>
+										</a>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Центр ментального здоров’я “Геліос”</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<a href="##" class="link">
+											<span>Дорослим</span>
+											<div class="i-link"></div>
+										</a>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Репродуктологія</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<a href="##" class="link">
+											<span>Хірургія</span>
+											<div class="i-link"></div>
+										</a>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<a href="##" class="link">
+											<span>Дітям</span>
+											<div class="i-link"></div>
+										</a>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Пластична хірургія</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Служба  лікування болю</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Сімейна медицина</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Хіміотерапія</div>
+									</div>
+								</div>
+								<div class="col-4 directions-item">
+									<div class="content">
+										<div class="link">Нейрохірургія</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="meeting mb-24 pt-16">
+				<div class="container">
+					<div class="row">
+						<div class="col-6">
+							<form id="form-meeting" class="p-5 bg-white">
+								<div class="h2 font-weight-bolder mb-5">Записатися на прийом</div>
+								<div class="row field-wrap">
+									<div class="col-12">
+										<div class="field mb-2">
+											<label class="control-label mb-2" for="form-meeting-name">Вкажіть ПІБ</label>
+											<input type="text" id="form-meeting-name" class="form-control mb-2" placeholder="Вкажіть ПІБ">
+											<div class="field--help-info small-txt text-red mb-2">Вкажіть ПІБ</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="field mb-2">
+											<label class="control-label mb-2" for="form-meeting-phone">Вкажіть номер телефону</label>
+											<input type="tel" id="form-meeting-phone" class="form-control mb-2" placeholder="Вкажіть номер телефону">
+											<div class="field--help-info small-txt text-red mb-2">Вкажіть номер телефону</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="field mb-2">
+											<div class="control-label mb-2">Оберіть фахівця</div>
+											<div class="select-wrap">
+												<select class="select-choose-specialist">
+													<option></option>
+													<option value="1">Фахівeць 1</option>
+													<option value="2">Фахівeць 2</option>
+													<option value="3">Фахівeць 3</option>
+													<option value="4">Фахівeць 4</option>
+												</select>
+											</div>
+											<div class="field--help-info small-txt text-red mb-2">Оберіть фахівця</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="field mb-2">
+											<div class="control-label mb-2">Оберіть клініку</div>
+											<div class="select-wrap">
+												<select class="select-choose-clinic">
+													<option></option>
+													<option value="1">Клініка 1</option>
+													<option value="2">Клініка 2</option>
+													<option value="3">Клініка 3</option>
+													<option value="4">Клініка 4</option>
+												</select>
+											</div>
+											<div class="field--help-info small-txt text-red mb-2">Оберіть клініку</div>
+										</div>
+									</div>
+									<div class="col-12">
+										<button type="button" class="btn btn-blue font-weight-bold w-100 mt-2">Записатися</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="col-6">
+							<div class="wrap-img">
+								<img src="img/img-right-b.png" alt="img">
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="seo mb-24">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="h2 font-weight-bolder text-blue mb-8">SEO</div>
+							<div class="seo-wrapper">
+								<div class="content">
+									<p>Медичний центр сімейного здоров'я та реабілітації Геліос - це сучасне обладнання, кваліфіковані лікарі, індивідуальний підхід до кожного пацієнта. Наша клініка керується міжнародними медичними стандартами і використовує всі інноваційні методи діагностики і терапії. Медичний центр сімейного здоров'я та реабілітації Геліос - це сучасне обладнання, кваліфіковані лікарі, індивідуальний підхід до кожного пацієнта. Наша клініка керується міжнародними медичними стандартами і використовує всі інноваційні методи діагностики і терапії.</p>
+									<p>Медичний центр сімейного здоров'я та реабілітації Геліос - це сучасне обладнання, кваліфіковані лікарі, індивідуальний підхід до кожного пацієнта. Наша клініка керується міжнародними медичними стандартами і використовує всі інноваційні методи діагностики і терапії. Медичний центр сімейного здоров'я та реабілітації Геліос - це сучасне обладнання, кваліфіковані лікарі, індивідуальний підхід до кожного пацієнта. Наша клініка керується міжнародними медичними стандартами і використовує всі інноваційні методи діагностики і терапії. </p>
+									<p>Медичний центр сімейного здоров'я та реабілітації Геліос - це сучасне обладнання, кваліфіковані лікарі, індивідуальний підхід до кожного пацієнта. Наша клініка керується міжнародними медичними стандартами і використовує всі інноваційні методи діагностики і терапії. Медичний центр сімейного здоров'я та реабілітації Геліос - це сучасне обладнання, кваліфіковані лікарі, індивідуальний підхід до кожного пацієнта. Наша клініка керується міжнародними медичними стандартами і використовує всі інноваційні методи діагностики і терапії.</p>
+									<p>Медичний центр сімейного здоров'я та реабілітації Геліос - це сучасне обладнання, кваліфіковані лікарі, індивідуальний підхід до кожного пацієнта. Наша клініка керується міжнародними медичними стандартами і використовує всі інноваційні методи діагностики і терапії. Медичний центр сімейного здоров'я та реабілітації Геліос - це сучасне обладнання, кваліфіковані лікарі, індивідуальний підхід до кожного пацієнта. Наша клініка керується міжнародними медичними стандартами і використовує всі інноваційні методи діагностики і терапії. </p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	@@include('html/scripts.html',{})
+</body>
+
+</html>

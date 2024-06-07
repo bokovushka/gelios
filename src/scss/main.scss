@@ -1,0 +1,72 @@
+@use "sass:math";
+
+//? main styles
+@import "styles/fonts";
+@import "styles/mixins";
+
+//colors
+$white: #ffffff; //filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(140deg) brightness(109%) contrast(101%);
+$black: #111010; //filter: brightness(0) saturate(100%) invert(4%) sepia(4%) saturate(593%) hue-rotate(314deg) brightness(101%) contrast(95%);
+
+$blue: #3da6d3; //filter: brightness(0) saturate(100%) invert(63%) sepia(100%) saturate(1319%) hue-rotate(167deg) brightness(88%) contrast(87%);
+$light-blue: #edf4ff; //filter: brightness(0) saturate(100%) invert(98%) sepia(12%) saturate(6518%) hue-rotate(179deg) brightness(104%) contrast(113%);
+$dark-blue: #009ee6; //filter: brightness(0) saturate(100%) invert(42%) sepia(71%) saturate(2652%) hue-rotate(172deg) brightness(100%) contrast(101%);
+$grey: #808b9e; //filter: brightness(0) saturate(100%) invert(59%) sepia(15%) saturate(414%) hue-rotate(179deg) brightness(89%) contrast(88%);
+$light-grey: #d1dae8; //filter: brightness(0) saturate(100%) invert(90%) sepia(24%) saturate(273%) hue-rotate(185deg) brightness(96%) contrast(89%);
+$red: #ff0000; //filter: brightness(0) saturate(100%)  invert(17%) sepia(93%) saturate(7332%) hue-rotate(2deg) brightness(99%) contrast(124%);
+
+// $dark-black: #020a18;
+
+// $main-blue: #00afff;
+// $light-blue: #36c0ff;
+// $dark-blue: #009ee6;
+// $sky-blue: #37bdfd;
+
+// $blue: #dce2ff;
+// $grey: #878787;
+// $light-grey: #8a90a4;
+// $red: #ff0000;
+// $orange: #f74e37;
+// $green: #11b685;
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape & safari*/
+}
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+main {
+	position: relative;
+	flex: 1 1 auto;
+	@include transition(0.3s ease-out 0s);
+	// margin-top: 78px;
+	overflow: hidden;
+	// @include lg-max {
+	// }
+	// @include md-max {
+	// 	margin-top: 70px;
+	// 	.home-page & {
+	// 		margin-top: 0;
+	// 	}
+	// }
+	// @include sm-max {
+	// }
+}
+
+// @import "typografy";
+
+//?include header=======================================================================================================//
+@import "parts/header";
+
+//?include footer=======================================================================================================//
+@import "parts/footer";
+
+//!styles==========================================================================================================//
+@import "common";
+@import "styles";

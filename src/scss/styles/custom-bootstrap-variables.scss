@@ -1,0 +1,250 @@
+//colors
+$white: #ffffff !default;
+$black: #111010 !default;
+
+$blue: #3da6d3 !default;
+$light-blue: #edf4ff !default;
+$dark-blue: #009ee6 !default;
+$grey: #808b9e !default;
+$light-grey: #d1dae8 !default;
+$red: #ff0000 !default;
+
+// $dark-black: #020a18 !default;
+
+// $main-blue: #00afff !default;
+// $light-blue: #36c0ff !default;
+// $dark-blue: #009ee6 !default;
+
+// $blue: #dce2ff !default;
+// $grey: #878787 !default;
+// $light-grey: #8a90a4 !default;
+// $red: #ff0000 !default;
+// $orange: #f74e37 !default;
+// $green: #11b685 !default;
+
+$colors: () !default;
+$colors: map-merge(
+	(
+		"white": $white,
+		"black": $black,
+		"blue": $blue,
+		"light-blue": $light-blue,
+		"dark-blue": $dark-blue,
+		"grey": $grey,
+		"light-grey": $light-grey,
+		"red": $red,
+		// "dark-black": $dark-black,
+		// "dark-blue": $dark-blue,
+		// "main-blue": $main-blue,
+		// "blue": $blue,
+		// "light-blue": $light-blue,
+		// "grey": $grey,
+		// "light-grey": $light-grey,
+		// "red": $red,
+		// "orange": $orange,
+		// "green": $green
+	),
+	$colors
+);
+
+$theme-colors: () !default;
+$theme-colors: map-merge(
+	(
+		"white": $white,
+		"black": $black,
+		"blue": $blue,
+		"light-blue": $light-blue,
+		"dark-blue": $dark-blue,
+		"grey": $grey,
+		"light-grey": $light-grey,
+		"red": $red,
+		// "dark-black": $dark-black,
+		// "dark-blue": $dark-blue,
+		// "main-blue": $main-blue,
+		// "blue": $blue,
+		// "light-blue": $light-blue,
+		// "grey": $grey,
+		// "light-grey": $light-grey,
+		// "red": $red,
+		// "orange": $orange,
+		// "green": $green
+	),
+	$theme-colors
+);
+
+$body-bg: $light-blue !default;
+$body-color: $black !default;
+
+//grid
+$container-max-widths: (
+	// sm: 576px,
+	// md: 768px,
+	// lg: 992px,
+	xs: 1328px
+);
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 1024px,
+	xl: 1200px,
+	xxl: 1400px
+) !default;
+
+$grid-gutter-widths: (
+	// xs: 20px,
+	xs: 25px,
+	lg: 30px,
+	xl: 25px
+) !default;
+
+$grid-gutter-width: map-get($grid-gutter-widths, xl);
+
+//typography
+$font-family-sans-serif: "Inter", sans-serif !default;
+$font-family-base: $font-family-sans-serif !default;
+
+$font-size-base: 1.125rem !default; // Assumes the browser default, typically `18px`
+$line-height-base: 1.125 !default; // '18px'
+
+$font-weight-lighter: lighter !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 500 !default;
+$font-weight-bolder: 700 !default;
+
+//components
+//btn-sm
+// $input-btn-padding-y-sm: 10px !default;
+// $input-btn-padding-x-sm: 20px !default;
+
+//spacer
+$spacer: 10px;
+$spacers: ();
+$spacers: map-merge(
+	(
+		0: 0,
+		1: (
+			$spacer * 0.5
+		),
+		2: $spacer,
+		3: (
+			$spacer * 1.5
+		),
+		4: (
+			$spacer * 2
+		),
+		5: (
+			$spacer * 2.5
+		),
+		6: (
+			$spacer * 3
+		),
+		7: (
+			$spacer * 3.5
+		),
+		8: (
+			$spacer * 4
+		),
+		9: (
+			$spacer * 4.5
+		),
+		10: (
+			$spacer * 5
+		),
+		11: (
+			$spacer * 5.5
+		),
+		12: (
+			$spacer * 6
+		),
+		13: (
+			$spacer * 6.5
+		),
+		14: (
+			$spacer * 7
+		),
+		15: (
+			$spacer * 7.5
+		),
+		16: (
+			$spacer * 8
+		),
+		17: (
+			$spacer * 8.5
+		),
+		18: (
+			$spacer * 9
+		),
+		19: (
+			$spacer * 9.5
+		),
+		20: (
+			$spacer * 10
+		),
+		21: (
+			$spacer * 10.5
+		),
+		22: (
+			$spacer * 11
+		),
+		23: (
+			$spacer * 11.5
+		),
+		24: (
+			$spacer * 12
+		),
+		25: (
+			$spacer * 12.5
+		),
+		26: (
+			$spacer * 13
+		),
+		34: (
+			$spacer * 17
+		),
+		35: (
+			$spacer * 17.5
+		),
+		40: (
+			$spacer * 20
+		),
+		42: (
+			$spacer * 21
+		),
+		60: (
+			$spacer * 30
+		)
+	),
+	$spacers
+);
+
+//link
+$link-color: $black !default;
+// $link-hover-color: darken($silver-custom, 15%) !default;
+
+//list
+$list-inline-padding: 28px !default;
+
+//btn
+$input-btn-padding-y: 1rem !default; //16px
+$input-btn-padding-x: 2rem !default; //32px
+
+// $paragraph-margin-bottom: 15px;
+
+$border-width: 1.5px !default;
+
+$border-radius: 2.5rem !default; //40px
+$border-radius-lg: 4rem !default; //64px
+$border-radius-sm: 2rem !default; //32px
+
+$modal-md: 640px !default;
+
+// Navbar
+$navbar-padding-y: 0 !default;
+$navbar-padding-x: 0 !default;
+$navbar-nav-link-padding-x: 0 !default;
+
+// Style p element.
+$paragraph-margin-bottom: 1.563rem !default; //25px
