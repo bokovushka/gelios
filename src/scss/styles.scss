@@ -1,6 +1,11 @@
 .section-top {
 	.backdrop {
 		position: relative;
+		@include md-max {
+			height: 400px;
+			display: flex;
+			align-items: end;
+		}
 		&::before {
 			content: "";
 			display: block;
@@ -19,6 +24,9 @@
 	}
 	.backdrop-small {
 		min-height: 275px;
+		@include sm-max {
+			height: 160px;
+		}
 	}
 	.section-top--backdrop-swiper {
 		.swiper-slide {
@@ -29,8 +37,12 @@
 		.swiper-pagination {
 			position: absolute;
 			justify-content: end;
-			bottom: 24px;
+			bottom: 24px !important;
 			padding-right: 24px;
+			@include md-max {
+				padding-right: 18px;
+				bottom: 18px !important;
+			}
 		}
 	}
 }
@@ -38,18 +50,48 @@
 .section-progress {
 	.section-progress--item {
 		min-height: 230px;
+		height: 100%;
 		align-content: center;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		&.item-small {
+			@include md-max {
+				min-height: 150px;
+				text-align: center;
+			}
+		}
 	}
 }
 
 .our-directions {
 	.directions {
 		row-gap: 25px;
+		@include md-max {
+			row-gap: 20px;
+		}
+		@include sm-max {
+			height: 420px;
+			overflow-y: auto;
+			padding-right: 5px;
+			margin-right: 0px;
+			&::-webkit-scrollbar {
+				width: 8px;
+				height: 8px;
+				background-color: #73c4fd;
+				border-radius: 24px;
+			}
+			&::-webkit-scrollbar-thumb {
+				background-color: #f4f4f4;
+				border-radius: 24px;
+			}
+		}
+		@include xs-max {
+			row-gap: 15px;
+		}
 		.directions-item {
 			.content {
+				height: 100%;
 				.link {
 					display: block;
 					font-size: 20px;
@@ -58,10 +100,16 @@
 					padding: 12px 24px 12px 24px;
 					border-radius: 32px;
 					min-height: 85px;
+					height: 100%;
 					align-content: center;
 					display: flex;
 					align-items: center;
 					justify-content: space-between;
+					gap: 40px;
+					@include sm-max {
+						padding: 16px;
+						min-height: auto;
+					}
 					&:hover {
 						.i-link {
 							border: 2px solid $blue;
@@ -75,6 +123,7 @@
 					.i-link {
 						display: block;
 						width: 32px;
+						min-width: 32px;
 						height: 32px;
 						background: $blue;
 						border-radius: 8px;
@@ -103,23 +152,35 @@
 
 .shares {
 	.shares--item {
-		&.different {
-			.inner {
-				background: $blue;
-				.h3 {
-					color: $white;
+		@include xl-min {
+			&:hover {
+				.inner {
+					background: $blue;
+					.h3 {
+						color: $white;
+					}
+					.underline {
+						text-decoration: underline;
+					}
 				}
 			}
 		}
 		&.content-item {
 			.inner {
 				padding: 0;
+				border-radius: 0;
 			}
 		}
 		.inner {
 			padding: 24px;
 			border-radius: 24px;
 			display: block;
+			background: transparent;
+			@include transition(0.3s ease-out 0s);
+			@include lg-max {
+				padding: 0px;
+				border-radius: 0;
+			}
 			.wrap-img {
 				border-radius: 32px;
 				height: 335px;
@@ -127,6 +188,7 @@
 			}
 			.h3 {
 				font-weight: 900;
+				@include transition(0.3s ease-out 0s);
 			}
 		}
 	}
@@ -170,7 +232,7 @@
 		&::after {
 			content: "";
 			position: absolute;
-			width: 45%;
+			width: 55%;
 			height: 100%;
 			border-radius: 0 50% 50% 0;
 			top: 50%;
@@ -179,6 +241,13 @@
 			right: 0;
 			bottom: 0;
 			z-index: 1;
+			@include lg-max {
+				width: 100%;
+			}
+			@include md-max {
+				width: 200%;
+				left: -35%;
+			}
 		}
 		&::before {
 			background: linear-gradient(90deg, $blue 10%, rgba(43, 45, 130, 0) 65%);
@@ -299,6 +368,9 @@
 			border-radius: 40px;
 			background: $white;
 			position: relative;
+			@include md-max {
+				padding: 80px 16px 32px 16px;
+			}
 			.wrap-img {
 				border: 6px solid rgb(255, 255, 255);
 				border-radius: 50%;
@@ -308,6 +380,9 @@
 				position: absolute;
 				top: -56.5px;
 				left: 32px;
+				@include md-max {
+					left: 16px;
+				}
 			}
 			.reviews--content {
 				color: $grey;
@@ -422,6 +497,9 @@
 			height: 900px;
 			background: url(../img/img-background-3.png) 50% 50% no-repeat;
 			background-size: 100%;
+			@include md-max {
+				content: unset;
+			}
 		}
 		.content {
 			border-radius: 32px;
@@ -432,9 +510,24 @@
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+			row-gap: 40px;
+			@include lg-max {
+				min-height: 380px;
+			}
+			@include md-max {
+				min-height: 340px;
+				row-gap: 15px;
+			}
+			@include sm-max {
+				min-height: 270px;
+			}
 			.i-card {
 				width: 96px;
 				height: 96px;
+				@include md-max {
+					width: 60px;
+					height: 60px;
+				}
 			}
 		}
 	}
@@ -460,7 +553,8 @@
 		}
 		li {
 			position: relative;
-			padding-left: 26px;
+			padding: 8px 8px 8px 26px;
+			color: $blue;
 			&::after {
 				content: "";
 				width: 14px;
@@ -468,7 +562,7 @@
 				border-radius: 50%;
 				border: 1.5px solid $blue;
 				position: absolute;
-				top: 14px;
+				top: 22px;
 				left: 0;
 				transform: translateY(-50%);
 			}
@@ -480,10 +574,23 @@
 				display: block;
 				border-radius: 50%;
 				position: absolute;
-				top: 14px;
+				top: 22px;
 				left: 4px;
 				transform: translateY(-50%);
 			}
+		}
+	}
+	.btn {
+		@include md-max {
+			width: 100%;
+		}
+	}
+	.plyr {
+		@include md-max {
+			height: 360px;
+		}
+		@include xs-max {
+			height: 250px;
 		}
 	}
 }
@@ -498,20 +605,47 @@
 			.wrap-img {
 				height: 130px;
 				overflow: hidden;
+				img {
+					object-fit: contain;
+				}
 			}
 		}
 	}
 }
 
 .clinic-gallery {
+	.clinic-gallery--wrap {
+		height: 100%;
+		@include md-max {
+			height: auto;
+		}
+		.wrap-img {
+			height: 100%;
+			@include md-max {
+				height: 380px;
+			}
+			@include sm-max {
+				height: 290px;
+			}
+		}
+	}
 	.wrap-img {
 		border-radius: 32px;
 		overflow: hidden;
 	}
 	.clinic-gallery--small-wrap {
 		row-gap: 25px;
+		@include md-max {
+			row-gap: 20px;
+		}
+		@include sm-max {
+			row-gap: 15px;
+		}
 		.wrap-img {
 			height: 215px;
+			@include sm-max {
+				height: 160px;
+			}
 		}
 	}
 }
@@ -541,6 +675,11 @@
 .hospital-top {
 	.backdrop {
 		position: relative;
+		display: flex;
+		align-items: end;
+		@include lg-max {
+			min-height: 340px;
+		}
 		&::before {
 			content: "";
 			display: block;
@@ -552,6 +691,17 @@
 			background: $blue;
 			filter: blur(75px);
 			border-radius: 30%;
+			@include lg-max {
+				width: 85%;
+				height: 175%;
+				top: 15%;
+				filter: blur(125px);
+			}
+			@include md-max {
+				width: 125%;
+				left: -40%;
+				filter: blur(75px);
+			}
 		}
 		.content {
 			position: relative;
@@ -561,10 +711,18 @@
 }
 
 .media-content {
+	.media-content--inner {
+		@include md-max {
+			row-gap: 20px;
+		}
+	}
 	.content-wrap {
 		padding: 32px;
 		border-radius: 24px;
 		background: $white;
+		@include md-max {
+			padding: 24px 16px;
+		}
 		.content {
 			max-height: 335px;
 			overflow-y: auto;
@@ -572,6 +730,9 @@
 			padding-right: 16px;
 			font-weight: 500;
 			color: $grey;
+			@include md-max {
+				max-height: 400px;
+			}
 			&::-webkit-scrollbar {
 				width: 8px;
 				height: 8px;
@@ -588,6 +749,9 @@
 		border-radius: 16px;
 		overflow: hidden;
 		height: 100%;
+		@include md-max {
+			height: 270px;
+		}
 	}
 }
 

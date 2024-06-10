@@ -41,6 +41,14 @@ input {
 }
 
 //typografy
+.rounded-sm,
+.rounded,
+.rounded-lg {
+	@include md-max {
+		border-radius: 24px !important;
+	}
+}
+
 a {
 	@include transition(0.3s ease-out 0s);
 	&:hover {
@@ -147,42 +155,45 @@ h1,
 .head {
 	font-size: 60px;
 	line-height: 100%;
+	margin-bottom: 0;
 	&.font-m,
 	.seo & {
-		// @include md-max {
-		// 	font-size: 50px;
-		// 	line-height: 120%;
-		// }
+		@include md-max {
+			font-size: 32px;
+			line-height: 120%;
+		}
 	}
 }
 h2,
 .h2 {
 	font-size: 50px;
 	line-height: 120%;
+	margin-bottom: 0;
 	&.font-m,
 	.seo & {
-		// @include md-max {
-		// 	font-size: 32px;
-		// 	line-height: 40px;
-		// }
+		@include md-max {
+			font-size: 32px;
+			line-height: 120%;
+		}
 	}
 }
 h3,
 .h3 {
 	font-size: 32px;
 	line-height: 120%;
+	margin-bottom: 0;
 	&.font-m,
 	.seo & {
-		// @include md-max {
-		// 	font-size: 24px;
-		// 	line-height: 32px;
-		// }
+		@include md-max {
+			font-size: 24px;
+		}
 	}
 }
 h4,
 .h4 {
 	font-size: 24px;
 	line-height: 120%;
+	margin-bottom: 0;
 	&.font-m,
 	.seo & {
 		// @include md-max {
@@ -195,17 +206,19 @@ h5,
 .h5 {
 	font-size: 20px;
 	line-height: 140%;
+	margin-bottom: 0;
 	&.font-m,
 	.seo & {
-		// @include md-max {
-		// 	font-size: 16px;
-		// }
+		@include md-max {
+			font-size: 18px;
+		}
 	}
 }
 h6,
 .h6 {
 	font-size: 18px;
 	line-height: 140%;
+	margin-bottom: 0;
 	&.font-m,
 	.seo & {
 		// @include md-max {
@@ -238,6 +251,15 @@ p {
 }
 .btn {
 	white-space: nowrap;
+	@include md-max {
+		font-size: 20px;
+		line-height: 140%;
+	}
+	&.btn-indent {
+		@include md-max {
+			padding: 7px 32px;
+		}
+	}
 	&.btn-reset {
 		padding: 0;
 		background: unset;
@@ -389,14 +411,6 @@ p {
 			background: unset;
 			color: $grey;
 			opacity: 1;
-		}
-	}
-	&.btn-indent {
-		padding-left: 20px;
-		padding-right: 20px;
-		@include md-max {
-			padding-left: 4px;
-			padding-right: 4px;
 		}
 	}
 	&.btn-modal-close {
@@ -1139,13 +1153,16 @@ form {
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
+	top: unset !important;
+	bottom: unset !important;
+	left: unset !important;
 	.swiper-pagination-bullet {
 		background: unset;
 		opacity: 1;
 		border: 2px solid $grey;
 		width: 14px;
 		height: 14px;
-		margin: 0;
+		margin: 0 !important;
 		&.swiper-pagination-bullet-active {
 			width: 20px;
 			height: 20px;
@@ -1286,7 +1303,7 @@ form {
 	}
 }
 .fancybox__backdrop {
-	background: rgb(0, 0, 0);
+	background: rgb(0, 0, 0, 0.8);
 }
 .fancybox__nav {
 	.is-next,
@@ -1299,13 +1316,14 @@ form {
 		svg {
 			width: 34px;
 			height: 34px;
-			filter: brightness(0) saturate(100%) invert(96%) sepia(0%) saturate(7485%) hue-rotate(175deg) brightness(105%)
-				contrast(97%);
+			stroke: none;
+			filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(140deg) brightness(109%)
+				contrast(101%);
 		}
 		&:hover {
 			svg {
-				filter: brightness(0) saturate(100%) invert(51%) sepia(43%) saturate(2610%) hue-rotate(168deg)
-					brightness(100%) contrast(104%);
+				filter: brightness(0) saturate(100%) invert(63%) sepia(100%) saturate(1319%) hue-rotate(167deg)
+					brightness(88%) contrast(87%);
 			}
 		}
 	}
@@ -1342,14 +1360,14 @@ form {
 		}
 		.f-button {
 			background: unset;
-			filter: brightness(0) saturate(100%) invert(79%) sepia(100%) saturate(0%) hue-rotate(302deg) brightness(110%)
+			filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(140deg) brightness(109%)
 				contrast(101%);
 			svg {
 				opacity: 1;
 			}
 			&:hover {
-				filter: brightness(0) saturate(100%) invert(49%) sepia(69%) saturate(1889%) hue-rotate(167deg)
-					brightness(100%) contrast(104%);
+				filter: brightness(0) saturate(100%) invert(63%) sepia(100%) saturate(1319%) hue-rotate(167deg)
+					brightness(88%) contrast(87%);
 			}
 		}
 	}
@@ -1404,6 +1422,9 @@ form {
 		background: $white;
 		padding: 32px;
 		border-radius: 24px;
+		@include md-max {
+			padding: 24px 15px;
+		}
 	}
 	.content {
 		max-height: 275px;
@@ -1412,6 +1433,9 @@ form {
 		padding-right: 16px;
 		font-weight: 500;
 		color: #65738a;
+		@include md-max {
+			max-height: 420px;
+		}
 		&::-webkit-scrollbar {
 			width: 8px;
 			height: 8px;
@@ -1741,6 +1765,9 @@ form {
 			justify-content: space-between;
 			gap: 20px;
 			white-space: normal;
+			@include md-max {
+				padding-left: 16px;
+			}
 			&::after {
 				content: "";
 				background: url(../img/icons/icons.svg#i-arrow-small-down) no-repeat center;

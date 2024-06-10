@@ -80,7 +80,7 @@ $container-max-widths: (
 	// sm: 576px,
 	// md: 768px,
 	// lg: 992px,
-	xs: 1328px
+	xs: 1305px
 );
 
 $grid-breakpoints: (
@@ -94,12 +94,14 @@ $grid-breakpoints: (
 
 $grid-gutter-widths: (
 	// xs: 20px,
-	xs: 25px,
-	lg: 30px,
-	xl: 25px
+	xs: 15px,
+	sm: 20px,
+	md: 20px,
+	lg: 25px,
+	// xl: 25px
 ) !default;
 
-$grid-gutter-width: map-get($grid-gutter-widths, xl);
+$grid-gutter-width: map-get($grid-gutter-widths, 30px);
 
 //typography
 $font-family-sans-serif: "Inter", sans-serif !default;
