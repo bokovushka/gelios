@@ -1910,3 +1910,19 @@ form {
 		max-width: 100%;
 	}
 }
+
+//panoram
+.psv-container {
+	.psv-fullscreen-button {
+		margin-left: auto;
+	}
+}
+.psv-loader-container {
+	.psv-loader-canvas {
+		display: none;
+	}
+	.psv-loader-image {
+		max-width: 150px !important;
+		max-height: 150px !important;
+	}
+}

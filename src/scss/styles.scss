@@ -106,6 +106,9 @@
 					align-items: center;
 					justify-content: space-between;
 					gap: 40px;
+					@include md-max {
+						border-radius: 24px;
+					}
 					@include sm-max {
 						padding: 16px;
 						min-height: auto;
@@ -185,6 +188,9 @@
 				border-radius: 32px;
 				height: 335px;
 				overflow: hidden;
+				@include md-max {
+					border-radius: 24px;
+				}
 			}
 			.h3 {
 				font-weight: 900;
@@ -420,6 +426,9 @@
 					align-items: center;
 					justify-content: center;
 					padding: 10px;
+					@include md-max {
+						border-radius: 24px;
+					}
 					.wrap-img {
 						height: inherit;
 						padding: 10px 0;
@@ -443,6 +452,9 @@
 				height: 360px;
 				overflow: hidden;
 				position: relative;
+				@include md-max {
+					border-radius: 24px;
+				}
 				.date-label {
 					position: absolute;
 					background: #edeef1;
@@ -517,6 +529,7 @@
 			@include md-max {
 				min-height: 340px;
 				row-gap: 15px;
+				border-radius: 24px;
 			}
 			@include sm-max {
 				min-height: 270px;
@@ -602,6 +615,9 @@
 			padding: 45px 55px;
 			border-radius: 32px;
 			background: $white;
+			@include md-max {
+				border-radius: 24px;
+			}
 			.wrap-img {
 				height: 130px;
 				overflow: hidden;
@@ -632,6 +648,9 @@
 	.wrap-img {
 		border-radius: 32px;
 		overflow: hidden;
+		@include md-max {
+			border-radius: 24px;
+		}
 	}
 	.clinic-gallery--small-wrap {
 		row-gap: 25px;
@@ -760,7 +779,10 @@
 	.wrap-img {
 		border-radius: 32px;
 		overflow: hidden;
-		max-height: 315px;
+		height: 315px;
+		@include md-max {
+			border-radius: 24px;
+		}
 	}
 	.stay-conditions--small-wrap {
 		row-gap: 25px;
@@ -770,10 +792,16 @@
 	}
 }
 
-.three-d-tour {
-	.tour {
+.tour {
+	.tour-viewer {
 		height: 660px;
 		overflow: hidden;
+		@include md-max {
+			height: 420px;
+		}
+		@include xs-max {
+			height: 220px;
+		}
 	}
 }
 

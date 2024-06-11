@@ -1,6 +1,7 @@
 import "./modules/meta-width-function.js";
 import "./modules/animate-scroll.js";
 import "./modules/pagination.js";
+import "./modules/js.js";
 
 // import "./modules/menu.js";
 // import "./modules/show-menu.js";

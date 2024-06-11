@@ -19,6 +19,9 @@
 	},
 	"devDependencies": {
 		"@fancyapps/ui": "latest",
+		"@photo-sphere-viewer/autorotate-plugin": "latest",
+		"@photo-sphere-viewer/core": "latest",
+		"@photo-sphere-viewer/gallery-plugin": "latest",
 		"@popperjs/core": "latest",
 		"air-datepicker": "latest",
 		"bootstrap": "4.6.2",
@@ -54,6 +57,7 @@
 		"select2": "latest",
 		"svelte-range-slider-pips": "latest",
 		"swiper": "latest",
+		"three": "latest",
 		"vinyl-ftp": "latest",
 		"webp-converter": "2.2.3",
 		"webpack": "latest",

@@ -1793,6 +1793,18 @@ form {
   max-width: 100%;
 }
 
+.psv-container .psv-fullscreen-button {
+  margin-left: auto;
+}
+
+.psv-loader-container .psv-loader-canvas {
+  display: none;
+}
+.psv-loader-container .psv-loader-image {
+  max-width: 150px !important;
+  max-height: 150px !important;
+}
+
 .section-top .backdrop {
   position: relative;
 }
@@ -1908,6 +1920,11 @@ form {
   justify-content: space-between;
   gap: 40px;
 }
+@media (max-width: 1023px) {
+  .our-directions .directions .directions-item .content .link {
+    border-radius: 24px;
+  }
+}
 @media (max-width: 767px) {
   .our-directions .directions .directions-item .content .link {
     padding: 16px;
@@ -1984,6 +2001,11 @@ form {
   border-radius: 32px;
   height: 335px;
   overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .shares .shares--item .inner .wrap-img {
+    border-radius: 24px;
+  }
 }
 .shares .shares--item .inner .h3 {
   font-weight: 900;
@@ -2203,6 +2225,11 @@ form {
   justify-content: center;
   padding: 10px;
 }
+@media (max-width: 1023px) {
+  .partners .partners--swiper .swiper-wrapper .swiper-slide .content {
+    border-radius: 24px;
+  }
+}
 .partners .partners--swiper .swiper-wrapper .swiper-slide .content .wrap-img {
   height: inherit;
   padding: 10px 0;
@@ -2220,6 +2247,11 @@ form {
   height: 360px;
   overflow: hidden;
   position: relative;
+}
+@media (max-width: 1023px) {
+  .news .news--item .inner .wrap-img {
+    border-radius: 24px;
+  }
 }
 .news .news--item .inner .wrap-img .date-label {
   position: absolute;
@@ -2296,6 +2328,7 @@ form {
   .about-top .about-top--card .content {
     min-height: 340px;
     row-gap: 15px;
+    border-radius: 24px;
   }
 }
 @media (max-width: 767px) {
@@ -2384,6 +2417,11 @@ form {
   border-radius: 32px;
   background: #ffffff;
 }
+@media (max-width: 1023px) {
+  .certificates .certificates--item .inner {
+    border-radius: 24px;
+  }
+}
 .certificates .certificates--item .inner .wrap-img {
   height: 130px;
   overflow: hidden;
@@ -2416,6 +2454,11 @@ form {
 .clinic-gallery .wrap-img {
   border-radius: 32px;
   overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .clinic-gallery .wrap-img {
+    border-radius: 24px;
+  }
 }
 .clinic-gallery .clinic-gallery--small-wrap {
   row-gap: 25px;
@@ -2554,7 +2597,13 @@ form {
 .hospital .wrap-img {
   border-radius: 32px;
   overflow: hidden;
-  max-height: 315px;
+  height: 315px;
+}
+@media (max-width: 1023px) {
+  .stay-conditions .wrap-img,
+  .hospital .wrap-img {
+    border-radius: 24px;
+  }
 }
 .stay-conditions .stay-conditions--small-wrap,
 .hospital .stay-conditions--small-wrap {
@@ -2565,9 +2614,19 @@ form {
   height: 145px;
 }
 
-.three-d-tour .tour {
+.tour .tour-viewer {
   height: 660px;
   overflow: hidden;
+}
+@media (max-width: 1023px) {
+  .tour .tour-viewer {
+    height: 420px;
+  }
+}
+@media (max-width: 575px) {
+  .tour .tour-viewer {
+    height: 220px;
+  }
 }
 
 .any-questions .h2 {

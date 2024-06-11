@@ -1,7 +1,7 @@
 import { Fancybox } from "@fancyapps/ui";
 
-//? clinic-gallery
-Fancybox.bind('[data-fancybox="clinic-gallery"]', {
+//? Загальні налаштування для Fancybox
+const fancyboxSettings = {
 	Toolbar: {
 		display: {
 			left: [],
@@ -23,11 +23,13 @@ Fancybox.bind('[data-fancybox="clinic-gallery"]', {
 	Thumbs: false,
 	caption: (fancybox, slide) => {
 		const caption = slide.caption || "";
-
-		return `${slide.index + 1} / ${fancybox.carousel?.slides.length
-			} <br /> ${caption}`;
+		return `${slide.index + 1} / ${fancybox.carousel?.slides.length} <br /> ${caption}`;
 	},
-});
+};
 
-
+Fancybox.bind('[data-fancybox="clinic--gallery"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="stay-conditions--gallery"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="stay-conditions--gallery-mob"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="hospital--gallery"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="hospital--gallery-mob"]', fancyboxSettings);
 

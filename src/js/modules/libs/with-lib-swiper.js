@@ -253,3 +253,61 @@ new Swiper('.certificates--swiper', {
 		}
 	}
 });
+
+new Swiper('.stay-conditions--swiper', {
+	grabCursor: true,
+	loop: true,
+	pagination: {
+		el: ".stay-conditions .swiper-pagination",
+		clickable: true,
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false
+	},
+	breakpoints: {
+		1024: {
+		},
+		768: {
+			slidesPerView: 2.2,
+			spaceBetween: 20,
+		},
+		575: {
+			slidesPerView: 1.7,
+			spaceBetween: 15,
+		},
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+		}
+	}
+});
+
+new Swiper('.hospital--swiper', {
+	grabCursor: true,
+	loop: true,
+	pagination: {
+		el: ".hospital .swiper-pagination",
+		clickable: true,
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false
+	},
+	breakpoints: {
+		1024: {
+		},
+		768: {
+			slidesPerView: 2.2,
+			spaceBetween: 20,
+		},
+		575: {
+			slidesPerView: 1.7,
+			spaceBetween: 15,
+		},
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+		}
+	}
+});
