@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		const viewer = new Viewer({
 			container: container,
-			panorama: '../img/3d-1.jpeg',
+			panorama: 'img/3d-1.jpeg',
 			touchmoveTwoFingers: true,
 			mousewheelCtrlKey: true,
-			loadingImg: '../img/loader.gif',
+			loadingImg: 'img/loader.gif',
 			lang: {
 				ctrlZoom: 'Натисніть ctrl + та використайте scroll для використання zoom',
 				twoFingers: 'Використайте подвійний дотик для навігації',
@@ -39,14 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
 		gallery.setItems([
 			{
 				id: 'panoram-img-1',
-				panorama: '../img/3d-1.jpeg',
-				thumbnail: '../img/3d-1.jpeg',
+				panorama: 'img/3d-1.jpeg',
+				thumbnail: 'img/3d-1.jpeg',
 				name: 'Панорама 1',
 			},
 			{
 				id: 'panoram-img-2',
-				panorama: '../img/3d-2.jpeg',
-				thumbnail: '../img/3d-2.jpeg',
+				panorama: 'img/3d-2.jpeg',
+				thumbnail: 'img/3d-2.jpeg',
 				name: 'Панорама 2',
 			},
 		]);
