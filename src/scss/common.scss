@@ -721,6 +721,7 @@ form {
 			color: $light-grey;
 			background: $white;
 			padding: 16px 32px;
+			gap: 5px;
 			.select2-selection__placeholder {
 				color: $light-grey;
 			}
@@ -1196,19 +1197,30 @@ form {
 				background-color: unset;
 			}
 		}
+		&.active {
+			.page-link {
+				cursor: default;
+			}
+		}
 		&.current-page {
-			cursor: pointer;
 			&.active {
 				.page-link {
 					color: $white !important;
 					background: $blue;
 					border-color: $blue;
+					cursor: default;
+				}
+				&:hover {
+					.page-link {
+						cursor: default;
+					}
 				}
 			}
 			&:hover {
 				.page-link {
 					color: $blue;
 					border-color: $blue;
+					cursor: pointer;
 				}
 			}
 		}
@@ -1225,13 +1237,20 @@ form {
 			padding: 0 5px;
 			border: 2px solid $blue;
 			border-radius: 4px;
+			cursor: default;
 		}
 	}
 	#previous-page,
 	#next-page {
+		&.active {
+			.page-link {
+				cursor: default;
+			}
+		}
 		.page-link {
 			padding: 0;
 			border-color: #dfe3e8;
+			cursor: pointer;
 		}
 		&:hover {
 			.page-link {

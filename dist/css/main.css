@@ -730,6 +730,7 @@ form {
   color: #d1dae8;
   background: #ffffff;
   padding: 16px 32px;
+  gap: 5px;
 }
 .field .select2-container .select2-selection .select2-selection__placeholder {
   color: #d1dae8;
@@ -1132,17 +1133,22 @@ form {
 .pagination .page-item:hover .page-link {
   background-color: unset;
 }
-.pagination .page-item.current-page {
-  cursor: pointer;
+.pagination .page-item.active .page-link {
+  cursor: default;
 }
 .pagination .page-item.current-page.active .page-link {
   color: #ffffff !important;
   background: #3da6d3;
   border-color: #3da6d3;
+  cursor: default;
+}
+.pagination .page-item.current-page.active:hover .page-link {
+  cursor: default;
 }
 .pagination .page-item.current-page:hover .page-link {
   color: #3da6d3;
   border-color: #3da6d3;
+  cursor: pointer;
 }
 .pagination .page-item .page-link {
   display: flex;
@@ -1157,11 +1163,17 @@ form {
   padding: 0 5px;
   border: 2px solid #3da6d3;
   border-radius: 4px;
+  cursor: default;
+}
+.pagination #previous-page.active .page-link,
+.pagination #next-page.active .page-link {
+  cursor: default;
 }
 .pagination #previous-page .page-link,
 .pagination #next-page .page-link {
   padding: 0;
   border-color: #dfe3e8;
+  cursor: pointer;
 }
 .pagination #previous-page:hover .page-link,
 .pagination #next-page:hover .page-link {
@@ -1826,6 +1838,16 @@ form {
   background: #3da6d3;
   filter: blur(85px);
 }
+@media (max-width: 767px) {
+  .section-top .backdrop::before {
+    width: 85%;
+  }
+}
+@media (max-width: 575px) {
+  .section-top .backdrop::before {
+    width: 100%;
+  }
+}
 .section-top .backdrop .content {
   position: relative;
   z-index: 2;
@@ -1967,6 +1989,14 @@ form {
 }
 
 @media (min-width: 1200px) {
+  .shares .shares-list .shares--item:hover .inner {
+    background: transparent;
+  }
+  .shares .shares-list .shares--item:hover .inner .h3 {
+    color: #3da6d3;
+  }
+}
+@media (min-width: 1200px) {
   .shares .shares--item:hover .inner {
     background: #3da6d3;
   }
@@ -1975,6 +2005,9 @@ form {
   }
   .shares .shares--item:hover .inner .underline {
     text-decoration: underline;
+  }
+  .shares .shares--item:hover .inner .wrap-img img {
+    scale: 1.25;
   }
 }
 .shares .shares--item.content-item .inner {
@@ -2007,6 +2040,12 @@ form {
     border-radius: 24px;
   }
 }
+.shares .shares--item .inner .wrap-img img {
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
+}
 .shares .shares--item .inner .h3 {
   font-weight: 900;
   -webkit-transition: 0.3s ease-out 0s;
@@ -2021,17 +2060,34 @@ form {
 .shares-top .backdrop {
   position: relative;
 }
+@media (max-width: 1199px) {
+  .shares-top .backdrop {
+    height: 400px;
+    display: flex;
+    align-items: end;
+  }
+}
 .shares-top .backdrop::before {
   content: "";
   display: block;
-  width: 95%;
-  height: 210%;
+  width: 65%;
+  height: 150%;
   position: absolute;
-  left: -35%;
-  top: -120px;
+  left: -120px;
+  top: 30px;
   background: #3da6d3;
   filter: blur(75px);
   border-radius: 30%;
+}
+@media (max-width: 767px) {
+  .shares-top .backdrop::before {
+    width: 85%;
+  }
+}
+@media (max-width: 575px) {
+  .shares-top .backdrop::before {
+    width: 100%;
+  }
 }
 .shares-top .backdrop .content {
   position: relative;
@@ -2039,6 +2095,12 @@ form {
 }
 .shares-top .backdrop-small {
   height: 575px;
+}
+@media (max-width: 1199px) {
+  .shares-top .backdrop-small {
+    height: auto;
+    min-height: 180px;
+  }
 }
 
 .about-us .content {
@@ -2078,6 +2140,11 @@ form {
   filter: blur(700px);
 }
 
+@media (min-width: 1200px) {
+  .doctors .doctors--item:hover .inner .wrap-img img {
+    scale: 1.25;
+  }
+}
 .doctors .doctors--item .inner {
   display: block;
 }
@@ -2085,6 +2152,12 @@ form {
   border-radius: 24px;
   height: 300px;
   overflow: hidden;
+}
+.doctors .doctors--item .inner .wrap-img img {
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
 }
 .doctors .doctors--item .inner .experience-quantity {
   font-size: 14px;
@@ -2101,6 +2174,33 @@ form {
 }
 .doctors .doctors-list {
   row-gap: 25px;
+}
+@media (max-width: 1023px) {
+  .doctors .doctors-list {
+    row-gap: 40px;
+  }
+}
+.doctors .doctors--nav .category {
+  row-gap: 15px;
+}
+.doctors .doctors--nav .category .btn {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 120%;
+}
+@media (max-width: 1023px) {
+  .doctors .doctors--nav .category .btn {
+    font-size: 22px;
+    padding-left: 24px;
+    padding-right: 24px;
+    width: 100%;
+  }
+}
+@media (max-width: 1023px) {
+  .doctors .doctors--nav .field .select2-container .select2-selection {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 .offices .offices--item .inner {
@@ -2238,6 +2338,14 @@ form {
   object-fit: contain;
 }
 
+@media (min-width: 1200px) {
+  .news .news--item:hover .inner .wrap-img img {
+    scale: 1.25;
+  }
+  .news .news--item:hover .inner .h3 {
+    color: #3da6d3;
+  }
+}
 .news .news--item .inner {
   border-radius: 24px;
   display: block;
@@ -2252,6 +2360,12 @@ form {
   .news .news--item .inner .wrap-img {
     border-radius: 24px;
   }
+}
+.news .news--item .inner .wrap-img img {
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
 }
 .news .news--item .inner .wrap-img .date-label {
   position: absolute;
@@ -2278,6 +2392,10 @@ form {
 }
 .news .news--item .inner .h3 {
   font-weight: 600;
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
 }
 .news .news--item .inner .descrp {
   overflow: hidden;
@@ -2455,10 +2573,21 @@ form {
   border-radius: 32px;
   overflow: hidden;
 }
+@media (min-width: 1200px) {
+  .clinic-gallery .wrap-img:hover img {
+    scale: 1.25;
+  }
+}
 @media (max-width: 1023px) {
   .clinic-gallery .wrap-img {
     border-radius: 24px;
   }
+}
+.clinic-gallery .wrap-img img {
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
 }
 .clinic-gallery .clinic-gallery--small-wrap {
   row-gap: 25px;
@@ -2502,17 +2631,17 @@ form {
   z-index: 2;
 }
 
-.hospital-top .backdrop {
+.section-top-2 .backdrop {
   position: relative;
   display: flex;
   align-items: end;
 }
 @media (max-width: 1199px) {
-  .hospital-top .backdrop {
+  .section-top-2 .backdrop {
     min-height: 340px;
   }
 }
-.hospital-top .backdrop::before {
+.section-top-2 .backdrop::before {
   content: "";
   display: block;
   width: 95%;
@@ -2525,7 +2654,7 @@ form {
   border-radius: 30%;
 }
 @media (max-width: 1199px) {
-  .hospital-top .backdrop::before {
+  .section-top-2 .backdrop::before {
     width: 85%;
     height: 175%;
     top: 15%;
@@ -2533,17 +2662,36 @@ form {
   }
 }
 @media (max-width: 1023px) {
-  .hospital-top .backdrop::before {
+  .section-top-2 .backdrop::before {
     width: 125%;
     left: -40%;
     filter: blur(75px);
   }
 }
-.hospital-top .backdrop .content {
+.section-top-2 .backdrop .content {
   position: relative;
   z-index: 2;
 }
 
+.media-content.card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  overflow: hidden;
+}
+@media (max-width: 1310px) {
+  .media-content.card-body {
+    overflow: visible;
+  }
+}
+.media-content.card-body > .row {
+  row-gap: 25px;
+}
+@media (max-width: 1023px) {
+  .media-content.card-body > .row {
+    row-gap: 20px;
+  }
+}
 @media (max-width: 1023px) {
   .media-content .media-content--inner {
     row-gap: 20px;
@@ -2592,6 +2740,9 @@ form {
     height: 270px;
   }
 }
+.media-content .media--swiper .wrap-img {
+  height: 230px;
+}
 
 .stay-conditions .wrap-img,
 .hospital .wrap-img {
@@ -2599,11 +2750,24 @@ form {
   overflow: hidden;
   height: 315px;
 }
+@media (min-width: 1200px) {
+  .stay-conditions .wrap-img:hover img,
+  .hospital .wrap-img:hover img {
+    scale: 1.25;
+  }
+}
 @media (max-width: 1023px) {
   .stay-conditions .wrap-img,
   .hospital .wrap-img {
     border-radius: 24px;
   }
+}
+.stay-conditions .wrap-img img,
+.hospital .wrap-img img {
+  -webkit-transition: 0.3s ease-out 0s;
+  -moz-transition: 0.3s ease-out 0s;
+  -o-transition: 0.3s ease-out 0s;
+  transition: 0.3s ease-out 0s;
 }
 .stay-conditions .stay-conditions--small-wrap,
 .hospital .stay-conditions--small-wrap {
@@ -2625,7 +2789,7 @@ form {
 }
 @media (max-width: 575px) {
   .tour .tour-viewer {
-    height: 220px;
+    height: 340px;
   }
 }
 
@@ -2648,27 +2812,7 @@ form {
 .search .input-search {
   position: relative;
   display: flex;
-  flex-direction: row-reverse;
   align-items: center;
-}
-.search .input-search::before {
-  content: "";
-  display: block;
-  position: relative;
-  min-width: 44px;
-  width: 44px;
-  height: 24px;
-  z-index: 2;
-  background: url(../img/icons/icons.svg#i-search) no-repeat center;
-}
-.search .input-search::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  background: #3da6d3;
-  border-radius: 50%;
 }
 .search .input-search input {
   background: unset;
@@ -2683,6 +2827,32 @@ form {
 .search .input-search .clear-icon {
   display: none;
   cursor: pointer;
+}
+.search .search-icon {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  margin-right: 5px;
+}
+.search .search-icon::before {
+  content: "";
+  display: block;
+  position: relative;
+  min-width: 44px;
+  width: auto;
+  height: 24px;
+  z-index: 2;
+  background: url(../img/icons/icons.svg#i-search) no-repeat center;
+}
+.search .search-icon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #3da6d3;
+  border-radius: 50%;
 }
 .search .results-search {
   position: absolute;
@@ -2702,6 +2872,11 @@ form {
   border-radius: 24px;
   background: #ffffff;
 }
+@media (max-width: 1023px) {
+  .typical-text .content {
+    padding: 24px 15px;
+  }
+}
 .typical-text .content p {
   font-size: 20px;
   font-weight: 500;
@@ -2720,12 +2895,30 @@ form {
   padding: 8px 0;
   border-bottom: 2px solid #3da6d3;
 }
+@media (max-width: 1023px) {
+  .prices-list .item {
+    padding: 8px 16px 16px 16px;
+  }
+}
 .prices-list .item .name {
   padding: 10px 32px 10px 32px;
+}
+@media (max-width: 1023px) {
+  .prices-list .item .name {
+    padding: 10px 0;
+  }
 }
 .prices-list .item .price {
   padding: 10px 24px 10px 24px;
 }
+@media (max-width: 1023px) {
+  .prices-list .item .price {
+    padding: 10px 0;
+  }
+}
 .prices-list .accordion .card:not(:last-child) {
   margin-bottom: 8px;
+}
+.prices-list .accordion .card-body {
+  padding-top: 0;
 }

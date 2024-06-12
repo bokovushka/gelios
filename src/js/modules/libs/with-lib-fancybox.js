@@ -32,4 +32,9 @@ Fancybox.bind('[data-fancybox="stay-conditions--gallery"]', fancyboxSettings);
 Fancybox.bind('[data-fancybox="stay-conditions--gallery-mob"]', fancyboxSettings);
 Fancybox.bind('[data-fancybox="hospital--gallery"]', fancyboxSettings);
 Fancybox.bind('[data-fancybox="hospital--gallery-mob"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="certificates--gallery"]', fancyboxSettings);
+
+Fancybox.bind('[data-fancybox="media--gallery-1"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="media--gallery-2"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="media--gallery-3"]', fancyboxSettings);
 

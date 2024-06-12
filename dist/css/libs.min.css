@@ -549,21 +549,21 @@ pre code {
 .container-fluid,
 .container-xs {
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 12.5px;
+  padding-left: 12.5px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .container {
-  max-width: 1305px;
+  max-width: 1310px;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  margin-right: -12.5px;
+  margin-left: -12.5px;
 }
 
 .no-gutters {
@@ -585,8 +585,8 @@ pre code {
 .col-auto, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1 {
   position: relative;
   width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 12.5px;
+  padding-left: 12.5px;
 }
 
 .col {
@@ -5059,25 +5059,25 @@ input[type=button].btn-block {
 }
 
 .card-deck .card {
-  margin-bottom: 15px;
+  margin-bottom: 12.5px;
 }
 @media (min-width: 576px) {
   .card-deck {
     display: flex;
     flex-flow: row wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-right: -12.5px;
+    margin-left: -12.5px;
   }
   .card-deck .card {
     flex: 1 0 0%;
-    margin-right: 15px;
+    margin-right: 12.5px;
     margin-bottom: 0;
-    margin-left: 15px;
+    margin-left: 12.5px;
   }
 }
 
 .card-group > .card {
-  margin-bottom: 15px;
+  margin-bottom: 12.5px;
 }
 @media (min-width: 576px) {
   .card-group {

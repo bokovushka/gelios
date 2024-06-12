@@ -31,7 +31,7 @@ new Swiper(".shares--swiper", {
 		disableOnInteraction: false
 	},
 	breakpoints: {
-		1200: {},
+		1200: { loop: false },
 		1024: {
 			slidesPerView: 2.3,
 			spaceBetween: 20,
@@ -200,7 +200,7 @@ new Swiper(".news--swiper", {
 		disableOnInteraction: false
 	},
 	breakpoints: {
-		1200: {},
+		1200: { loop: false },
 		1024: {
 			slidesPerView: 2.3,
 			spaceBetween: 20,
@@ -267,6 +267,7 @@ new Swiper('.stay-conditions--swiper', {
 	},
 	breakpoints: {
 		1024: {
+			loop: false
 		},
 		768: {
 			slidesPerView: 2.2,
@@ -296,6 +297,7 @@ new Swiper('.hospital--swiper', {
 	},
 	breakpoints: {
 		1024: {
+			loop: false
 		},
 		768: {
 			slidesPerView: 2.2,
@@ -310,4 +312,42 @@ new Swiper('.hospital--swiper', {
 			spaceBetween: 15,
 		}
 	}
+});
+
+new Swiper('.media--swiper', {
+	grabCursor: true,
+	loop: true,
+	slidesPerView: 4.5,
+	spaceBetween: 25,
+	pagination: {
+		el: ".media-content .swiper-pagination",
+		clickable: true,
+	},
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false
+	},
+	breakpoints: {
+		1200: {
+		},
+		1024: {
+			slidesPerView: 3.5,
+		},
+		768: {
+			slidesPerView: 2.7,
+			spaceBetween: 20,
+		},
+		575: {
+			slidesPerView: 2.2,
+			spaceBetween: 15,
+		},
+		0: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+		}
+	},
+	//для обновлення при табатах
+	observer: true,
+	observeParents: true,
+	observeSlideChildren: true,
 });

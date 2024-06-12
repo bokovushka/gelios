@@ -16,6 +16,12 @@
 			top: 30px;
 			background: $blue;
 			filter: blur(85px);
+			@include sm-max {
+				width: 85%;
+			}
+			@include xs-max {
+				width: 100%;
+			}
 		}
 		.content {
 			position: relative;
@@ -154,6 +160,20 @@
 }
 
 .shares {
+	.shares-list {
+		.shares--item {
+			@include xl-min {
+				&:hover {
+					.inner {
+						background: transparent;
+						.h3 {
+							color: $blue;
+						}
+					}
+				}
+			}
+		}
+	}
 	.shares--item {
 		@include xl-min {
 			&:hover {
@@ -164,6 +184,11 @@
 					}
 					.underline {
 						text-decoration: underline;
+					}
+					.wrap-img {
+						img {
+							scale: 1.25;
+						}
 					}
 				}
 			}
@@ -191,6 +216,9 @@
 				@include md-max {
 					border-radius: 24px;
 				}
+				img {
+					@include transition(0.3s ease-out 0s);
+				}
 			}
 			.h3 {
 				font-weight: 900;
@@ -206,17 +234,28 @@
 .shares-top {
 	.backdrop {
 		position: relative;
+		@include lg-max {
+			height: 400px;
+			display: flex;
+			align-items: end;
+		}
 		&::before {
 			content: "";
 			display: block;
-			width: 95%;
-			height: 210%;
+			width: 65%;
+			height: 150%;
 			position: absolute;
-			left: -35%;
-			top: -120px;
+			left: -120px;
+			top: 30px;
 			background: $blue;
 			filter: blur(75px);
 			border-radius: 30%;
+			@include sm-max {
+				width: 85%;
+			}
+			@include xs-max {
+				width: 100%;
+			}
 		}
 		.content {
 			position: relative;
@@ -225,6 +264,10 @@
 	}
 	.backdrop-small {
 		height: 575px;
+		@include lg-max {
+			height: auto;
+			min-height: 180px;
+		}
 	}
 }
 
@@ -268,12 +311,26 @@
 
 .doctors {
 	.doctors--item {
+		@include xl-min {
+			&:hover {
+				.inner {
+					.wrap-img {
+						img {
+							scale: 1.25;
+						}
+					}
+				}
+			}
+		}
 		.inner {
 			display: block;
 			.wrap-img {
 				border-radius: 24px;
 				height: 300px;
 				overflow: hidden;
+				img {
+					@include transition(0.3s ease-out 0s);
+				}
 			}
 			.experience-quantity {
 				font-size: 14px;
@@ -292,6 +349,31 @@
 	}
 	.doctors-list {
 		row-gap: 25px;
+		@include md-max {
+			row-gap: 40px;
+		}
+	}
+	.doctors--nav {
+		.category {
+			row-gap: 15px;
+			.btn {
+				font-size: 24px;
+				font-weight: 600;
+				line-height: 120%;
+				@include md-max {
+					font-size: 22px;
+					padding-left: 24px;
+					padding-right: 24px;
+					width: 100%;
+				}
+			}
+		}
+		.field .select2-container .select2-selection {
+			@include md-max {
+				padding-left: 24px;
+				padding-right: 24px;
+			}
+		}
 	}
 }
 
@@ -444,6 +526,20 @@
 
 .news {
 	.news--item {
+		@include xl-min {
+			&:hover {
+				.inner {
+					.wrap-img {
+						img {
+							scale: 1.25;
+						}
+					}
+					.h3 {
+						color: $blue;
+					}
+				}
+			}
+		}
 		.inner {
 			border-radius: 24px;
 			display: block;
@@ -454,6 +550,9 @@
 				position: relative;
 				@include md-max {
 					border-radius: 24px;
+				}
+				img {
+					@include transition(0.3s ease-out 0s);
 				}
 				.date-label {
 					position: absolute;
@@ -482,6 +581,7 @@
 			}
 			.h3 {
 				font-weight: 600;
+				@include transition(0.3s ease-out 0s);
 			}
 			.descrp {
 				overflow: hidden;
@@ -648,8 +748,18 @@
 	.wrap-img {
 		border-radius: 32px;
 		overflow: hidden;
+		@include xl-min {
+			&:hover {
+				img {
+					scale: 1.25;
+				}
+			}
+		}
 		@include md-max {
 			border-radius: 24px;
+		}
+		img {
+			@include transition(0.3s ease-out 0s);
 		}
 	}
 	.clinic-gallery--small-wrap {
@@ -691,7 +801,7 @@
 	}
 }
 
-.hospital-top {
+.section-top-2 {
 	.backdrop {
 		position: relative;
 		display: flex;
@@ -730,6 +840,21 @@
 }
 
 .media-content {
+	&.card-body {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		overflow: hidden;
+		@media (max-width: 1310px) {
+			overflow: visible;
+		}
+		> .row {
+			row-gap: 25px;
+			@include md-max {
+				row-gap: 20px;
+			}
+		}
+	}
 	.media-content--inner {
 		@include md-max {
 			row-gap: 20px;
@@ -772,6 +897,11 @@
 			height: 270px;
 		}
 	}
+	.media--swiper {
+		.wrap-img {
+			height: 230px;
+		}
+	}
 }
 
 .stay-conditions,
@@ -780,8 +910,18 @@
 		border-radius: 32px;
 		overflow: hidden;
 		height: 315px;
+		@include xl-min {
+			&:hover {
+				img {
+					scale: 1.25;
+				}
+			}
+		}
 		@include md-max {
 			border-radius: 24px;
+		}
+		img {
+			@include transition(0.3s ease-out 0s);
 		}
 	}
 	.stay-conditions--small-wrap {
@@ -800,7 +940,7 @@
 			height: 420px;
 		}
 		@include xs-max {
-			height: 220px;
+			height: 340px;
 		}
 	}
 }
@@ -825,27 +965,7 @@
 	.input-search {
 		position: relative;
 		display: flex;
-		flex-direction: row-reverse;
 		align-items: center;
-		&::before {
-			content: "";
-			display: block;
-			position: relative;
-			min-width: 44px;
-			width: 44px;
-			height: 24px;
-			z-index: 2;
-			background: url(../img/icons/icons.svg#i-search) no-repeat center;
-		}
-		&::after {
-			content: "";
-			display: block;
-			position: absolute;
-			width: 44px;
-			height: 44px;
-			background: $blue;
-			border-radius: 50%;
-		}
 		input {
 			background: unset;
 			width: 100%;
@@ -859,6 +979,32 @@
 		.clear-icon {
 			display: none;
 			cursor: pointer;
+		}
+	}
+	.search-icon {
+		position: relative;
+		width: 44px;
+		height: 44px;
+		margin-right: 5px;
+		&::before {
+			content: "";
+			display: block;
+			position: relative;
+			min-width: 44px;
+			width: auto;
+			height: 24px;
+			z-index: 2;
+			background: url(../img/icons/icons.svg#i-search) no-repeat center;
+		}
+		&::after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: $blue;
+			border-radius: 50%;
 		}
 	}
 	.results-search {
@@ -880,6 +1026,9 @@
 		padding: 32px;
 		border-radius: 24px;
 		background: $white;
+		@include md-max {
+			padding: 24px 15px;
+		}
 		p {
 			font-size: 20px;
 			font-weight: 500;
@@ -900,14 +1049,28 @@
 		line-height: 140%;
 		padding: 8px 0;
 		border-bottom: 2px solid $blue;
+		@include md-max {
+			padding: 8px 16px 16px 16px;
+		}
 		.name {
 			padding: 10px 32px 10px 32px;
+			@include md-max {
+				padding: 10px 0;
+			}
 		}
 		.price {
 			padding: 10px 24px 10px 24px;
+			@include md-max {
+				padding: 10px 0;
+			}
 		}
 	}
-	.accordion .card:not(:last-child) {
-		margin-bottom: 8px;
+	.accordion {
+		.card:not(:last-child) {
+			margin-bottom: 8px;
+		}
+		.card-body {
+			padding-top: 0;
+		}
 	}
 }

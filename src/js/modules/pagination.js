@@ -50,7 +50,15 @@ function getPageList(totalPages, page, maxLength) {
 $(function () {
 	var targetElement = '#doctors';
 	var numberOfItems = $("#doctors .content-item").length;
-	var limitPerPage = 12;
+	// var limitPerPage = 12;
+	var w = screen.width;
+	if (w < 768) {
+		var limitPerPage = 5;
+	} else if (w < 1024) {
+		var limitPerPage = 8;
+	} else {
+		var limitPerPage = 12;
+	}
 	var totalPages = Math.ceil(numberOfItems / limitPerPage);
 	var paginationSize = 7;
 	var currentPage;
@@ -65,6 +73,20 @@ $(function () {
 				.append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(item || "..."))
 				.insertBefore(targetElement + " #next-page");
 		});
+
+		// Add or remove active class from previous and next buttons
+		if (currentPage === 1) {
+			$("#previous-page").addClass("active");
+		} else {
+			$("#previous-page").removeClass("active");
+		}
+
+		if (currentPage === totalPages) {
+			$("#next-page").addClass("active");
+		} else {
+			$("#next-page").removeClass("active");
+		}
+
 		return true;
 	}
 
@@ -88,8 +110,12 @@ $(function () {
 		)
 	);
 	// Show the page links
-	$("#doctors").show();
-	showPage(1);
+	if (totalPages > 1) {
+		$("#doctors").show();
+		showPage(1);
+	} else {
+		$("#doctors .pagination").hide();
+	}
 
 	$(document).on("click", targetElement + " .pagination li.current-page:not(.active)", function () {
 		var targetPage = +$(this).text();
@@ -98,31 +124,35 @@ $(function () {
 	});
 
 	$(targetElement + " #next-page").on("click", function () {
-		var nextPage = currentPage + 1;
-		showPage(nextPage);
-		scrollToElement(targetElement);
+		if (currentPage < totalPages) {
+			var nextPage = currentPage + 1;
+			showPage(nextPage);
+			scrollToElement(targetElement);
+		}
 	});
 
 	$(targetElement + " #previous-page").on("click", function () {
-		var prevPage = currentPage - 1;
-		showPage(prevPage);
-		scrollToElement(targetElement);
+		if (currentPage > 1) {
+			var prevPage = currentPage - 1;
+			showPage(prevPage);
+			scrollToElement(targetElement);
+		}
 	});
 });
 
 //? pagination shares
 $(function () {
-	var targetElement = '.shares';
-	var numberOfItems = $(".shares .content-item").length;
-	// var w = screen.width;
-	// if (w < 768) {
-	// 	var limitPerPage = 5;
-	// } else if (w < 1024) {
-	// 	var limitPerPage = 8;
-	// } else {
-	// 	var limitPerPage = 12;
-	// }
-	var limitPerPage = 12;
+	var targetElement = '#shares';
+	var numberOfItems = $("#shares .content-item").length;
+	// var limitPerPage = 12;
+	var w = screen.width;
+	if (w < 768) {
+		var limitPerPage = 5;
+	} else if (w < 1200) {
+		var limitPerPage = 8;
+	} else {
+		var limitPerPage = 9;
+	}
 	var totalPages = Math.ceil(numberOfItems / limitPerPage);
 	var paginationSize = 7;
 	var currentPage;
@@ -137,11 +167,25 @@ $(function () {
 				.append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(item || "..."))
 				.insertBefore(targetElement + " #next-page");
 		});
+
+		// Add or remove active class from previous and next buttons
+		if (currentPage === 1) {
+			$("#previous-page").addClass("active");
+		} else {
+			$("#previous-page").removeClass("active");
+		}
+
+		if (currentPage === totalPages) {
+			$("#next-page").addClass("active");
+		} else {
+			$("#next-page").removeClass("active");
+		}
+
 		return true;
 	}
 
 	// Include the prev/next buttons:
-	$(".shares .pagination").append(
+	$("#shares .pagination").append(
 		$("<li>").addClass("page-item button-slider-prev").attr({ id: "previous-page" }).append(
 			$(`<a><svg><use xlink:href="img/icons/icons.svg#i-arrow-small-down">`)
 				.addClass("page-link")
@@ -160,9 +204,12 @@ $(function () {
 		)
 	);
 	// Show the page links
-	$(".shares").show();
-	showPage(1);
-
+	if (totalPages > 1) {
+		$("#shares").show();
+		showPage(1);
+	} else {
+		$("#shares .pagination").hide();
+	}
 
 	$(document).on("click", targetElement + " .pagination li.current-page:not(.active)", function () {
 		var targetPage = +$(this).text();
@@ -171,33 +218,18 @@ $(function () {
 	});
 
 	$(targetElement + " #next-page").on("click", function () {
-		var nextPage = currentPage + 1;
-		showPage(nextPage);
-		scrollToElement(targetElement);
+		if (currentPage < totalPages) {
+			var nextPage = currentPage + 1;
+			showPage(nextPage);
+			scrollToElement(targetElement);
+		}
 	});
 
 	$(targetElement + " #previous-page").on("click", function () {
-		var prevPage = currentPage - 1;
-		showPage(prevPage);
-		scrollToElement(targetElement);
+		if (currentPage > 1) {
+			var prevPage = currentPage - 1;
+			showPage(prevPage);
+			scrollToElement(targetElement);
+		}
 	});
-
-	$(".shares .btn-show-more").on("click", function () {
-		var w = screen.width;
-		if (w < '768') {
-			limitPerPage += 5;
-		} else
-			if (w < '1024') {
-				limitPerPage += 4;
-			}
-			else {
-				limitPerPage += 3;
-			}
-		// limitPerPage += 3; // Increase limitPerPage by its initial value
-		totalPages = Math.ceil(numberOfItems / limitPerPage);
-		showPage(currentPage); // Show the current page with the updated limitPerPage
-	});
-
-
-
 });
