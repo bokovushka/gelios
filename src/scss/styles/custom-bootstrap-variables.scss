@@ -9,19 +9,6 @@ $grey: #808b9e !default;
 $light-grey: #d1dae8 !default;
 $red: #ff0000 !default;
 
-// $dark-black: #020a18 !default;
-
-// $main-blue: #00afff !default;
-// $light-blue: #36c0ff !default;
-// $dark-blue: #009ee6 !default;
-
-// $blue: #dce2ff !default;
-// $grey: #878787 !default;
-// $light-grey: #8a90a4 !default;
-// $red: #ff0000 !default;
-// $orange: #f74e37 !default;
-// $green: #11b685 !default;
-
 $colors: () !default;
 $colors: map-merge(
 	(
@@ -32,17 +19,7 @@ $colors: map-merge(
 		"dark-blue": $dark-blue,
 		"grey": $grey,
 		"light-grey": $light-grey,
-		"red": $red,
-		// "dark-black": $dark-black,
-		// "dark-blue": $dark-blue,
-		// "main-blue": $main-blue,
-		// "blue": $blue,
-		// "light-blue": $light-blue,
-		// "grey": $grey,
-		// "light-grey": $light-grey,
-		// "red": $red,
-		// "orange": $orange,
-		// "green": $green
+		"red": $red
 	),
 	$colors
 );
@@ -57,17 +34,7 @@ $theme-colors: map-merge(
 		"dark-blue": $dark-blue,
 		"grey": $grey,
 		"light-grey": $light-grey,
-		"red": $red,
-		// "dark-black": $dark-black,
-		// "dark-blue": $dark-blue,
-		// "main-blue": $main-blue,
-		// "blue": $blue,
-		// "light-blue": $light-blue,
-		// "grey": $grey,
-		// "light-grey": $light-grey,
-		// "red": $red,
-		// "orange": $orange,
-		// "green": $green
+		"red": $red
 	),
 	$theme-colors
 );
@@ -227,7 +194,7 @@ $link-color: $black !default;
 // $link-hover-color: darken($silver-custom, 15%) !default;
 
 //list
-$list-inline-padding: 28px !default;
+$list-inline-padding: 8px !default;
 
 //btn
 $input-btn-padding-y: 1rem !default; //16px

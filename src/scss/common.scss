@@ -244,8 +244,11 @@ p {
 }
 .list-inline-item {
 	&:not(:last-child) {
-		@include lg-max {
+		@include xl-max {
 			margin-right: 12px;
+		}
+		@include lg-max {
+			margin-right: 6px;
 		}
 	}
 }
@@ -787,7 +790,7 @@ form {
 	}
 }
 .select2-container {
-	z-index: 1070;
+	z-index: 1050;
 	.select2-dropdown {
 		&.select2-dropdown--below {
 			border-radius: 0 0 30px 30px;

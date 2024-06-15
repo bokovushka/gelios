@@ -457,7 +457,7 @@ mark,
   display: inline-block;
 }
 .list-inline-item:not(:last-child) {
-  margin-right: 28px;
+  margin-right: 8px;
 }
 
 .initialism {

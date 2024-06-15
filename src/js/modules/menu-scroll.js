@@ -1,5 +1,3 @@
-import $ from 'jquery';
-
 let lastScrollTop = 0;
 
 $(window).scroll(function (event) {
@@ -7,19 +5,49 @@ $(window).scroll(function (event) {
 	let headerThreshold = 15;
 	let mainThreshold = 15;
 
+	if ($(window).width() < 1024) {
+		headerThreshold = 5;
+		mainThreshold = 5;
+	}
 
-	if ($(window).width() <= 1023) {
+	// if ($(window).width() < 1400 && $(window).width() >= 1024) {
+	// 	headerThreshold = 91;
+	// 	mainThreshold = 91;
+	// } else if ($(window).width() < 1024 && $(window).width() >= 768) {
+	// 	headerThreshold = 45;
+	// 	mainThreshold = 45;
+	// } else if ($(window).width() < 768) {
+	// 	headerThreshold = 0;
+	// 	mainThreshold = 0;
+	// }
+
+	if ($(window).width() >= 768) {
 		// Perform header modifications only if window width is 768 or greater
 		if (st > lastScrollTop && $(window).scrollTop() >= mainThreshold) {
-			$(".header-main").addClass("header--show");
+			$(".header").removeClass("header--show").addClass("header--hide");
+			$("main").addClass("show");
 		} else {
+			$(".header").removeClass("header--hide");
 			if ($(window).scrollTop() <= headerThreshold) {
-				$(".header-main").removeClass("header--show");
+				$(".header").removeClass("header--show");
+				$("main").removeClass("show");
+			} else {
+				$(".header").addClass("header--show");
+				$("main").addClass("show");
 			}
 		}
 	}
 	lastScrollTop = st;
 });
+
+
+setInterval(function () {
+	if ($(".header").hasClass("header--hide")) {
+		$(".header-top .current-lang").removeClass("active");
+		$(".header-top .current-lang--inner").removeClass("active");
+		$(".header-top .current-lang .submenu").removeClass("active");
+	}
+}, 300);
 
 
 

@@ -1,6 +1,14 @@
 import $ from 'jquery';
-//? languages
-showMenu($(".header .languages .current-lang .current-lang--inner"), $(".header .languages .current-lang .submenu"), $(".header .languages .current-lang"));
+
+initShowMenu($(".header .languages .current-lang .current-lang--inner"), $(".header .languages .current-lang .submenu"), $(".header .languages .current-lang"));
+initShowMenu($(".header-main--desk .nav-link .nav-link--inner"), $(".header-main--desk .nav-link .submenu"), $(".header-main--desk .nav-link"));
+
+function initShowMenu(links, menus, burgers) {
+	links.each(function (index) {
+		showMenu($(this), menus.eq(index), burgers.eq(index));
+	});
+}
+
 function showMenu(link, menu, burger) {
 	$(document).mouseup(function (e) {
 		if (burger.is(e.target) || burger.has(e.target).length !== 0) {
@@ -9,14 +17,10 @@ function showMenu(link, menu, burger) {
 				burger.addClass('active');
 				link.addClass('active');
 			}
-			// else {
-			// 	menu.removeClass('active'); // скрываем его
-			// 	burger.removeClass('active');
-			// }
 			else {
 				if ((link.is(e.target) || link.has(e.target).length !== 0)) {
 					if (link.hasClass('active')) {
-						menu.removeClass('active'); // скрываем его
+						menu.removeClass('active'); // ховаємо його
 						burger.removeClass('active');
 						link.removeClass('active');
 					}
@@ -24,9 +28,9 @@ function showMenu(link, menu, burger) {
 			}
 		}
 		else {
-			if (!menu.is(e.target) // если клик был не по нашему блоку
-				&& menu.has(e.target).length === 0) { // и не по его дочерним элементам
-				menu.removeClass('active'); // скрываем его
+			if (!menu.is(e.target) // якщо клік був не по нашому блоку
+				&& menu.has(e.target).length === 0) { // і не по його дочірнім елементам
+				menu.removeClass('active'); // ховаємо його
 				burger.removeClass('active');
 				link.removeClass('active');
 			}

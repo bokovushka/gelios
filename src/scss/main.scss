@@ -15,20 +15,6 @@ $grey: #808b9e; //filter: brightness(0) saturate(100%) invert(59%) sepia(15%) sa
 $light-grey: #d1dae8; //filter: brightness(0) saturate(100%) invert(90%) sepia(24%) saturate(273%) hue-rotate(185deg) brightness(96%) contrast(89%);
 $red: #ff0000; //filter: brightness(0) saturate(100%)  invert(17%) sepia(93%) saturate(7332%) hue-rotate(2deg) brightness(99%) contrast(124%);
 
-// $dark-black: #020a18;
-
-// $main-blue: #00afff;
-// $light-blue: #36c0ff;
-// $dark-blue: #009ee6;
-// $sky-blue: #37bdfd;
-
-// $blue: #dce2ff;
-// $grey: #878787;
-// $light-grey: #8a90a4;
-// $red: #ff0000;
-// $orange: #f74e37;
-// $green: #11b685;
-
 html,
 body {
 	width: 100%;
@@ -44,11 +30,24 @@ body {
 main {
 	position: relative;
 	flex: 1 1 auto;
-	@include transition(0.3s ease-out 0s);
-	// margin-top: 78px;
+	margin-top: 150px;
 	overflow: hidden;
-	// @include lg-max {
-	// }
+	@include transition(0.3s ease-out 0s);
+	@include xl-max {
+		margin-top: 173px;
+	}
+	@include md-max {
+		margin-top: 85px;
+	}
+	&.show {
+		margin-top: 120px;
+		@include xl-max {
+			margin-top: 100px;
+		}
+		@include md-max {
+			margin-top: 85px;
+		}
+	}
 	// @include md-max {
 	// 	margin-top: 70px;
 	// 	.home-page & {
@@ -58,8 +57,6 @@ main {
 	// @include sm-max {
 	// }
 }
-
-// @import "typografy";
 
 //?include header=======================================================================================================//
 @import "parts/header";
