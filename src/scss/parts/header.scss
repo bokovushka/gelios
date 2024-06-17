@@ -1,3 +1,7 @@
+:root {
+	--app-height: 100%;
+}
+
 //header
 .header {
 	z-index: 1060;
@@ -653,8 +657,8 @@
 		@include md-max {
 			margin-bottom: 10px;
 			border-radius: 24px;
-			--safe-area-inset-top: env(safe-area-inset-top);
-			height: calc(100vh - 124px - var(--safe-area-inset-top));
+			height: calc(100vh - 124px);
+			height: calc((var(--vh, 1vh) * 100) - 124px);
 			overflow-y: scroll;
 			.push-menu {
 				position: relative;

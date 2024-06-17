@@ -43,10 +43,12 @@
 html,
 body {
   -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape & safari*/
+  height: -webkit-fill-available;
 }
 
 .wrapper {
   min-height: 100%;
+  min-height: -webkit-fill-available;
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -84,6 +86,10 @@ main.show {
   main.show {
     margin-top: 85px;
   }
+}
+
+:root {
+  --app-height: 100%;
 }
 
 .header {
@@ -762,8 +768,8 @@ main.show {
   .header-main .header-main--mob {
     margin-bottom: 10px;
     border-radius: 24px;
-    --safe-area-inset-top: env(safe-area-inset-top);
-    height: calc(100vh - 124px - var(--safe-area-inset-top));
+    height: calc(100vh - 124px);
+    height: calc(var(--vh, 1vh) * 100 - 124px);
     overflow-y: scroll;
   }
   .header-main .header-main--mob .push-menu {
