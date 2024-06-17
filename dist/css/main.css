@@ -565,7 +565,7 @@ main.show {
     position: relative;
     width: 100%;
     max-height: 750px;
-    height: calc(100vh - 163px);
+    height: calc(100vh - 178px);
     border-radius: 32px;
     background: #ffffff;
     overflow: hidden;
@@ -763,6 +763,7 @@ main.show {
 @media (max-width: 1023px) {
   .header-main .header-main--mob {
     margin-bottom: 10px;
+    border-radius: 24px;
     height: calc(100vh - 124px);
     overflow-y: scroll;
   }
