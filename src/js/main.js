@@ -6,4 +6,5 @@ import "./modules/menu-scroll.js";
 import "./modules/show-menu.js";
 import "./modules/multi-level-push-menu.js";
 import "./modules/mobile-menu.js";
+import "./modules/check-scrollbar.js";
 // import "./modules/js.js";

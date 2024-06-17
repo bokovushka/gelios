@@ -112,8 +112,45 @@
 			<div class="row">
 				<div class="col">
 					<nav class="navbar navbar-expand-lg flex-column p-0">
-						<div class="d-flex flex-wrap align-items-center justify-content-between w-100 p-3">
-							<a class="navbar-brand p-0" href="/"><img src="img/logo.png" alt="logo"></a>
+						<div class="inner w-100">
+							<div class="content d-flex justify-content-between">
+								<a class="navbar-brand p-0" href="/"><img src="img/logo.png" alt="logo"></a>
+								<div class="navbar-nav--mob d-flex d-lg-none justify-content-between">
+									<div class="languages">
+										<div class="current-lang">
+											<div class="current-lang--inner d-flex align-items-center">
+												<div class="language mr-1">
+													<span>Ua</span>
+												</div>
+												<svg class="i-arrow-down">
+													<use xlink:href="img/icons/icons.svg#i-arrow-small-down"></use>
+												</svg>
+											</div>
+											<ul class="submenu list-unstyled mb-0 position-absolute py-1 px-2">
+												<li>
+													<div class="language d-flex align-items-center">
+														<a class="d-flex" href="/">
+															<span>Ru</span>
+														</a>
+													</div>
+												</li>
+												<li>
+													<div class="language d-flex align-items-center">
+														<a class="d-flex" href="/">
+															<span>Eng</span>
+														</a>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<button class="navbar-toggler h-100 collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggleMenu">
+										<div class="menu-burger position-relative">
+											<div class="lines"></div>
+										</div>
+									</button>
+								</div>
+							</div>
 							<div class="collapse navbar-collapse justify-content-between order-last" id="navbarSupportedContent">
 								<div class="header-main--desk d-none d-lg-flex align-items-center justify-content-end justify-content-xxl-between w-100">
 									<div class="navbar-nav list-inline">
@@ -171,118 +208,129 @@
 									</div>
 								</div>
 								<div class="header-main--mob d-lg-none">
-									<div class="navbar-nav-wrapper">
-										<div class="navbar-nav">
-											<div class="nav-toggle">
-												<span class="nav-back"></span>
-												<span class="nav-title">Напрямки12412</span>
-												<span class="nav-close"></span>
+									<div class="push-menu d-flex flex-column justify-content-between">
+										<div class="nav-toggle">
+											<span class="nav-back"></span>
+											<span class="nav-title">Menu</span>
+											<span class="nav-close"></span>
+										</div>
+										<div class="push-menu--nav">
+											<div class="push-menu--lvl scrollable-content">
+												<div class="inner">
+													<div class="item has-dropdown">
+														<a href="##">Напрямки</a>
+														<div class="push-menu--lvl scrollable-content">
+															<div class="inner">
+																<div class="item"><a href="##">Напрямки</a></div>
+																<div class="item has-dropdown">
+																	<a href="##">Дієтологія</a>
+																	<div class="push-menu--lvl scrollable-content">
+																		<div class="inner">
+																			<div class="item"><a href="##">Гастроентеролог</a></div>
+																			<div class="item"><a href="##">Дерматовенерологія</a></div>
+																			<div class="item"><a href="##">Алергологія</a></div>
+																			<div class="item"><a href="##">Гематологія</a></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item has-dropdown">
+																	<a href="##">Кардіологія</a>
+																	<div class="push-menu--lvl">
+																		<div class="inner">
+																			<div class="item"><a href="##">Гастроентеролог</a></div>
+																			<div class="item"><a href="##">Дерматовенерологія</a></div>
+																			<div class="item"><a href="##">Гематологія</a></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item has-dropdown">
+																	<a href="##">Неврологія</a>
+																	<div class="push-menu--lvl">
+																		<div class="inner">
+																			<div class="item"><a href="##">Гастроентеролог</a></div>
+																			<div class="item"><a href="##">Гематологія</a></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item has-dropdown">
+																	<a href="##">Ендокринологія</a>
+																	<div class="push-menu--lvl">
+																		<div class="inner">
+																			<div class="item"><a href="##">Дерматовенерологія</a></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="item has-dropdown">
+														<a href="##">Хірургія</a>
+														<div class="push-menu--lvl scrollable-content">
+															<div class="inner">
+																<div class="item"><a href="##">Хірургія</a></div>
+																<div class="item has-dropdown">
+																	<a href="##">Дієтологія</a>
+																	<div class="push-menu--lvl scrollable-content">
+																		<div class="inner">
+																			<div class="item"><a href="##">Гастроентеролог</a></div>
+																			<div class="item"><a href="##">Дерматовенерологія</a></div>
+																			<div class="item"><a href="##">Алергологія</a></div>
+																			<div class="item"><a href="##">Гематологія</a></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item has-dropdown">
+																	<a href="##">Кардіологія</a>
+																	<div class="push-menu--lvl">
+																		<div class="inner">
+																			<div class="item"><a href="##">Гастроентеролог</a></div>
+																			<div class="item"><a href="##">Дерматовенерологія</a></div>
+																			<div class="item"><a href="##">Гематологія</a></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item has-dropdown">
+																	<a href="##">Неврологія</a>
+																	<div class="push-menu--lvl">
+																		<div class="inner">
+																			<div class="item"><a href="##">Гастроентеролог</a></div>
+																			<div class="item"><a href="##">Гематологія</a></div>
+																		</div>
+																	</div>
+																</div>
+																<div class="item has-dropdown">
+																	<a href="##">Ендокринологія</a>
+																	<div class="push-menu--lvl">
+																		<div class="inner">
+																			<div class="item"><a href="##">Дерматовенерологія</a></div>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="item"><a href="##">Про компанію</a></div>
+													<div class="item"><a href="##">Акції</a></div>
+													<div class="item"><a href="##">Лікарі</a></div>
+													<div class="item"><a href="##">Стаціонар</a></div>
+													<div class="item"><a href="##">Ціни</a></div>
+													<div class="item"><a href="##">Контакти</a></div>
+												</div>
 											</div>
-											<ul class="d-flex flex-column align-items-center justify-content-between">
-												<li class="has-dropdown">
-													<a href="##">Для вас</a>
-													<ul>
-														<li><a href="/for-you.html">Для вас</a></li>
-														<li class="has-dropdown">
-															<a href="##">Автострахування</a>
-															<ul>
-																<li><a href="/motor-insurance.html">Всі послуги</a></li>
-																<li><a href="/osago.html">ОСЦПВ (Автоцивілка)</a></li>
-																<li><a href="/green-card.html">Зелена картка</a></li>
-																<li><a href="/casco.html">Страхування КАСКО</a></li>
-																<li><a href="/minicasco.html">Міні КАСКО</a></li>
-																<li><a href="/eurocasco.html">Євро КАСКО</a></li>
-																<li><a href="/full-auto-protection.html">Повний автозахист</a></li>
-															</ul>
-														</li>
-														<li class="has-dropdown">
-															<a href="##">Захист майна</a>
-															<ul>
-																<li><a href="/property-protection.html">Всі послуги</a></li>
-																<li><a href="/povniy-zhytlozahyst.html">Страхування житла та відповідальності</a></li>
-																<li><a href="/strahuvannya-mayna.html">Послуга страхування майна</a></li>
-																<li><a href="/strahuvanya-vidpovidalnosti.html">Страхування відповідальності</a></li>
-															</ul>
-														</li>
-														<li class="has-dropdown">
-															<a href="##">Захист здоров’я</a>
-															<ul>
-																<li><a href="/health-protection.html">Всі послуги</a></li>
-																<li><a href="/medychna-strahovka.html">Повний медзахист</a></li>
-																<li><a href="/tas-territoriya-zdorovya.html">ТАС - територія здоров’я</a></li>
-																<li><a href="/strahuvannya-zdorovya-na-vypadok-hvoroby.html">Страхування здоров’я на випадок хвороби</a></li>
-																<li><a href="/tas-doctor-medicinskoe-strahovanie.html">Послуга медичного страхування “TAS - Doctor”</a></li>
-																<li><a href="/strahuvannya-vid-neshhasnogo-vypadku.html">Страхування від нещасного випадку</a></li>
-																<li><a href="/strahuvannya-vid-neshhasnogo-vypadku-na-transporti.html">Страхування від нещасного випадку в транспорті</a></li>
-															</ul>
-														</li>
-														<li class="has-dropdown">
-															<a href="##">Туристичне страхування</a>
-															<ul>
-																<li><a href="/travel.html">Всі послуги</a></li>
-																<li><a href="/strahovanie-podorozhey-za-kordon.html">ТАС Тревел - подорож за кордон</a></li>
-																<li><a href="/strahovanie-podorozhey-po-ukraini.html">ТАС Тревел - подорож по Україні</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<li class="has-dropdown">
-													<a href="##">Для бізнесу</a>
-													<ul>
-														<li><a href="##">Для бізнесу</a></li>
-														<li class="has-dropdown">
-															<a href="##">Захист співробітників</a>
-															<ul>
-																<li><a href="##">Всі послуги</a></li>
-																<li><a href="##">Добровільне медичне страхування (ДМС)</a></li>
-																<li><a href="##">Страхування співробітників від нещасного випадку</a></li>
-																<li><a href="##">Страхування на випадок захворювання</a></li>
-																<li><a href="##">Страхування співробітників від нещасного випадку на транспорті</a></li>
-															</ul>
-														</li>
-														<li class="has-dropdown">
-															<a href="##">Захист майна</a>
-															<ul>
-																<li><a href="##">Всі послуги</a></li>
-																<li><a href="##">Повний бізнес-захист</a></li>
-																<li><a href="##">Страхування обладнання</a></li>
-																<li><a href="##">Страхування майна юридичних осіб</a></li>
-																<li><a href="##">Страхування будівельно-монтажних робіт</a></li>
-																<li><a href="##">Страхування вантажів</a></li>
-															</ul>
-														</li>
-														<li class="has-dropdown">
-															<a href="##">Захист транспорту</a>
-															<ul>
-																<li><a href="##">Всі послуги</a></li>
-																<li><a href="##">Страхування автотранспорту в Україні</a></li>
-																<li><a href="##">Страхування залізничного транспорту</a></li>
-															</ul>
-														</li>
-													</ul>
-												</li>
-												<li><a href="##">Реферальна програма</a></li>
-												<li><a href="##">Купити онлайн</a></li>
-												<li class="d-md-none"><a href="##">Про компанію</a></li>
-												<li class="d-md-none"><a href="##">Блог</a></li>
-												<li class="d-md-none"><a href="##">Публічна інформація</a></li>
-												<li class="d-md-none"><a href="##">Карта офісів</a></li>
-												<li class="d-md-none"><a href="##">Контакти</a></li>
-												<li class="w-100">
-													<ul class="navbar-nav--other list-inline mb-0 d-flex align-items-center">
-														<li class="list-inline-item"><a href="##" class="btn btn-blue btn-default">Записатися на прийом</a></li>
-													</ul>
-												</li>
-											</ul>
+										</div>
+										<div class="navbar-nav--other mb-5">
+											<button type="button" class="btn btn-blue w-100 mb-5">Записатися на прийом</button>
+											<div class="contact-offices">
+												<div class="contact-offices--label">Переглянути філії:</div>
+												<div class="buttons">
+													<button type="button" class="contact-details btn"><span>Дніпро</span></button>
+													<button type="button" class="contact-details btn"><span>Новомосковськ</span></button>
+												</div>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<button class="navbar-toggler h-100 collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="toggleMenu">
-								<div class="menu-burger position-relative">
-									<div class="lines"></div>
-								</div>
-							</button>
 						</div>
 					</nav>
 				</div>

@@ -10,19 +10,7 @@ $(window).scroll(function (event) {
 		mainThreshold = 5;
 	}
 
-	// if ($(window).width() < 1400 && $(window).width() >= 1024) {
-	// 	headerThreshold = 91;
-	// 	mainThreshold = 91;
-	// } else if ($(window).width() < 1024 && $(window).width() >= 768) {
-	// 	headerThreshold = 45;
-	// 	mainThreshold = 45;
-	// } else if ($(window).width() < 768) {
-	// 	headerThreshold = 0;
-	// 	mainThreshold = 0;
-	// }
-
-	if ($(window).width() >= 768) {
-		// Perform header modifications only if window width is 768 or greater
+	if ($(window).width() <= 1024) {
 		if (st > lastScrollTop && $(window).scrollTop() >= mainThreshold) {
 			$(".header").removeClass("header--show").addClass("header--hide");
 			$("main").addClass("show");
