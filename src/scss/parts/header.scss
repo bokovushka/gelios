@@ -653,7 +653,7 @@
 		@include md-max {
 			margin-bottom: 10px;
 			border-radius: 24px;
-			height: calc(100vh - 124px);
+			height: calc(100vh - 124px - env(safe-area-inset-top));
 			overflow-y: scroll;
 			.push-menu {
 				position: relative;
