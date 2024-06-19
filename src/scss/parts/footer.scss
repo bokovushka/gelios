@@ -1,3 +1,156 @@
 //footer
 .footer {
+	.footer-logo {
+		max-width: 120px;
+	}
+	ul li {
+		&:not(:last-child) {
+			margin-bottom: 8px;
+		}
+		a {
+			color: $white;
+			font-weight: 500;
+			&:hover {
+				color: $black;
+			}
+		}
+	}
+	.socials {
+		@include sm-max {
+			margin-right: 10px;
+		}
+		ul li {
+			margin-bottom: 0;
+		}
+		a {
+			border-radius: 50%;
+			border: 1px solid $white;
+			background: $white;
+			padding: 8px !important;
+			svg {
+				transition: unset;
+			}
+			&:hover {
+				border: 1px solid $black;
+				background: $black;
+				svg {
+					filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(140deg)
+						brightness(109%) contrast(101%);
+				}
+			}
+		}
+	}
+	.socials,
+	.footer-logo--wrap {
+		@include sm-max {
+			width: calc(50% - 20px);
+		}
+	}
+	.footer-logo--wrap {
+		@include sm-max {
+			margin-right: 10px;
+		}
+	}
+	.footer-descrp {
+		@include sm-max {
+			order: 13;
+		}
+	}
+	.link-phone {
+		display: flex;
+		align-items: center;
+		color: $white;
+		@include transition(all 0.3s ease 0s);
+		&:hover {
+			color: $black;
+			&::before {
+				filter: brightness(0) saturate(100%) invert(4%) sepia(4%) saturate(593%) hue-rotate(314deg) brightness(101%)
+					contrast(95%);
+			}
+		}
+		&::before {
+			content: "";
+			display: block;
+			width: 24px;
+			height: 24px;
+			margin-right: 5px;
+			position: relative;
+			background: url(../img/icons/icons.svg#i-phone) no-repeat center;
+			background-size: contain;
+			filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(140deg) brightness(109%)
+				contrast(101%);
+			@include transition(all 0.3s ease 0s);
+		}
+	}
+	.contact-details {
+		padding: 0;
+		border: unset;
+		background: unset;
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		gap: 5px;
+		color: $white;
+		@include transition(all 0.3s ease 0s);
+		&:hover {
+			color: $black;
+			&::before,
+			&::after {
+				filter: unset;
+			}
+		}
+		&::before,
+		&::after {
+			content: "";
+			display: block;
+			width: 24px;
+			height: 24px;
+			position: relative;
+			filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(140deg) brightness(109%)
+				contrast(101%);
+			@include transition(all 0.3s ease 0s);
+		}
+		&::before {
+			background: url(../img/icons/icons.svg#i-map-pin) no-repeat center;
+			background-size: contain;
+			order: 2;
+		}
+		&::after {
+			background: url(../img/icons/icons.svg#i-clock) no-repeat center;
+			background-size: contain;
+			order: 1;
+		}
+	}
+	.footer-contacts {
+		ul li {
+			a {
+				transition: unset;
+			}
+		}
+	}
+	.footer-bottom {
+		.copyright {
+			font-size: 14px;
+			line-height: 17px;
+		}
+	}
+	.regulation {
+		ul {
+			column-gap: 40px;
+			row-gap: 10px;
+			li {
+				margin-right: 0;
+				margin-bottom: 0;
+				a {
+					color: $blue;
+					font-size: 14px;
+					font-weight: 500;
+					line-height: 140%;
+					&:hover {
+						color: $black;
+					}
+				}
+			}
+		}
+	}
 }

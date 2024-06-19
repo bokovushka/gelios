@@ -383,16 +383,18 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+			padding: 15px;
 			@include md-max {
 				all: unset;
 				display: block;
+				padding: 0px;
 			}
 			.content {
-				padding: 15px;
 				background: $white;
 				border-radius: 64px;
 				@include md-max {
 					width: 100%;
+					padding: 15px;
 				}
 			}
 		}

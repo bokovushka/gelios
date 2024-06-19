@@ -1628,7 +1628,7 @@ form {
 
 #btnTop {
 	display: inline-block;
-	background: $blue;
+	background: $black;
 	width: 32px;
 	height: 32px;
 	border-radius: 50%;
@@ -1643,16 +1643,19 @@ form {
 	align-items: center;
 	justify-content: center;
 	padding: 0;
+	transform: scaleY(-1);
 	svg {
 		width: 24px;
 		height: 24px;
+		filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(140deg) brightness(109%)
+			contrast(101%);
 		@include transition(0.3s ease-out 0s);
 	}
 	&:hover {
 		background: $white;
 		svg {
-			filter: brightness(0) saturate(100%) invert(49%) sepia(69%) saturate(1889%) hue-rotate(167deg) brightness(100%)
-				contrast(104%);
+			filter: brightness(0) saturate(100%) invert(63%) sepia(100%) saturate(1319%) hue-rotate(167deg) brightness(88%)
+				contrast(87%);
 		}
 	}
 }
