@@ -17,8 +17,8 @@ $red: #ff0000; //filter: brightness(0) saturate(100%)  invert(17%) sepia(93%) sa
 
 html,
 body {
-	// width: 100%;
-	// height: 100%;
+	width: 100%;
+	height: 100%;
 	-webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape & safari*/
 }
 .wrapper {

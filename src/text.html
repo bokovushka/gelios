@@ -4,7 +4,7 @@
 "title":"Текстова сторінка"
 })
 
-<body class="home-page">
+<body>
 	<div class="wrapper">
 		@@include('html/header.html',{})
 		<main class="main">
@@ -47,8 +47,13 @@
 				</div>
 			</section>
 		</main>
+		@@include('html/footer.html',{})
 	</div>
-	@@include('html/footer.html',{})
+	@@include('html/popup/popup--sign-up-appointment.html',{})
+	@@include('html/popup/popup--contacts.html',{})
+
+	@@include('html/maps/contacts-map.html',{})
+
 	@@include('html/scripts.html',{})
 </body>
 

@@ -237,6 +237,9 @@ p {
 		// 	line-height: 18px;
 		// }
 	}
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 .small-txt {
 	font-size: 12px;
@@ -554,19 +557,16 @@ p {
 	}
 }
 .btn-review-add-pic {
-	svg {
-		width: 24px;
-		height: 24px;
-	}
-	&::after {
-		left: 32px;
-	}
+	background: #bad9ff;
+	border-radius: 50%;
+	padding: 35px;
+	@include transition(0.3s ease-out 0s);
 	&:hover {
-		text-decoration: none;
-		&::after {
-			width: calc(100% - 32px);
-			background: $blue;
-		}
+		background: $blue;
+	}
+	svg {
+		width: 40px;
+		height: 40px;
 	}
 }
 .bg-down {
@@ -702,11 +702,44 @@ form {
 		}
 	}
 	textarea {
-		&.form-control {
-			border-radius: 20px;
-			padding: 12px 32px;
-			background: $white;
+		&::-webkit-scrollbar {
+			width: 8px;
+			height: 8px;
+			background-color: #f4f4f4;
+			border-radius: 24px;
 		}
+		&::-webkit-scrollbar-thumb {
+			background-color: $blue;
+			border-radius: 24px;
+		}
+		&.form-control {
+			padding: 0;
+			border-radius: unset;
+			border: unset !important;
+			&:hover,
+			&:focus {
+				border: unset !important;
+			}
+			&:not(:placeholder-shown) {
+				border: unset !important;
+			}
+		}
+	}
+	.textarea-container {
+		position: relative;
+		border-radius: 20px;
+		padding: 12px 32px 42px 32px;
+		background: $white;
+		border: 1px solid $blue;
+	}
+	.textarea-counter {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 140%;
+		color: $light-grey;
+		position: absolute;
+		right: 32px;
+		bottom: 15px;
 	}
 	.select2-container {
 		width: 100% !important;
@@ -1248,6 +1281,19 @@ form {
 		&.active {
 			.page-link {
 				cursor: default;
+				background: $light-grey;
+				svg {
+					filter: unset;
+				}
+			}
+			&:hover {
+				.page-link {
+					background: $light-grey;
+					border-color: $light-grey;
+					svg {
+						filter: unset;
+					}
+				}
 			}
 		}
 		.page-link {
@@ -1288,18 +1334,24 @@ form {
 		.modal-content {
 			border-radius: 20px;
 			box-shadow: 0px 4px 6px 0px rgba(10, 26, 33, 0.2);
-			background: linear-gradient(154.36deg, rgb(4, 25, 66) 11.449%, rgb(4, 21, 38) 90.04%);
-			color: $white;
+			background: $white;
+			color: $black;
 			.modal-body {
-				.modal-title {
-					font-size: 24px;
-					line-height: 29px;
-				}
+				position: static;
 				.close {
+					position: absolute;
+					top: 22px;
+					right: 25px;
+					border-radius: 50%;
+					background: $light-blue;
 					opacity: 1;
+					padding: 10px;
 					@include transition(0.3s ease-out 0s);
 					&:hover {
 						opacity: 0.5;
+					}
+					span {
+						display: flex;
 					}
 				}
 				.custom-checkbox {
@@ -1578,6 +1630,7 @@ form {
 .map {
 	height: 100%;
 	width: 100%;
+	min-height: 480px;
 }
 .gm-style {
 	.gm-style-iw {
@@ -1598,31 +1651,44 @@ form {
 // }
 
 //google maps html marker
+// .map-marker-place {
+// 	background: $blue;
+// 	border-radius: 50%;
+// 	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
+// 	margin: 10px;
+// 	height: 20px;
+// 	width: 20px;
+// 	border: 3px solid $white;
+// 	transform: scale(1);
+// 	animation: pulse-black 2s infinite;
+// }
+// @keyframes pulse-black {
+// 	0% {
+// 		transform: scale(0.75);
+// 		box-shadow: 0 0 0 0 rgba(91, 117, 255, 0.7);
+// 	}
+
+// 	70% {
+// 		transform: scale(1);
+// 		box-shadow: 0 0 0 10px rgba(91, 117, 255, 0);
+// 	}
+
+// 	100% {
+// 		transform: scale(0.75);
+// 		box-shadow: 0 0 0 0 rgba(91, 117, 255, 0);
+// 	}
+// }
+
 .map-marker-place {
-	background: $blue;
-	border-radius: 50%;
-	box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-	margin: 10px;
-	height: 20px;
-	width: 20px;
-	border: 3px solid $white;
-	transform: scale(1);
-	animation: pulse-black 2s infinite;
-}
-@keyframes pulse-black {
-	0% {
-		transform: scale(0.75);
-		box-shadow: 0 0 0 0 rgba(91, 117, 255, 0.7);
-	}
-
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(91, 117, 255, 0);
-	}
-
-	100% {
-		transform: scale(0.75);
-		box-shadow: 0 0 0 0 rgba(91, 117, 255, 0);
+	&::before {
+		content: "";
+		display: block;
+		width: 40px;
+		height: 40px;
+		margin-right: 5px;
+		position: relative;
+		background: url(../img/icons/icons.svg#i-google-maps-pin) no-repeat center;
+		background-size: contain;
 	}
 }
 

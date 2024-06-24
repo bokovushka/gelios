@@ -1,0 +1,14 @@
+<svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip2436_11276">
+			<rect id="test-tube-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="test-tube-line" width="40.000000" height="40.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip2436_11276)">
+		<path id="Vector" d="M28.33 3.33L28.33 6.66L26.66 6.66L26.66 30C26.66 33.68 23.68 36.66 20 36.66C16.31 36.66 13.33 33.68 13.33 30L13.33 6.66L11.66 6.66L11.66 3.33L28.33 3.33ZM23.33 16.66L16.66 16.66L16.66 30C16.66 31.84 18.15 33.33 20 33.33C21.84 33.33 23.33 31.84 23.33 30L23.33 16.66ZM21.66 25C22.58 25 23.33 25.74 23.33 26.66C23.33 27.58 22.58 28.33 21.66 28.33C20.74 28.33 20 27.58 20 26.66C20 25.74 20.74 25 21.66 25ZM18.33 20C19.25 20 20 20.74 20 21.66C20 22.58 19.25 23.33 18.33 23.33C17.41 23.33 16.66 22.58 16.66 21.66C16.66 20.74 17.41 20 18.33 20ZM23.33 6.66L16.66 6.66L16.66 13.33L23.33 13.33L23.33 6.66Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

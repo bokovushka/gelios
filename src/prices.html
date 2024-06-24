@@ -4,7 +4,7 @@
 "title":"Ціни"
 })
 
-<body class="home-page">
+<body>
 	<div class="wrapper">
 		@@include('html/header.html',{})
 		<main class="main">
@@ -28,13 +28,32 @@
 					</div>
 				</div>
 			</section>
-			<section class="prices-list mb-24">
+			<section class="mb-8">
 				<div class="container">
-					<div class="row mb-8">
-						<div class="col d-flex align-items-center justify-content-between">
-							<div class="h2 font-m font-weight-bolder text-blue">Ціни</div>
+					<div class="row">
+						<div class="col">
+							<div class="row mb-8">
+								<div class="col d-flex align-items-center justify-content-between">
+									<div class="h2 font-m font-weight-bolder text-blue">Ціни</div>
+								</div>
+							</div>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col">
+							<div class="search">
+								<div class="input-search">
+									<input type="search" class="search-input" placeholder="Пошук по адресі">
+									<button type="button" class="search-icon btn p-0"></button>
+								</div>
+								<div class="results-search"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="prices-list mb-24">
+				<div class="container">
 					<div class="row">
 						<div class="col">
 							<div class="accordion" id="accordion-prices-list">
@@ -279,8 +298,13 @@
 				</div>
 			</section>
 		</main>
+		@@include('html/footer.html',{})
 	</div>
-	@@include('html/footer.html',{})
+	@@include('html/popup/popup--sign-up-appointment.html',{})
+	@@include('html/popup/popup--contacts.html',{})
+
+	@@include('html/maps/contacts-map.html',{})
+
 	@@include('html/scripts.html',{})
 </body>
 

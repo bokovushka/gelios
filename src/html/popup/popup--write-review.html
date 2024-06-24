@@ -1,0 +1,52 @@
+<div class="modal modal--custom popup--write-review fade" id="popup--write-review" data-keyboard="false" tabindex="-1" aria-labelledby="popup--write-reviewLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content py-5 px-3 py-md-13 px-md-11">
+			<div class="modal-body p-0">
+				<form class="form-popup--write-review" autocomplete="off">
+					<div class="row">
+						<div class="col position-static">
+							<div class="d-flex align-items-start justify-content-between mb-5">
+								<div class="h2 font-m modal-title font-weight-bolder mb-0 pr-8">Залишити відгук</div>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">
+										<svg>
+											<use xlink:href="img/icons/icons.svg#i-close"></use>
+										</svg>
+									</span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="row field-wrap">
+						<div class="col-12 mb-3 text-center">
+							<button type="button" class="btn btn-review-add-pic">
+								<svg>
+									<use xlink:href="img/icons/icons.svg#i-photo"></use>
+								</svg>
+							</button>
+						</div>
+						<div class="col-12">
+							<div class="field mb-2">
+								<label class="control-label mb-2" for="form-write-review--name">Вкажіть ПіБ</label>
+								<input type="text" id="form-write-review--name" class="form-control mb-2" placeholder="Вкажіть ПіБ">
+								<div class="field--help-info small-txt text-red mb-2">Вкажіть ПіБ</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="field mb-2">
+								<div class="control-label mb-2">Залиште відгук</div>
+								<div class="textarea-container">
+									<textarea class="form-textarea form-control h-100" rows="8" maxlength="300" placeholder="Наприклад, усе дуже професійно в цьому медичному центрі для реабілітації після травми..."></textarea>
+									<div class="textarea-counter"><span class="count">0</span> / 300</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12">
+							<button type="button" class="btn btn-blue font-weight-bold w-100 mt-2" data-toggle="modal" data-target="#popup--review-thank" data-dismiss="modal" aria-label="Close">Залишити відгук</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

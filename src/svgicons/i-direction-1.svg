@@ -1,0 +1,29 @@
+<svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip265_7118">
+			<rect id="psychotherapy-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_7122">
+			<rect id="dossier-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_7126">
+			<rect id="empathize-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_7130">
+			<rect id="first-aid-kit-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_7134">
+			<rect id="health-book-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_7138">
+			<rect id="nurse-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="psychotherapy-line" width="40.000000" height="40.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip265_7118)">
+		<path id="Vector" d="M18.33 3.33C25.11 3.33 30.71 8.39 31.55 14.94L35.3 20.83C35.55 21.22 35.5 21.8 34.93 22.05L31.66 23.44L31.66 28.33C31.66 30.17 30.17 31.66 28.33 31.66L25 31.66L25 36.66L10 36.66L10 30.5C10 28.54 9.27 26.68 7.92 25C6.09 22.71 5 19.81 5 16.66C5 9.3 10.97 3.33 18.33 3.33ZM18.33 6.66C12.81 6.66 8.33 11.14 8.33 16.66C8.33 18.97 9.11 21.15 10.52 22.91C12.34 25.18 13.33 27.77 13.33 30.5L13.33 33.33L21.66 33.33L21.66 28.33L28.33 28.33L28.33 21.25L30.91 20.14L28.34 16.1L28.25 15.36C27.6 10.41 23.37 6.66 18.33 6.66ZM18.33 11.66C19.25 11.66 20 12.41 20 13.33L20 15L21.66 15C22.58 15 23.33 15.74 23.33 16.66C23.33 17.58 22.58 18.33 21.66 18.33L20 18.33L20 20C20 20.91 19.25 21.66 18.33 21.66C17.41 21.66 16.66 20.91 16.66 20L16.66 18.33L15 18.33C14.08 18.33 13.33 17.58 13.33 16.66C13.33 15.74 14.08 15 15 15L16.66 14.99L16.66 13.33C16.66 12.41 17.41 11.66 18.33 11.66Z" fill="#3DA6D3" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

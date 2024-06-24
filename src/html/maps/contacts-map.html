@@ -1,0 +1,106 @@
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgMBbn1eBSqj8V9kKOn6CqiwTZhoTQP6s&callback=initMap&libraries=marker&v=beta" defer></script>
+<script>
+	function initMap() {
+		const mapConfigs = [
+			{
+				elementId: "map",
+				center: { lat: 50.45668411158, lng: 30.50518209469263 },
+				zoom: 10.1,
+				tourStops: [
+					{ position: { lat: 51.64334524926339, lng: 32.82858348658312 }, title: "Офіс 1" },
+					{ position: { lat: 50.45853652359974, lng: 30.411489795412983 }, title: "Офіс 2" },
+				],
+			},
+			{
+				elementId: "map1",
+				center: { lat: 50.4501, lng: 30.5234 },
+				zoom: 10.0,
+				tourStops: [
+					{ position: { lat: 50.4501, lng: 30.5234 }, title: "Офіс 1-1" },
+					{ position: { lat: 50.45466, lng: 30.5238 }, title: "Офіс 1-2" },
+				],
+			},
+			{
+				elementId: "map2",
+				center: { lat: 49.839683, lng: 24.029717 },
+				zoom: 12.0,
+				tourStops: [
+					{ position: { lat: 49.839683, lng: 24.029717 }, title: "Офіс 2-1" },
+					{ position: { lat: 49.832213, lng: 24.029194 }, title: "Офіс 2-2" },
+				],
+			},
+			{
+				elementId: "map3",
+				center: { lat: 46.482526, lng: 30.7233095 },
+				zoom: 11.0,
+				tourStops: [
+					{ position: { lat: 46.482526, lng: 30.7233095 }, title: "Офіс 3-1" },
+					{ position: { lat: 46.47747, lng: 30.73262 }, title: "Офіс 3-2" },
+				],
+			},
+			{
+				elementId: "map4",
+				center: { lat: 50.4501, lng: 30.5234 },
+				zoom: 10.0,
+				tourStops: [
+					{ position: { lat: 50.4501, lng: 30.5234 }, title: "Офіс 4-1" },
+					{ position: { lat: 50.45466, lng: 30.5238 }, title: "Офіс 4-2" },
+				],
+			},
+		];
+
+		mapConfigs.forEach(({ elementId, center, zoom, tourStops }) => {
+			const mapElement = document.getElementById(elementId);
+			if (mapElement) {
+				const map = new google.maps.Map(mapElement, {
+					center,
+					zoom,
+					disableDefaultUI: true,
+					scaleControl: true,
+					zoomControl: true,
+					scrollwheel: false,
+					mapId: "cd19383a34cacd50",
+					styles: [
+						{
+							featureType: "administrative.province",
+							elementType: "geometry.stroke",
+							stylers: [{ visibility: "off" }],
+						},
+					],
+				});
+
+				const infoWindow = new google.maps.InfoWindow();
+
+				tourStops.forEach(({ position, title }) => {
+					const mapMarkerPlace = document.createElement("div");
+					mapMarkerPlace.className = "map-marker-place";
+
+					const pinView = new google.maps.marker.PinView();
+					const marker = new google.maps.marker.AdvancedMarkerView({
+						position,
+						map,
+						title: `${title}`,
+						content: mapMarkerPlace,
+					});
+
+					marker.addListener("click", ({ domEvent, latLng }) => {
+						const { target } = domEvent;
+
+						infoWindow.close();
+						infoWindow.setContent(marker.title);
+						infoWindow.open(marker.map, marker);
+					});
+				});
+
+				map.data.setStyle({
+					strokeColor: "#FF0000",
+					strokeOpacity: 0.5,
+					strokeWeight: 1.5,
+					fillColor: "#dce2ff",
+					fillOpacity: 0.25,
+				});
+			}
+		});
+	}
+
+</script>

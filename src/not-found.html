@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('html/head.html',{
+"title":"404"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<section class="nav-breadcrumb mt-8 mb-8">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<nav aria-label="breadcrumb" class="breadcrumb-nav">
+								<ol class="breadcrumb mb-0">
+									<li class="breadcrumb-item">
+										<a href="index.html">
+											<svg class="i-home">
+												<use xlink:href="img/icons/icons.svg#i-home"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="breadcrumb-item active" aria-current="page">404</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="not-found text-blue mb-24">
+				<div class="container">
+					<div class="row">
+						<div class="col text-center">
+							<div class="inner">
+								<div class="title mb-5">404</div>
+								<p class="mb-5">Сторінку не знайдено</p>
+								<a href="index.html" class="btn btn-indent btn-blue">На головну</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+	@@include('html/popup/popup--sign-up-appointment.html',{})
+	@@include('html/popup/popup--contacts.html',{})
+
+	@@include('html/maps/contacts-map.html',{})
+
+	@@include('html/scripts.html',{})
+</body>
+
+</html>

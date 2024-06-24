@@ -233,3 +233,189 @@ $(function () {
 		}
 	});
 });
+
+//? pagination reviews
+$(function () {
+	var targetElement = '#reviews';
+	var numberOfItems = $("#reviews .content-item").length;
+	// var limitPerPage = 12;
+	var w = screen.width;
+	if (w < 1024) {
+		var limitPerPage = 5;
+	} else {
+		var limitPerPage = 8;
+	}
+	var totalPages = Math.ceil(numberOfItems / limitPerPage);
+	var paginationSize = 7;
+	var currentPage;
+
+	function showPage(whichPage) {
+		if (whichPage < 1 || whichPage > totalPages) return false;
+		currentPage = whichPage;
+		$(targetElement + " .content-item").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+		$(targetElement + " .pagination li").slice(1, -1).remove();
+		getPageList(totalPages, currentPage, paginationSize).forEach(item => {
+			$("<li>").addClass("page-item " + (item ? "current-page " : "") + (item === currentPage ? "active " : ""))
+				.append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(item || "..."))
+				.insertBefore(targetElement + " #next-page");
+		});
+
+		// Add or remove active class from previous and next buttons
+		if (currentPage === 1) {
+			$("#previous-page").addClass("active");
+		} else {
+			$("#previous-page").removeClass("active");
+		}
+
+		if (currentPage === totalPages) {
+			$("#next-page").addClass("active");
+		} else {
+			$("#next-page").removeClass("active");
+		}
+
+		return true;
+	}
+
+	// Include the prev/next buttons:
+	$("#reviews .pagination").append(
+		$("<li>").addClass("page-item button-slider-prev").attr({ id: "previous-page" }).append(
+			$(`<a><svg><use xlink:href="img/icons/icons.svg#i-arrow-small-down">`)
+				.addClass("page-link")
+				.attr({
+					href: "javascript:void(0)"
+				})
+			// .text("Prev")
+		),
+		$("<li>").addClass("page-item button-slider-next").attr({ id: "next-page" }).append(
+			$(`<a><svg><use xlink:href="img/icons/icons.svg#i-arrow-small-down">`)
+				.addClass("page-link")
+				.attr({
+					href: "javascript:void(0)"
+				})
+			// .text("Next")
+		)
+	);
+	// Show the page links
+	if (totalPages > 1) {
+		$("#reviews").show();
+		showPage(1);
+	} else {
+		$("#reviews .pagination").hide();
+	}
+
+	$(document).on("click", targetElement + " .pagination li.current-page:not(.active)", function () {
+		var targetPage = +$(this).text();
+		showPage(targetPage);
+		scrollToElement(targetElement);
+	});
+
+	$(targetElement + " #next-page").on("click", function () {
+		if (currentPage < totalPages) {
+			var nextPage = currentPage + 1;
+			showPage(nextPage);
+			scrollToElement(targetElement);
+		}
+	});
+
+	$(targetElement + " #previous-page").on("click", function () {
+		if (currentPage > 1) {
+			var prevPage = currentPage - 1;
+			showPage(prevPage);
+			scrollToElement(targetElement);
+		}
+	});
+});
+
+//? pagination news
+$(function () {
+	var targetElement = '#news';
+	var numberOfItems = $("#news .content-item").length;
+	// var limitPerPage = 12;
+	var w = screen.width;
+	if (w < 768) {
+		var limitPerPage = 5;
+	} else if (w < 1200) {
+		var limitPerPage = 8;
+	} else {
+		var limitPerPage = 9;
+	}
+	var totalPages = Math.ceil(numberOfItems / limitPerPage);
+	var paginationSize = 9;
+	var currentPage;
+
+	function showPage(whichPage) {
+		if (whichPage < 1 || whichPage > totalPages) return false;
+		currentPage = whichPage;
+		$(targetElement + " .content-item").hide().slice((currentPage - 1) * limitPerPage, currentPage * limitPerPage).show();
+		$(targetElement + " .pagination li").slice(1, -1).remove();
+		getPageList(totalPages, currentPage, paginationSize).forEach(item => {
+			$("<li>").addClass("page-item " + (item ? "current-page " : "") + (item === currentPage ? "active " : ""))
+				.append($("<a>").addClass("page-link").attr({ href: "javascript:void(0)" }).text(item || "..."))
+				.insertBefore(targetElement + " #next-page");
+		});
+
+		// Add or remove active class from previous and next buttons
+		if (currentPage === 1) {
+			$("#previous-page").addClass("active");
+		} else {
+			$("#previous-page").removeClass("active");
+		}
+
+		if (currentPage === totalPages) {
+			$("#next-page").addClass("active");
+		} else {
+			$("#next-page").removeClass("active");
+		}
+
+		return true;
+	}
+
+	// Include the prev/next buttons:
+	$("#news .pagination").append(
+		$("<li>").addClass("page-item button-slider-prev").attr({ id: "previous-page" }).append(
+			$(`<a><svg><use xlink:href="img/icons/icons.svg#i-arrow-small-down">`)
+				.addClass("page-link")
+				.attr({
+					href: "javascript:void(0)"
+				})
+			// .text("Prev")
+		),
+		$("<li>").addClass("page-item button-slider-next").attr({ id: "next-page" }).append(
+			$(`<a><svg><use xlink:href="img/icons/icons.svg#i-arrow-small-down">`)
+				.addClass("page-link")
+				.attr({
+					href: "javascript:void(0)"
+				})
+			// .text("Next")
+		)
+	);
+	// Show the page links
+	if (totalPages > 1) {
+		$("#news").show();
+		showPage(1);
+	} else {
+		$("#news .pagination").hide();
+	}
+
+	$(document).on("click", targetElement + " .pagination li.current-page:not(.active)", function () {
+		var targetPage = +$(this).text();
+		showPage(targetPage);
+		scrollToElement(targetElement);
+	});
+
+	$(targetElement + " #next-page").on("click", function () {
+		if (currentPage < totalPages) {
+			var nextPage = currentPage + 1;
+			showPage(nextPage);
+			scrollToElement(targetElement);
+		}
+	});
+
+	$(targetElement + " #previous-page").on("click", function () {
+		if (currentPage > 1) {
+			var prevPage = currentPage - 1;
+			showPage(prevPage);
+			scrollToElement(targetElement);
+		}
+	});
+});

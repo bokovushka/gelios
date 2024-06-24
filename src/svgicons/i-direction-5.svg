@@ -1,0 +1,29 @@
+<svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip2932_26280">
+			<rect id="psychotherapy-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip2932_26284">
+			<rect id="dossier-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip2932_26288">
+			<rect id="empathize-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip2932_26292">
+			<rect id="first-aid-kit-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip2932_26296">
+			<rect id="health-book-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip2932_26300">
+			<rect id="nurse-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="nurse-line" width="40.000000" height="40.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip2932_26300)">
+		<path id="Vector" d="M20 25C26.79 25 32.41 30.08 33.23 36.66L6.76 36.66C7.58 30.08 13.19 25 20 25ZM16.97 28.79C14.58 29.55 12.57 31.18 11.33 33.33L20 33.33L16.97 28.79ZM23.02 28.79L20 33.33L28.66 33.33C27.42 31.18 25.41 29.55 23.02 28.79ZM30 3.33L30 13.33C30 18.85 25.52 23.33 20 23.33C14.47 23.33 10 18.85 10 13.33L10 3.33L30 3.33ZM13.33 13.33C13.33 17.01 16.31 20 20 20C23.68 20 26.66 17.01 26.66 13.33L13.33 13.33ZM26.66 6.66L13.33 6.66L13.33 10L26.66 10L26.66 6.66Z" fill="#3DA6D3" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>

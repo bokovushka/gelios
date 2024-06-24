@@ -1,0 +1,29 @@
+<svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip265_9259">
+			<rect id="psychotherapy-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_9263">
+			<rect id="dossier-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_9267">
+			<rect id="empathize-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_9271">
+			<rect id="first-aid-kit-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_9275">
+			<rect id="health-book-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+		<clipPath id="clip265_9279">
+			<rect id="nurse-line" width="40.000000" height="40.000000" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="dossier-line" width="40.000000" height="40.000000" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip265_9263)">
+		<path id="Vector" d="M28.33 3.33L28.33 6.66L33.33 6.66C34.25 6.66 35 7.41 35 8.33L35 35C35 35.91 34.25 36.66 33.33 36.66L6.66 36.66C5.74 36.66 5 35.91 5 35L5 8.33C5 7.41 5.74 6.66 6.66 6.66L11.66 6.66L11.66 3.33L28.33 3.33ZM11.66 10L8.33 10L8.33 33.33L31.66 33.33L31.66 10L28.33 10L28.33 13.33L11.66 13.33L11.66 10ZM21.66 18.33L21.66 21.66L25 21.66L25 25L21.66 25L21.66 28.33L18.33 28.33L18.33 25L15 25L15 21.66L18.33 21.66L18.33 18.33L21.66 18.33ZM25 6.66L15 6.66L15 10L25 10L25 6.66Z" fill="#3DA6D3" fill-opacity="1.000000" fill-rule="evenodd"/>
+	</g>
+</svg>
