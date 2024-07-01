@@ -27,3 +27,24 @@ $(document).ready(function () {
 });
 
 
+
+$(document).ready(function () {
+	function initializeReadmore() {
+		$('.spoiler-list').readmore({
+			speed: 75,
+			collapsedHeight: false,
+			moreLink: '<button class="btn-read-more btn rounded-0 mt-3 p-0 text-blue">Показати більше</button>',
+			lessLink: '<button class="btn-read-more btn rounded-0 mt-3 p-0 text-blue">Показати менше</button>'
+		});
+	}
+
+	// Initialize on document ready
+	initializeReadmore();
+
+	// Reinitialize on window resize
+	$(window).resize(function () {
+		initializeReadmore();
+	});
+
+
+});

@@ -364,8 +364,130 @@ p {
 			}
 		}
 	}
+	&.btn-blue {
+		&:not(:disabled) {
+			&:hover {
+				border: 1px solid #008cc7;
+				background: #008cc7;
+				color: $white;
+			}
+			&:active,
+			&:focus {
+				color: $white;
+			}
+			&:active {
+				border: 1px solid #0f68ba;
+				background: #0f68ba;
+			}
+			&:focus {
+				border: 1px solid #0f68ba;
+				background: #0f68ba;
+				color: $white;
+			}
+		}
+		&:disabled {
+			border-color: $light-grey;
+			background: $light-grey;
+			color: $grey;
+			opacity: 1;
+			cursor: not-allowed;
+		}
+	}
 	&.btn-white {
-		color: $blue;
+		&:not(:disabled) {
+			color: $blue;
+			background: $white;
+			border: 1px solid $white;
+			&:hover {
+				border: 1px solid #008cc7;
+				background: #008cc7;
+				color: $white;
+			}
+			&:active,
+			&:focus {
+				color: $white;
+			}
+			&:active {
+				border: 1px solid #0f68ba;
+				background: #0f68ba;
+			}
+			&:focus {
+				border: 1px solid #0f68ba;
+				background: #0f68ba;
+				color: $white;
+			}
+		}
+		&:disabled {
+			border-color: $light-grey;
+			background: $light-grey;
+			color: $grey;
+			opacity: 1;
+			cursor: not-allowed;
+		}
+	}
+	&.btn-outline-white {
+		&:not(:disabled) {
+			color: $white;
+			border: 1px solid $white;
+			background: transparent;
+			&:hover {
+				border: 1px solid #008cc7;
+				background: #008cc7;
+				color: $white;
+			}
+			&:active,
+			&:focus {
+				color: $white;
+			}
+			&:active {
+				border: 1px solid #0f68ba;
+				background: #0f68ba;
+			}
+			&:focus {
+				border: 1px solid #0f68ba;
+				background: #0f68ba;
+				color: $white;
+			}
+		}
+		&:disabled {
+			border-color: $light-grey;
+			background: $light-grey;
+			color: $grey;
+			opacity: 1;
+			cursor: not-allowed;
+		}
+	}
+	&.btn-outline-blue {
+		&:not(:disabled) {
+			color: $blue;
+			border: 1px solid $blue;
+			background: transparent;
+			&:hover {
+				border: 1px solid #008cc7;
+				background: #008cc7;
+				color: $white;
+			}
+			&:active,
+			&:focus {
+				color: $white;
+			}
+			&:active {
+				border: 1px solid #0f68ba;
+				background: #0f68ba;
+			}
+			&:focus {
+				border: 1px solid #0f68ba;
+				background: #0f68ba;
+				color: $white;
+			}
+		}
+		&:disabled {
+			border-color: $light-grey;
+			background: $light-grey;
+			color: $grey;
+			opacity: 1;
+			cursor: not-allowed;
+		}
 	}
 	&.btn-default-orange {
 		&:not(:disabled) {
@@ -1858,6 +1980,9 @@ form {
 			white-space: normal;
 			@include md-max {
 				padding-left: 16px;
+			}
+			@include sm-max {
+				border-radius: 24px;
 			}
 			&::after {
 				content: "";

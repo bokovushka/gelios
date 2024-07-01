@@ -47,6 +47,7 @@
 			position: relative;
 			background: url(../img/icons/icons.svg#i-phone) no-repeat center;
 			background-size: contain;
+			@include transition(all 0.3s ease 0s);
 		}
 	}
 }
@@ -186,6 +187,7 @@
 			width: 16px;
 			height: 16px;
 			position: relative;
+			@include transition(all 0.3s ease 0s);
 		}
 		&::before {
 			background: url(../img/icons/icons.svg#i-map-pin) no-repeat center;

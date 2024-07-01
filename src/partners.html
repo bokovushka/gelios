@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('html/head.html',{
+"title":"Страхові"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<section class="nav-breadcrumb mt-8 mb-8">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<nav aria-label="breadcrumb" class="breadcrumb-nav">
+								<ol class="breadcrumb mb-0">
+									<li class="breadcrumb-item">
+										<a href="index.html">
+											<svg class="i-home">
+												<use xlink:href="img/icons/icons.svg#i-home"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="breadcrumb-item active" aria-current="page">Страхові</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="partners-top mb-24">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="position-relative align-content-end h-100 rounded-sm overflow-hidden text-white">
+								<div class="backdrop p-3 px-lg-6 py-lg-12">
+									<div class="row">
+										<div class="col col-lg-6">
+											<div class="content pt-34 mt-20 pt-lg-0 mt-lg-0">
+												<div class="h2 font-m font-weight-bolder mb-5">Медичне страхування</div>
+												<div class="h6 font-m font-weight-bold">Ми відкриті для співпраці зі страховими компаніями і партнерами по обслуговуванню Пацієнтів з добровільного медичного страхування. Якщо у Вас є поліс ДМС, Ви можете звернутися в свою страхову компанію і попросити додати нашу клініку в програму.</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="wrap-img">
+									<img class="bg-down" src="img/img19b1417c.jpeg" alt="img">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="partners mb-24">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="h2 text-blue font-m font-weight-bolder mb-8">Страхові компанії, з якими ми співпрацюємо</div>
+						</div>
+					</div>
+				</div>
+				@@include('html/parts/partners.html',{})
+			</section>
+			<section class="partners-contacts mb-24">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<div class="position-relative align-content-end h-100 rounded-sm overflow-hidden text-white bg-blue">
+								<div class="p-3 px-lg-6 py-lg-12">
+									<div class="row">
+										<div class="col-12 col-lg-6 mb-4">
+											<div class="content">
+												<div class="h3 font-weight-bolder mb-5">Для укладення договору та отримання більш детальної інформації необхідно звернутися до співробітника центру.</div>
+												<ul class="list-inline mb-5 d-flex flex-column">
+													<li class="list-inline-item">
+														<a href="tel:+38 (095) 000-01-50">
+															<div class="link-phone">+38 (095) 000-01-50</div>
+														</a>
+													</li>
+													<li class="list-inline-item">
+														<a href="tel:+38 (050) 325-62-93">
+															<div class="link-phone">+38 (050) 325-62-93</div>
+														</a>
+													</li>
+													<li class="list-inline-item">
+														<button type="button" class="contact-details" data-toggle="modal" data-target="#popup--contacts">Переглянути</button>
+													</li>
+												</ul>
+												<div class="descrp h5">Будемо раді співпраці!</div>
+											</div>
+										</div>
+										<div class="col-12 col-lg-6">
+											<div class="d-flex align-items-center justify-content-center h-100">
+												<div class="wrap-img mb-4 mb-lg-0">
+													<img src="img/logo-without-name.png" alt="img">
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+	@@include('html/popup/popup--sign-up-appointment.html',{})
+	@@include('html/popup/popup--contacts.html',{})
+
+	@@include('html/maps/contacts-map.html',{})
+
+	@@include('html/scripts.html',{})
+</body>
+
+</html>

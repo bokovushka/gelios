@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="uk">
+@@include('html/head.html',{
+"title":"Лікар"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/header.html',{})
+		<main class="main">
+			<section class="nav-breadcrumb mt-8 mb-8">
+				<div class="container">
+					<div class="row">
+						<div class="col">
+							<nav aria-label="breadcrumb" class="breadcrumb-nav">
+								<ol class="breadcrumb mb-0">
+									<li class="breadcrumb-item">
+										<a href="index.html">
+											<svg class="i-home">
+												<use xlink:href="img/icons/icons.svg#i-home"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="breadcrumb-item">
+										<a href="##">Лікарі</a>
+									</li>
+									<li class="breadcrumb-item active" aria-current="page">Один лікар</li>
+								</ol>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="section-doctor mb-24">
+				<div class="container">
+					<div class="row">
+						<div class="col-12 col-lg-6 mb-5 mb-lg-0">
+							<div class="wrap-img">
+								<img class="bg-down" src="img/doctors/doctor-2.jpeg" alt="img">
+							</div>
+						</div>
+						<div class="col-12 col-lg-6">
+							<div class="doctor-descrp">
+								<div class="row mb-1">
+									<div class="col-8">
+										<div class="h3 font-m font-weight-bolder text-blue">Мершавка Надія Володимирівна</div>
+									</div>
+								</div>
+								<div class="position-work font-weight-bold text-grey mb-3">Лікар терапевт</div>
+								<div class="experience-quantity mb-3">8 років досвіду</div>
+								<div class="content mb-3">
+									<div class="mb-2">
+										<span class="text-blue">Спеціальність:</span><span>лікарська справа</span>
+									</div>
+									<div class="mb-2">
+										<span class="text-blue">Спеціалізація:</span><span>терапевт</span>
+									</div>
+									<div class="mb-2">
+										<span class="text-blue">Стаж:</span><span>23 роки</span>
+									</div>
+									<div class="mb-2">
+										<span class="text-blue">Освіта:</span><span>вища</span>
+									</div>
+									<p>1993-1999 Дніпропетровська державна медична академія
+										2006-2011 Зав. терапевтичного відділення МКЛ №11 в м. Дніпропетровськ<br>
+										2011-2012 Зав. приймального відділення КЗДМКЛ №11 в м. Дніпропетровськ<br>
+										2012-2019 Зав. терапевтичного відділення КЗДМКЛ №11 м. Дніпро<br>
+										2011-2021 Працювала лікарем приймального відділення<br>
+										1993-1999 Дніпропетровська державна медична академія<br>
+										1993-1999 Дніпропетровська державна медична академія<br>
+										2006-2011 Зав. терапевтичного відділення МКЛ №11 в м. Дніпропетровськ<br>
+										2011-2012 Зав. приймального відділення КЗДМКЛ №11 в м. Дніпропетровськ<br>
+										2012-2019 Зав. терапевтичного відділення КЗДМКЛ №11 м. Дніпро<br>
+										2011-2021 Працювала лікарем приймального відділення<br>
+										1993-1999 Дніпропетровська державна медична академія</p>
+								</div>
+								<div class="text-blue font-weight-bold mb-2">Напрямки лікування:</div>
+								<div class="doctor-directions-list font-weight-bold mb-3">
+									<div class="item">Хірургія</div>
+									<div class="item">Загальна хірургія</div>
+									<div class="item">Офтальмологія</div>
+									<div class="item">Хірургія ока</div>
+									<div class="item">Мікрохірургія</div>
+								</div>
+								<button type="button" class="btn btn-indent btn-blue font-weight-bold">Записатися на прийом</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="certificates mb-24">
+				<div class="container overflow-hidden">
+					<div class="row mb-8">
+						<div class="col d-flex align-items-center justify-content-between">
+							<div class="h2 font-m font-weight-bolder text-blue">Дипломи та сертифікати</div>
+						</div>
+					</div>
+					@@include('html/parts/certificates.html',{})
+				</div>
+			</section>
+			<section class="reviews mb-24">
+				<div class="container overflow-hidden">
+					@@include('html/parts/reviews.html',{})
+				</div>
+			</section>
+			<section class="meeting mb-24 py-lg-16">
+				<div class="container">
+					@@include('html/parts/meeting.html',{})
+				</div>
+			</section>
+			<section class="news mb-24">
+				<div class="container overflow-hidden">
+					<div class="row">
+						<div class="col d-flex align-items-center justify-content-between mb-5">
+							<div class="h2 font-m font-weight-bolder">Новини</div>
+							<a href="##" class="btn btn-white font-weight-bold">Усі новини</a>
+						</div>
+					</div>
+					@@include('html/parts/news.html',{})
+				</div>
+			</section>
+		</main>
+		@@include('html/footer.html',{})
+	</div>
+	@@include('html/popup/popup--sign-up-appointment.html',{})
+	@@include('html/popup/popup--contacts.html',{})
+
+	@@include('html/maps/contacts-map.html',{})
+
+	@@include('html/scripts.html',{})
+</body>
+
+</html>

@@ -9,4 +9,5 @@ import "./modules/mobile-menu.js";
 import "./modules/height-vh-root.js";
 import "./modules/counter-textarea.js";
 import './modules/scroll-class.js'
-// import "./modules/js.js";
+import './modules/height-max-height.js'
+import "./modules/js.js";
