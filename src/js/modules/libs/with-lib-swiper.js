@@ -1,3 +1,4 @@
+import { auto } from '@popperjs/core';
 import Swiper from 'swiper/bundle';
 
 new Swiper(".section-top--backdrop-swiper", {
@@ -351,3 +352,98 @@ new Swiper('.media--swiper', {
 	observeParents: true,
 	observeSlideChildren: true,
 });
+
+new Swiper(".template-shares--swiper", {
+	grabCursor: true,
+	slidesPerView: 1,
+	loop: true,
+	spaceBetween: 25,
+	autoHeight: true,
+	pagination: {
+		el: ".template-shares--swiper .swiper-pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".template-shares--swiper .swiper-buttons .button-slider-next",
+		prevEl: ".template-shares--swiper .swiper-buttons .button-slider-prev",
+	},
+	autoplay: {
+		delay: 10000,
+		disableOnInteraction: false
+	},
+	breakpoints: {
+		1024: {
+		},
+		768: {
+			spaceBetween: 20,
+			slidesPerView: 2,
+		},
+		0: {
+			spaceBetween: 15,
+		}
+	}
+})
+
+new Swiper(".offices--swiper", {
+	grabCursor: true,
+	slidesPerView: 4,
+	loop: true,
+	spaceBetween: 25,
+	autoHeight: true,
+	pagination: {
+		el: ".offices--swiper .swiper-pagination",
+		clickable: true,
+	},
+	navigation: {
+		nextEl: ".offices--swiper .swiper-buttons .button-slider-next",
+		prevEl: ".offices--swiper .swiper-buttons .button-slider-prev",
+	},
+	autoplay: {
+		delay: 10000,
+		disableOnInteraction: false
+	},
+	breakpoints: {
+		1024: {
+		},
+		768: {
+			spaceBetween: 20,
+			slidesPerView: 2,
+		},
+		0: {
+			spaceBetween: 15,
+		}
+	}
+})
+
+var SwiperWallpaperCollectionThumbs = new Swiper(".offices-direction-thumbs--swiper", {
+	grabCursor: true,
+	spaceBetween: 8,
+	slidesPerView: 'auto'
+})
+
+new Swiper(".offices-direction--swiper", {
+	grabCursor: true,
+	slidesPerView: 1,
+	loop: true,
+	breakpoints: {
+		1200: {
+			spaceBetween: 25,
+		},
+		576: {
+			spaceBetween: 20,
+		},
+		0: {
+		}
+	},
+	// autoplay: {
+	// 	delay: 10000,
+	// 	disableOnInteraction: false
+	// },
+	navigation: {
+		nextEl: ".offices-direction--swiper .swiper-buttons .button-slider-next",
+		prevEl: ".offices-direction--swiper .swiper-buttons .button-slider-prev",
+	},
+	thumbs: {
+		swiper: SwiperWallpaperCollectionThumbs,
+	}
+})

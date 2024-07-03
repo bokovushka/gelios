@@ -31,20 +31,16 @@ buttons.forEach(button => {
 //subcategory.html
 function matchHeight() {
 	if (window.innerWidth >= 768) {
-		// Отримати посилання на обидва блоки
+
 		var block1 = document.getElementById('doctor-features--inner-1');
 		var block2 = document.getElementById('doctor-features--inner-2');
 
-		// Отримати висоту першого блоку
-		var height2 = block2.offsetHeight;
+		if (block1 && block2) {
+			var height2 = block2.offsetHeight;
 
-		// Встановити висоту другого блоку такою ж
-		block1.style.height = height2 + 'px';
+			block1.style.height = height2 + 'px';
+		}
 	}
 }
-
-// Викликати функцію після завантаження сторінки
 window.onload = matchHeight;
-
-// Викликати функцію при зміні розміру вікна
 window.onresize = matchHeight;
