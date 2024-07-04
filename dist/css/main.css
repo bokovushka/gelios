@@ -2527,7 +2527,7 @@ form {
 
 .fancybox__container {
   --fancybox-bg: rgba(24, 24, 27, 0.8);
-  z-index: 1070;
+  z-index: 1080;
 }
 .fancybox__container .f-button {
   background: inherit;
