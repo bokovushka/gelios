@@ -153,7 +153,7 @@ ol.list-default {
 h1,
 .h1,
 .head {
-	font-size: 60px;
+	font-size: 64px;
 	line-height: 100%;
 	margin-bottom: 0;
 	&.font-m,
@@ -228,7 +228,7 @@ h6,
 	}
 }
 p {
-	font-size: 18px;
+	font-size: 20px;
 	line-height: 140%;
 	&.font-m,
 	.seo & {
@@ -310,6 +310,13 @@ p {
 			opacity: 1;
 			cursor: not-allowed;
 		}
+	}
+	&.btn-blue,
+	&.btn-white,
+	&.btn-outline-white,
+	&.btn-outline-blue {
+		font-size: 20px;
+		line-height: 140%;
 	}
 	&.btn-default-white {
 		&:not(:disabled) {
@@ -945,7 +952,7 @@ form {
 	}
 }
 .select2-container {
-	z-index: 1050;
+	z-index: 1070;
 	.select2-dropdown {
 		&.select2-dropdown--below {
 			border-radius: 0 0 30px 30px;

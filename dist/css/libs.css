@@ -71,7 +71,7 @@ body {
   margin: 0;
   font-family: "Inter";
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.125;
   color: #111010;
   text-align: left;
@@ -142,7 +142,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 small {
@@ -2108,7 +2108,7 @@ pre code {
   height: calc(1.125em + 2rem + 3px);
   padding: 1rem 2rem;
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.125;
   color: #495057;
   background-color: #ffffff;
@@ -2541,7 +2541,7 @@ textarea.form-control {
 
 .btn {
   display: inline-block;
-  font-weight: 400;
+  font-weight: 500;
   color: #111010;
   text-align: center;
   vertical-align: middle;
@@ -4208,7 +4208,7 @@ input[type=button].btn-block {
   height: calc(1.125em + 2rem + 3px);
   padding: 1rem 3rem 1rem 2rem;
   font-size: 1.125rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.125;
   color: #495057;
   vertical-align: middle;
@@ -4299,7 +4299,7 @@ input[type=button].btn-block {
   height: calc(1.125em + 2rem + 3px);
   padding: 1rem 2rem;
   overflow: hidden;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.125;
   color: #495057;
   background-color: #ffffff;
@@ -20029,7 +20029,7 @@ button.bg-red:focus {
 }
 
 .font-weight-bolder {
-  font-weight: 700 !important;
+  font-weight: 600 !important;
 }
 
 .font-italic {

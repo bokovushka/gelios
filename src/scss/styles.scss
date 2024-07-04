@@ -16,15 +16,22 @@
 		&::before {
 			content: "";
 			display: block;
-			width: 65%;
-			height: 150%;
+			width: 75%;
+			height: 125%;
 			position: absolute;
-			left: -120px;
-			top: 30px;
+			left: -125px;
+			top: 125px;
 			background: $blue;
 			filter: blur(85px);
-			@include sm-max {
+			@include lg-max {
+				width: 95%;
+			}
+			@include md-max {
 				width: 85%;
+			}
+			@include sm-max {
+				width: 75%;
+				top: 45px;
 			}
 			@include xs-max {
 				width: 100%;
@@ -33,7 +40,7 @@
 		.content {
 			position: relative;
 			z-index: 2;
-			width: 50%;
+			width: 95%;
 			@include sm-max {
 				width: 85%;
 			}
@@ -140,9 +147,6 @@
 	}
 }
 
-.our-directions {
-}
-
 .shares {
 	.shares-list {
 		.shares--item {
@@ -168,6 +172,7 @@
 					}
 					.underline {
 						text-decoration: underline;
+						font-weight: 900;
 					}
 					.wrap-img {
 						img {
@@ -205,7 +210,7 @@
 				}
 			}
 			.h3 {
-				font-weight: 900;
+				font-weight: 600;
 				@include transition(0.3s ease-out 0s);
 			}
 		}
@@ -325,6 +330,10 @@
 				color: $white;
 				background: $blue;
 				width: max-content;
+			}
+			.position-work {
+				font-size: 20px;
+				line-height: 140%;
 			}
 			.h4 {
 				color: $blue;
@@ -994,6 +1003,9 @@
 				background-color: $blue;
 				border-radius: 24px;
 			}
+			p {
+				font-size: 20px;
+			}
 			ul {
 				li {
 					position: relative;
@@ -1108,6 +1120,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
+		height: 100%;
 		input {
 			background: unset;
 			width: 100%;
@@ -1127,12 +1140,16 @@
 		position: relative;
 		width: 44px;
 		height: 44px;
+		min-width: 44px;
 		margin-right: 5px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		&::before {
 			content: "";
 			display: block;
 			position: relative;
-			min-width: 44px;
+			min-width: inherit;
 			width: auto;
 			height: 24px;
 			z-index: 2;
@@ -1143,8 +1160,8 @@
 			display: block;
 			position: absolute;
 			top: 0;
-			width: 100%;
-			height: 100%;
+			width: inherit;
+			height: inherit;
 			background: $blue;
 			border-radius: 50%;
 		}
@@ -1626,7 +1643,6 @@
 			overflow-x: hidden;
 			width: calc(100% - 1px);
 			padding-right: 10px;
-			max-height: calc(85px * 5 + 25px * 4);
 		}
 		.category-direction-column-item & {
 			max-height: calc(170px * 3 + 25px * 2);
@@ -1635,6 +1651,15 @@
 			}
 			@include xs-max {
 				max-height: calc(103px * 10 + 15px * 9);
+			}
+		}
+		.our-directions & {
+			max-height: calc(85px * 5 + 25px * 4);
+			@include md-max {
+				max-height: calc(85px * 10 + 20px * 9);
+			}
+			@include xs-max {
+				max-height: calc(85px * 10 + 15px * 9);
 			}
 		}
 		.lvl-end & {
@@ -1658,14 +1683,14 @@
 		}
 		.directions-item {
 			height: 100%;
+			.offices-direction & {
+				min-height: 85px;
+			}
 			.category-direction-column-item & {
 				min-height: 170px;
 				@include md-max {
 					min-height: 103px;
 				}
-			}
-			.offices-direction & {
-				min-height: 85px;
 			}
 			.content {
 				height: 100%;

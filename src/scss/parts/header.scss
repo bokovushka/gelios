@@ -4,7 +4,7 @@
 
 //header
 .header {
-	z-index: 1060;
+	z-index: 1075;
 	position: fixed;
 	width: 100%;
 	@include transition(0.3s ease-out 0s);
@@ -623,6 +623,9 @@
 							word-break: break-word;
 							background: transparent;
 							color: $black;
+							&.heading {
+								font-size: 20px;
+							}
 							&:hover {
 								background: $light-blue;
 								color: $blue;
@@ -634,6 +637,13 @@
 						}
 						&.nav-dropdown-open > .push-menu--lvl {
 							display: grid;
+						}
+					}
+					.push-menu--aside {
+						.item {
+							a {
+								font-size: 20px;
+							}
 						}
 					}
 					.push-menu--sub-category {

@@ -392,7 +392,7 @@ new Swiper(".offices-anchor--swiper", {
 	autoHeight: true,
 	navigation: {
 		nextEl: ".offices-anchor--swiper .swiper-buttons .button-slider-next",
-		prevEl: ".offices-anchor--swiper.swiper-buttons .button-slider-prev",
+		prevEl: ".offices-anchor--swiper .swiper-buttons .button-slider-prev",
 	},
 	autoplay: {
 		delay: 10000,
