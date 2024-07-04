@@ -11,4 +11,5 @@ import "./modules/counter-textarea.js";
 import './modules/scroll-class.js'
 import './modules/height-max-height.js'
 import './modules/multi-level-push-menu-direction.js'
+import './modules/anchor.js'
 import "./modules/js.js";

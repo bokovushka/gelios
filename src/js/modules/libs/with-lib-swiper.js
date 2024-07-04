@@ -384,66 +384,79 @@ new Swiper(".template-shares--swiper", {
 	}
 })
 
-new Swiper(".offices--swiper", {
+new Swiper(".offices-anchor--swiper", {
 	grabCursor: true,
 	slidesPerView: 4,
 	loop: true,
 	spaceBetween: 25,
 	autoHeight: true,
-	pagination: {
-		el: ".offices--swiper .swiper-pagination",
-		clickable: true,
-	},
 	navigation: {
-		nextEl: ".offices--swiper .swiper-buttons .button-slider-next",
-		prevEl: ".offices--swiper .swiper-buttons .button-slider-prev",
+		nextEl: ".offices-anchor--swiper .swiper-buttons .button-slider-next",
+		prevEl: ".offices-anchor--swiper.swiper-buttons .button-slider-prev",
 	},
 	autoplay: {
 		delay: 10000,
 		disableOnInteraction: false
 	},
 	breakpoints: {
+		1400: {
+		},
+		1200: {
+			slidesPerView: 3,
+		},
 		1024: {
+			slidesPerView: 3,
 		},
 		768: {
 			spaceBetween: 20,
 			slidesPerView: 2,
 		},
+		575: {
+			spaceBetween: 15,
+			slidesPerView: 1,
+		},
 		0: {
 			spaceBetween: 15,
+			slidesPerView: 1,
 		}
 	}
 })
 
-var SwiperWallpaperCollectionThumbs = new Swiper(".offices-direction-thumbs--swiper", {
-	grabCursor: true,
-	spaceBetween: 8,
-	slidesPerView: 'auto'
-})
+document.querySelectorAll('.offices-direction-thumbs--swiper').forEach(function (swiperThumbsEl, index) {
+	var swiperMainEl = document.querySelectorAll('.offices-direction--swiper')[index];
 
-new Swiper(".offices-direction--swiper", {
-	grabCursor: true,
-	slidesPerView: 1,
-	loop: true,
-	breakpoints: {
-		1200: {
-			spaceBetween: 25,
-		},
-		576: {
-			spaceBetween: 20,
-		},
-		0: {
-		}
-	},
-	// autoplay: {
-	// 	delay: 10000,
-	// 	disableOnInteraction: false
-	// },
-	navigation: {
-		nextEl: ".offices-direction--swiper .swiper-buttons .button-slider-next",
-		prevEl: ".offices-direction--swiper .swiper-buttons .button-slider-prev",
-	},
-	thumbs: {
-		swiper: SwiperWallpaperCollectionThumbs,
+	if (swiperThumbsEl && swiperMainEl) {
+		var SwiperOfficesDirectionThumbs = new Swiper(swiperThumbsEl, {
+			grabCursor: true,
+			spaceBetween: 8,
+			slidesPerView: 'auto'
+		});
+
+		new Swiper(swiperMainEl, {
+			grabCursor: true,
+			slidesPerView: 1,
+			loop: true,
+			breakpoints: {
+				1200: {
+					spaceBetween: 25,
+				},
+				576: {
+					spaceBetween: 20,
+				},
+				0: {
+				}
+			},
+			autoplay: {
+				delay: 10000,
+				disableOnInteraction: false
+			},
+			navigation: {
+				nextEl: swiperMainEl.querySelector(".swiper-buttons .button-slider-next"),
+				prevEl: swiperMainEl.querySelector(".swiper-buttons .button-slider-prev"),
+			},
+			thumbs: {
+				swiper: SwiperOfficesDirectionThumbs,
+			}
+		});
 	}
-})
+});
