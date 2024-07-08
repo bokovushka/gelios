@@ -508,6 +508,13 @@
 	}
 }
 
+.section-top-reviews {
+	.btn {
+		@include md-max {
+			width: 100%;
+		}
+	}
+}
 .reviews {
 	.reviews--item {
 		.inner {
@@ -1005,6 +1012,9 @@
 			}
 			p {
 				font-size: 20px;
+				.section-top & {
+					font-size: 18px;
+				}
 			}
 			ul {
 				li {
@@ -1349,6 +1359,9 @@
 				background-size: 100%;
 			}
 		}
+	}
+	.btn {
+		min-width: 270px;
 	}
 }
 
