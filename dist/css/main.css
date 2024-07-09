@@ -2534,7 +2534,7 @@ form {
 }
 
 .modal--custom {
-  z-index: 1065;
+  z-index: 1085;
 }
 .modal--custom .modal-dialog .modal-content {
   border-radius: 20px;
@@ -2569,7 +2569,7 @@ form {
 }
 
 .modal-backdrop {
-  z-index: 1060;
+  z-index: 1080;
 }
 
 .fancybox__toolbar .btn-fancybox-close svg {
@@ -4352,7 +4352,7 @@ form {
   display: block;
   position: relative;
   min-width: inherit;
-  width: auto;
+  width: inherit;
   height: 24px;
   z-index: 2;
   background: url(../img/icons/icons.svg#i-search) no-repeat center;
@@ -4865,12 +4865,12 @@ form {
 }
 @media (max-width: 1023px) {
   .category-direction-column-item .category-directions .category-directions--list {
-    max-height: 1210px;
+    max-height: 575px;
   }
 }
 @media (max-width: 575px) {
   .category-direction-column-item .category-directions .category-directions--list {
-    max-height: 1165px;
+    max-height: 575px;
   }
 }
 .our-directions .category-directions .category-directions--list {
@@ -4878,12 +4878,12 @@ form {
 }
 @media (max-width: 1023px) {
   .our-directions .category-directions .category-directions--list {
-    max-height: 1030px;
+    max-height: 505px;
   }
 }
 @media (max-width: 575px) {
   .our-directions .category-directions .category-directions--list {
-    max-height: 985px;
+    max-height: 485px;
   }
 }
 .lvl-end .category-directions .category-directions--list {

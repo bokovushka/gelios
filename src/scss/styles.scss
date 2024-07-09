@@ -1160,7 +1160,7 @@
 			display: block;
 			position: relative;
 			min-width: inherit;
-			width: auto;
+			width: inherit;
 			height: 24px;
 			z-index: 2;
 			background: url(../img/icons/icons.svg#i-search) no-repeat center;
@@ -1660,19 +1660,19 @@
 		.category-direction-column-item & {
 			max-height: calc(170px * 3 + 25px * 2);
 			@include md-max {
-				max-height: calc(103px * 10 + 20px * 9);
+				max-height: calc(103px * 5 + 20px * 3);
 			}
 			@include xs-max {
-				max-height: calc(103px * 10 + 15px * 9);
+				max-height: calc(103px * 5 + 15px * 4);
 			}
 		}
 		.our-directions & {
 			max-height: calc(85px * 5 + 25px * 4);
 			@include md-max {
-				max-height: calc(85px * 10 + 20px * 9);
+				max-height: calc(85px * 5 + 20px * 4);
 			}
 			@include xs-max {
-				max-height: calc(85px * 10 + 15px * 9);
+				max-height: calc(85px * 5 + 15px * 4);
 			}
 		}
 		.lvl-end & {
