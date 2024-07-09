@@ -695,6 +695,7 @@ main.show {
   .header-main .header-main--desk .push-menu .push-menu--nav .push-menu--lvl .push-menu--category,
   .header-main .header-main--desk .push-menu .push-menu--nav .push-menu--lvl .push-menu--category .push-menu--sub-category {
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     padding-right: 6px;
   }
   .header-main .header-main--desk .push-menu .push-menu--nav .push-menu--lvl .push-menu--aside::-webkit-scrollbar,
@@ -878,6 +879,7 @@ main.show {
   .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner {
     height: 100%;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     padding-right: 15px;
   }
   .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner::-webkit-scrollbar {
@@ -1974,6 +1976,9 @@ form {
   outline: 0;
   outline-offset: 0;
 }
+.field textarea {
+  -webkit-overflow-scrolling: touch;
+}
 .field textarea::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -2694,6 +2699,7 @@ form {
   max-height: 275px;
   overflow-y: scroll;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   padding-right: 16px;
   font-weight: 500;
   color: #65738a;
@@ -3707,6 +3713,7 @@ form {
   color: #808b9e;
   padding-right: 25px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   height: 125px;
   font-weight: 500;
 }
@@ -3836,6 +3843,9 @@ form {
   color: #111010;
 }
 
+.news-category-results .select2-results__options {
+  -webkit-overflow-scrolling: touch;
+}
 .news-category-results .select2-results__options.has-scrollbar {
   margin-right: 10px;
 }
@@ -3919,6 +3929,7 @@ form {
 .procedures ul {
   height: 335px;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 .procedures ul::-webkit-scrollbar {
   width: 8px;
@@ -4174,6 +4185,7 @@ form {
   max-height: 335px;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   padding-right: 16px;
   font-weight: 500;
   color: #808b9e;
@@ -4832,6 +4844,9 @@ form {
 .category-directions {
   height: inherit;
 }
+.category-directions .category-directions--list {
+  -webkit-overflow-scrolling: touch;
+}
 @media (max-width: 767px) {
   .category-directions .category-directions--list {
     height: 420px;
@@ -5056,6 +5071,7 @@ form {
   max-height: 350px;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   padding-right: 16px;
   font-weight: 500;
   color: #808b9e;
@@ -5227,6 +5243,7 @@ form {
   max-height: 200px;
   overflow-y: auto;
   overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   padding-right: 16px;
   font-weight: 500;
   color: #808b9e;
@@ -5446,6 +5463,7 @@ form {
 .doctor-features .content {
   overflow-x: hidden;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding-right: 5px;
   margin-right: 0px;
 }

@@ -576,6 +576,7 @@
 						.push-menu--category,
 						.push-menu--category .push-menu--sub-category {
 							overflow-y: auto;
+							-webkit-overflow-scrolling: touch;
 							padding-right: 6px;
 							&::-webkit-scrollbar {
 								width: 4px;
@@ -767,6 +768,7 @@
 					.scrollable-content--inner {
 						height: 100%;
 						overflow-y: auto;
+						-webkit-overflow-scrolling: touch;
 						padding-right: 15px;
 						&::-webkit-scrollbar {
 							width: 8px;

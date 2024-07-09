@@ -832,6 +832,7 @@ form {
 		}
 	}
 	textarea {
+		-webkit-overflow-scrolling: touch;
 		&::-webkit-scrollbar {
 			width: 8px;
 			height: 8px;
@@ -1655,6 +1656,7 @@ form {
 		max-height: 275px;
 		overflow-y: scroll;
 		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
 		padding-right: 16px;
 		font-weight: 500;
 		color: #65738a;
