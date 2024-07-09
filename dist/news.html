@@ -8,6 +8,22 @@
 	<link rel="shortcut icon" href="##" type="image/x-icon" />
 	<link rel="stylesheet" href="css/libs.min.css">
 	<link rel="stylesheet" href="css/main.min.css">
+	<style>
+		/**
+		* Reinstate scrolling for non-JS clients
+		*/
+		.simplebar-content-wrapper {
+			scrollbar-width: auto;
+			-ms-overflow-style: auto;
+		}
+
+		.simplebar-content-wrapper::-webkit-scrollbar,
+		.simplebar-hide-scrollbar::-webkit-scrollbar {
+			display: initial;
+			width: initial;
+			height: initial;
+		}
+	</style>
 </head>
 
 <body>
@@ -290,16 +306,16 @@
 										</div>
 										<div class="push-menu--nav">
 											<div class="push-menu--lvl scrollable-content">
-												<div class="scrollable-content--inner">
+												<div class="scrollable-content--inner simplebar-overflow">
 													<div class="item has-dropdown">
 														<a href="##">Напрямки</a>
 														<div class="push-menu--lvl scrollable-content">
-															<div class="scrollable-content--inner">
+															<div class="scrollable-content--inner simplebar-overflow">
 																<div class="item"><a href="##">Напрямки</a></div>
 																<div class="item has-dropdown">
 																	<a href="##">Дієтологія</a>
 																	<div class="push-menu--lvl scrollable-content">
-																		<div class="scrollable-content--inner">
+																		<div class="scrollable-content--inner simplebar-overflow">
 																			<div class="item"><a href="##">Гастроентеролог</a></div>
 																			<div class="item"><a href="##">Дерматовенерологія</a></div>
 																			<div class="item"><a href="##">Алергологія</a></div>
@@ -310,7 +326,7 @@
 																<div class="item has-dropdown">
 																	<a href="##">Кардіологія</a>
 																	<div class="push-menu--lvl scrollable-content">
-																		<div class="scrollable-content--inner">
+																		<div class="scrollable-content--inner simplebar-overflow">
 																			<div class="item"><a href="##">Гастроентеролог</a></div>
 																			<div class="item"><a href="##">Дерматовенерологія</a></div>
 																			<div class="item"><a href="##">Гематологія</a></div>
@@ -320,7 +336,7 @@
 																<div class="item has-dropdown">
 																	<a href="##">Неврологія</a>
 																	<div class="push-menu--lvl scrollable-content">
-																		<div class="scrollable-content--inner">
+																		<div class="scrollable-content--inner simplebar-overflow">
 																			<div class="item"><a href="##">Гастроентеролог</a></div>
 																			<div class="item"><a href="##">Гематологія</a></div>
 																		</div>
@@ -329,7 +345,7 @@
 																<div class="item has-dropdown">
 																	<a href="##">Ендокринологія</a>
 																	<div class="push-menu--lvl scrollable-content">
-																		<div class="scrollable-content--inner">
+																		<div class="scrollable-content--inner simplebar-overflow">
 																			<div class="item"><a href="##">Дерматовенерологія</a></div>
 																		</div>
 																	</div>
@@ -340,12 +356,12 @@
 													<div class="item has-dropdown">
 														<a href="##">Хірургія</a>
 														<div class="push-menu--lvl scrollable-content">
-															<div class="scrollable-content--inner">
+															<div class="scrollable-content--inner simplebar-overflow">
 																<div class="item"><a href="##">Хірургія</a></div>
 																<div class="item has-dropdown">
 																	<a href="##">Дієтологія</a>
 																	<div class="push-menu--lvl scrollable-content">
-																		<div class="scrollable-content--inner">
+																		<div class="scrollable-content--inner simplebar-overflow">
 																			<div class="item"><a href="##">Гастроентеролог</a></div>
 																			<div class="item"><a href="##">Дерматовенерологія</a></div>
 																			<div class="item"><a href="##">Алергологія</a></div>
@@ -356,7 +372,7 @@
 																<div class="item has-dropdown">
 																	<a href="##">Кардіологія</a>
 																	<div class="push-menu--lvl scrollable-content">
-																		<div class="scrollable-content--inner">
+																		<div class="scrollable-content--inner simplebar-overflow">
 																			<div class="item"><a href="##">Гастроентеролог</a></div>
 																			<div class="item"><a href="##">Дерматовенерологія</a></div>
 																			<div class="item"><a href="##">Гематологія</a></div>
@@ -366,7 +382,7 @@
 																<div class="item has-dropdown">
 																	<a href="##">Неврологія</a>
 																	<div class="push-menu--lvl scrollable-content">
-																		<div class="scrollable-content--inner">
+																		<div class="scrollable-content--inner simplebar-overflow">
 																			<div class="item"><a href="##">Гастроентеролог</a></div>
 																			<div class="item"><a href="##">Гематологія</a></div>
 																		</div>
@@ -375,7 +391,7 @@
 																<div class="item has-dropdown">
 																	<a href="##">Ендокринологія</a>
 																	<div class="push-menu--lvl scrollable-content">
-																		<div class="scrollable-content--inner">
+																		<div class="scrollable-content--inner simplebar-overflow">
 																			<div class="item"><a href="##">Дерматовенерологія</a></div>
 																		</div>
 																	</div>

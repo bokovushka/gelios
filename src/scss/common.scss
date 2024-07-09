@@ -2173,3 +2173,19 @@ form {
 		max-height: 150px !important;
 	}
 }
+
+.simplebar-track {
+	border-radius: 24px;
+	background: $light-blue;
+	&.simplebar-horizontal,
+	&.simplebar-vertical {
+		width: 8px;
+	}
+}
+.simplebar-scrollbar {
+	background: $blue;
+	border-radius: 24px;
+	&::before {
+		background: $blue;
+	}
+}

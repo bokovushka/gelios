@@ -878,24 +878,32 @@ main.show {
   }
   .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner {
     height: 100%;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-right: 15px;
   }
-  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background-color: #f4f4f4;
-    border-radius: 24px;
+  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner .simplebar-wrapper {
+    overflow: visible;
   }
-  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner::-webkit-scrollbar-thumb {
-    background-color: #3da6d3;
-    border-radius: 24px;
+  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner .simplebar-height-auto-observer-wrapper {
+    overflow: visible;
+    position: static;
+  }
+  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner .simplebar-mask {
+    overflow: visible;
+  }
+  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner .simplebar-offset {
+    position: unset;
+    height: 100%;
+  }
+  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner .simplebar-content-wrapper {
+    overflow: visible scroll !important;
+    position: static;
   }
   .header-main .header-main--mob .push-menu--nav .push-menu--lvl .push-menu--lvl {
     display: none;
     left: 100%;
     padding-top: 85px;
+  }
+  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .push-menu--lvl .push-menu--lvl {
+    padding-top: 0;
   }
   .header-main .header-main--mob .push-menu--nav .item {
     border-radius: 64px;
@@ -3159,6 +3167,22 @@ form {
 .psv-loader-container .psv-loader-image {
   max-width: 150px !important;
   max-height: 150px !important;
+}
+
+.simplebar-track {
+  border-radius: 24px;
+  background: #edf4ff;
+}
+.simplebar-track.simplebar-horizontal, .simplebar-track.simplebar-vertical {
+  width: 8px;
+}
+
+.simplebar-scrollbar {
+  background: #3da6d3;
+  border-radius: 24px;
+}
+.simplebar-scrollbar::before {
+  background: #3da6d3;
 }
 
 .section-top .backdrop {
