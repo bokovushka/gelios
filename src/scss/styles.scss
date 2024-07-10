@@ -3,15 +3,9 @@
 		position: relative;
 		height: 100%;
 		@include md-max {
-			height: 400px;
+			min-height: 400px;
 			display: flex;
 			align-items: end;
-		}
-		@include sm-max {
-			height: 300px;
-		}
-		@include xs-max {
-			height: 260px;
 		}
 		&::before {
 			content: "";
@@ -49,27 +43,7 @@
 	.backdrop-small {
 		min-height: 275px;
 		@include sm-max {
-			height: 160px;
-		}
-	}
-	.section-top--backdrop-swiper {
-		.swiper-slide {
-			.backdrop {
-				display: flex;
-				flex-direction: column;
-				justify-content: flex-end;
-				align-items: start;
-			}
-		}
-		.swiper-pagination {
-			position: absolute;
-			justify-content: end;
-			bottom: 24px !important;
-			padding-right: 24px;
-			@include md-max {
-				padding-right: 18px;
-				bottom: 18px !important;
-			}
+			min-height: 160px;
 		}
 	}
 	.buttons {
@@ -79,6 +53,27 @@
 			@include xl-max {
 				width: 100%;
 			}
+		}
+	}
+}
+
+.section-top--backdrop-swiper {
+	.swiper-slide {
+		.backdrop {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			align-items: start;
+		}
+	}
+	.swiper-pagination {
+		position: absolute;
+		justify-content: end;
+		bottom: 24px !important;
+		padding-right: 24px;
+		@include md-max {
+			padding-right: 18px;
+			bottom: 18px !important;
 		}
 	}
 }
@@ -93,7 +88,7 @@
 .section-top-4 {
 	.backdrop {
 		@include lg-min {
-			height: 510px;
+			min-height: 510px;
 			display: flex;
 			align-items: end;
 		}
@@ -109,7 +104,7 @@
 .section-top-5 {
 	.backdrop {
 		@include lg-min {
-			height: 510px;
+			min-height: 510px;
 			display: flex;
 			align-items: end;
 		}
@@ -118,7 +113,7 @@
 			height: 50vh;
 		}
 		@include xs-max {
-			min-height: 640px;
+			min-height: 400px;
 		}
 		&::before {
 			@include lg-min {
@@ -169,6 +164,9 @@
 					background: $blue;
 					.h3 {
 						color: $white;
+						div {
+							display: contents;
+						}
 					}
 					.underline {
 						text-decoration: underline;
@@ -212,6 +210,9 @@
 			.h3 {
 				font-weight: 600;
 				@include transition(0.3s ease-out 0s);
+				div {
+					display: contents;
+				}
 			}
 		}
 	}
@@ -252,7 +253,7 @@
 		}
 	}
 	.backdrop-small {
-		height: 575px;
+		min-height: 575px;
 		@include lg-max {
 			height: auto;
 			min-height: 180px;
@@ -294,6 +295,13 @@
 			background: $blue;
 			box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 			filter: blur(700px);
+		}
+	}
+}
+.about-us--laboratory {
+	.btn {
+		@include sm-max {
+			width: 100%;
 		}
 	}
 }
@@ -546,6 +554,9 @@
 				-webkit-overflow-scrolling: touch;
 				height: 125px;
 				font-weight: 500;
+				@include md-max {
+					height: 200px;
+				}
 				&::-webkit-scrollbar {
 					width: 8px;
 					height: 8px;
@@ -913,16 +924,16 @@
 		display: flex;
 		align-items: end;
 		@include lg-max {
-			min-height: 340px;
+			min-height: 400px;
 		}
 		&::before {
 			content: "";
 			display: block;
 			width: 95%;
-			height: 400%;
+			height: 200%;
 			position: absolute;
 			left: -15%;
-			top: -130%;
+			top: -40%;
 			background: $blue;
 			filter: blur(75px);
 			border-radius: 30%;
@@ -1166,6 +1177,7 @@
 			min-width: inherit;
 			width: inherit;
 			height: 24px;
+			margin-top: 2px;
 			z-index: 2;
 			background: url(../img/icons/icons.svg#i-search) no-repeat center;
 		}
@@ -1326,7 +1338,7 @@
 	.row-gap {
 		row-gap: 25px;
 		@include md-max {
-			row-gap: 20px;
+			row-gap: 40px;
 		}
 	}
 }
@@ -1448,6 +1460,10 @@
 			border-radius: 50%;
 			overflow: hidden;
 		}
+		.place-work {
+			font-size: 18px;
+			line-height: 140%;
+		}
 	}
 }
 
@@ -1492,6 +1508,9 @@
 			}
 			&:not(:last-child) {
 				margin-bottom: 8px;
+				@include md-max {
+					margin-bottom: 16px;
+				}
 			}
 		}
 	}

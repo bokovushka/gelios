@@ -317,7 +317,7 @@ p {
 	&.btn-outline-white,
 	&.btn-outline-blue {
 		font-size: 20px;
-		line-height: 140%;
+		line-height: 120%;
 	}
 	&.btn-default-white {
 		&:not(:disabled) {
@@ -1266,28 +1266,32 @@ form {
 	background: transparent;
 	padding: 0;
 	row-gap: 10px;
+	display: inline-block;
 	.breadcrumb-item {
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 140%;
 		position: relative;
-		display: flex;
-		align-items: center;
+		display: inline;
 		&.active {
 			color: $grey;
 		}
 		+ .breadcrumb-item {
 			padding-left: 0;
 			margin-left: 4px;
+			word-break: break-word;
+			hyphens: auto;
 			&::before {
 				all: unset;
 				content: "";
-				display: block;
+				display: inline-block;
+				vertical-align: middle;
 				margin: 0;
 				border: none;
 				width: 24px;
 				height: 24px;
 				margin-right: 4px;
+				margin-top: -4px;
 				position: relative;
 				background: url(../img/icons/icons.svg#i-arrow-small-down) no-repeat center;
 				background-size: cover;
@@ -1298,6 +1302,8 @@ form {
 		}
 		a {
 			color: $blue;
+			word-break: break-word;
+			hyphens: auto;
 			&:hover {
 				text-decoration: unset;
 				color: $grey;
