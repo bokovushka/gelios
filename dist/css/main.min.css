@@ -1061,6 +1061,8 @@ main.show {
 
 [data-overlayscrollbars-viewport]:not([data-overlayscrollbars]) {
   position: static;
+}
+[data-overlayscrollbars-viewport]:not([data-overlayscrollbars]):focus {
   overflow: visible !important;
 }
 
