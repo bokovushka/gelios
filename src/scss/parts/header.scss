@@ -768,9 +768,10 @@
 					.scrollable-content--inner {
 						height: 100%;
 						position: static;
-						overflow-y: auto;
-						-webkit-overflow-scrolling: touch;
-						padding-right: 15px;
+						// overflow-y: auto;
+						// -webkit-overflow-scrolling: touch;
+						// padding-right: 15px;
+
 						// .simplebar-wrapper {
 						// 	overflow: visible;
 						// }
@@ -789,25 +790,29 @@
 						// 	overflow: visible scroll !important;
 						// 	position: static;
 						// }
-						&::-webkit-scrollbar {
-							width: 8px;
-							height: 8px;
-							background-color: #f4f4f4;
-							border-radius: 24px;
-						}
-						&::-webkit-scrollbar-thumb {
-							background-color: $blue;
-							border-radius: 24px;
-						}
+
+						// &::-webkit-scrollbar {
+						// 	width: 8px;
+						// 	height: 8px;
+						// 	background-color: #f4f4f4;
+						// 	border-radius: 24px;
+						// }
+						// &::-webkit-scrollbar-thumb {
+						// 	background-color: $blue;
+						// 	border-radius: 24px;
+						// }
 					}
 					// }
 					.push-menu--lvl {
 						display: none;
 						left: 100%;
-						padding-top: 85px;
-						// .push-menu--lvl {
-						// 	padding-top: 0;
-						// }
+						margin-top: 85px;
+						height: calc(100% - 85px);
+						// padding-top: 85px;
+						.push-menu--lvl {
+							margin-top: 0;
+							height: 100%;
+						}
 					}
 				}
 				.item {
@@ -984,3 +989,17 @@
 // .hover-aside-menu--item > .link:only-child:after {
 // 	content: "";
 // }
+
+.os-scrollbar-vertical .os-scrollbar-track:before {
+	background: $light-blue;
+	border-radius: 24px;
+}
+.os-scrollbar.os-scrollbar-track-interactive .os-scrollbar-track,
+.os-scrollbar.os-scrollbar-handle-interactive .os-scrollbar-handle {
+	background: $blue;
+	border-radius: 24px;
+}
+
+[data-overlayscrollbars-viewport]:not([data-overlayscrollbars]) {
+	position: static;
+}

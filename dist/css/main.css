@@ -879,24 +879,16 @@ main.show {
   .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner {
     height: 100%;
     position: static;
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-    padding-right: 15px;
-  }
-  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-    background-color: #f4f4f4;
-    border-radius: 24px;
-  }
-  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .scrollable-content--inner::-webkit-scrollbar-thumb {
-    background-color: #3da6d3;
-    border-radius: 24px;
   }
   .header-main .header-main--mob .push-menu--nav .push-menu--lvl .push-menu--lvl {
     display: none;
     left: 100%;
-    padding-top: 85px;
+    margin-top: 85px;
+    height: calc(100% - 85px);
+  }
+  .header-main .header-main--mob .push-menu--nav .push-menu--lvl .push-menu--lvl .push-menu--lvl {
+    margin-top: 0;
+    height: 100%;
   }
   .header-main .header-main--mob .push-menu--nav .item {
     border-radius: 64px;
@@ -1054,6 +1046,21 @@ main.show {
   padding-left: unset;
   right: 233px;
   padding-right: 32px;
+}
+
+.os-scrollbar-vertical .os-scrollbar-track:before {
+  background: #edf4ff;
+  border-radius: 24px;
+}
+
+.os-scrollbar.os-scrollbar-track-interactive .os-scrollbar-track,
+.os-scrollbar.os-scrollbar-handle-interactive .os-scrollbar-handle {
+  background: #3da6d3;
+  border-radius: 24px;
+}
+
+[data-overlayscrollbars-viewport]:not([data-overlayscrollbars]) {
+  position: static;
 }
 
 .footer .footer-logo {

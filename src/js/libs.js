@@ -6,4 +6,5 @@ import "./modules/libs/with-lib-plyr.js";
 import "./modules/libs/with-lib-fancybox.js";
 import "./modules/libs/with-lib-readmore.js";
 import "./modules/libs/with-lib-photo-sphere-viewer.js";
+import "./modules/libs/with-lib-overlayscrollbars.js";
 // import "./modules/libs/with-lib-simplebar.js";
