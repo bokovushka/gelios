@@ -1002,4 +1002,5 @@
 
 [data-overlayscrollbars-viewport]:not([data-overlayscrollbars]) {
 	position: static;
+	overflow: visible !important;
 }
