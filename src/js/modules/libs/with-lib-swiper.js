@@ -358,7 +358,7 @@ new Swiper(".template-shares--swiper", {
 	slidesPerView: 1,
 	loop: true,
 	spaceBetween: 25,
-	autoHeight: true,
+	// autoHeight: true,
 	pagination: {
 		el: ".template-shares--swiper .swiper-pagination",
 		clickable: true,

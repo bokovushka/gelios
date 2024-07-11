@@ -166,6 +166,9 @@
 						color: $white;
 						div {
 							display: contents;
+							&.underline {
+								display: inline;
+							}
 						}
 					}
 					.underline {
@@ -658,6 +661,11 @@
 		}
 	}
 }
+.news-doctor {
+	.news--item .inner .descrp {
+		font-size: 20px;
+	}
+}
 .date-label {
 	position: absolute;
 	background: #edeef1;
@@ -1024,12 +1032,6 @@
 			&::-webkit-scrollbar-thumb {
 				background-color: $blue;
 				border-radius: 24px;
-			}
-			p {
-				font-size: 20px;
-				.section-top & {
-					font-size: 18px;
-				}
 			}
 			ul {
 				li {
@@ -1743,7 +1745,7 @@
 				.link {
 					display: block;
 					line-height: 120%;
-					font-weight: 600;
+					font-weight: 500;
 					padding: 12px 24px 12px 24px;
 					border-radius: 32px;
 					height: 100%;
@@ -1872,6 +1874,9 @@
 			background-color: $blue;
 			border-radius: 24px;
 		}
+		p {
+			font-size: 18px;
+		}
 	}
 	.doctor-directions-list {
 		display: flex;
@@ -1884,6 +1889,7 @@
 			background: #d7e6ff;
 			color: $blue;
 			white-space: nowrap;
+			font-size: 14px;
 		}
 	}
 	.btn {
@@ -1898,6 +1904,11 @@
 		row-gap: 25px;
 	}
 	.check-up--list {
+		&.row-gap {
+			@include md-max {
+				row-gap: 40px;
+			}
+		}
 		.check-up--item {
 			min-height: 425px;
 			@include md-max {
@@ -1984,13 +1995,19 @@
 					position: relative;
 					display: inline-block;
 					z-index: 2;
+					@include md-max {
+						display: flex;
+						flex-direction: column;
+						gap: 4px;
+					}
 					span {
-						display: inherit;
+						display: inline-block;
 					}
 				}
 				.heading {
 					position: relative;
 					z-index: 2;
+					font-weight: 600;
 				}
 				.content-more {
 					display: grid;
@@ -2033,6 +2050,9 @@
 							&::-webkit-scrollbar-thumb {
 								background-color: $blue;
 								border-radius: 24px;
+							}
+							p {
+								font-size: 18px;
 							}
 						}
 					}
@@ -2235,6 +2255,7 @@
 		}
 	}
 	.card-body {
+		color: $grey;
 		.btn {
 			@include sm-max {
 				width: 100%;
@@ -2362,18 +2383,16 @@
 	.template-shares--swiper {
 		overflow-x: hidden;
 		position: relative;
+		.swiper-slide {
+			height: auto;
+		}
 		.shares--item {
-			@include md-max {
-				height: 100%;
-			}
-			@include sm-max {
-				height: auto;
-			}
 			.inner {
 				padding: 40px 30px;
 				border-radius: 24px;
 				display: block;
 				background: $blue;
+				height: 100%;
 				@include lg-max {
 					padding: 15px;
 				}
@@ -2427,7 +2446,7 @@
 			z-index: 3;
 		}
 		.city-pin {
-			font-weight: 600;
+			font-weight: 500;
 			display: flex;
 			gap: 8px;
 			color: $grey;
@@ -2660,6 +2679,9 @@
 			@include md-max {
 				width: 100%;
 			}
+		}
+		p {
+			font-size: 18px;
 		}
 	}
 	.offices-direction--body {

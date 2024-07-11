@@ -1444,7 +1444,7 @@ h6,
   margin-bottom: 0;
 }
 p {
-  font-size: 20px;
+  font-size: 18px;
   line-height: 140%;
 }
 p.font-m, .seo p {
@@ -1523,7 +1523,7 @@ p:last-child {
   opacity: 1;
   cursor: not-allowed;
 }
-.btn.btn-blue, .btn.btn-white, .btn.btn-outline-white, .btn.btn-outline-blue {
+.btn.btn-blue, .btn.btn-white, .btn.btn-outline-white, .btn.btn-outline-blue, .btn.btn-reception, .btn.btn-read-more--check-up {
   font-size: 20px;
   line-height: 120%;
 }
@@ -3359,6 +3359,9 @@ form {
   .shares .shares--item:hover .inner .h3 div {
     display: contents;
   }
+  .shares .shares--item:hover .inner .h3 div.underline {
+    display: inline;
+  }
   .shares .shares--item:hover .inner .underline {
     text-decoration: underline;
     font-weight: 900;
@@ -3849,6 +3852,10 @@ form {
   color: #808b9e;
 }
 
+.news-doctor .news--item .inner .descrp {
+  font-size: 20px;
+}
+
 .date-label {
   position: absolute;
   background: #edeef1;
@@ -4248,12 +4255,6 @@ form {
 .media-content .content-wrap .content::-webkit-scrollbar-thumb {
   background-color: #3da6d3;
   border-radius: 24px;
-}
-.media-content .content-wrap .content p {
-  font-size: 20px;
-}
-.section-top .media-content .content-wrap .content p {
-  font-size: 18px;
 }
 .media-content .content-wrap .content ul li {
   position: relative;
@@ -5000,7 +5001,7 @@ form {
 .category-directions .category-directions--list .directions-item .content .link {
   display: block;
   line-height: 120%;
-  font-weight: 600;
+  font-weight: 500;
   padding: 12px 24px 12px 24px;
   border-radius: 32px;
   height: 100%;
@@ -5139,6 +5140,9 @@ form {
   background-color: #3da6d3;
   border-radius: 24px;
 }
+.doctor-descrp .content p {
+  font-size: 18px;
+}
 .doctor-descrp .doctor-directions-list {
   display: flex;
   align-items: center;
@@ -5151,6 +5155,7 @@ form {
   background: #d7e6ff;
   color: #3da6d3;
   white-space: nowrap;
+  font-size: 14px;
 }
 @media (max-width: 1023px) {
   .doctor-descrp .btn {
@@ -5160,6 +5165,11 @@ form {
 
 .section-check-up .row-gap {
   row-gap: 25px;
+}
+@media (max-width: 1023px) {
+  .section-check-up .check-up--list.row-gap {
+    row-gap: 40px;
+  }
 }
 .section-check-up .check-up--list .check-up--item {
   min-height: 425px;
@@ -5254,12 +5264,20 @@ form {
   display: inline-block;
   z-index: 2;
 }
+@media (max-width: 1023px) {
+  .section-check-up .check-up--list .check-up--item .inner .descrp {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+}
 .section-check-up .check-up--list .check-up--item .inner .descrp span {
-  display: inherit;
+  display: inline-block;
 }
 .section-check-up .check-up--list .check-up--item .inner .heading {
   position: relative;
   z-index: 2;
+  font-weight: 600;
 }
 .section-check-up .check-up--list .check-up--item .inner .content-more {
   display: grid;
@@ -5305,6 +5323,9 @@ form {
 .section-check-up .check-up--list .check-up--item .inner .content-more .content-more--inner .content-more--txt::-webkit-scrollbar-thumb {
   background-color: #3da6d3;
   border-radius: 24px;
+}
+.section-check-up .check-up--list .check-up--item .inner .content-more .content-more--inner .content-more--txt p {
+  font-size: 18px;
 }
 .section-check-up .check-up--list .check-up--item .inner .buttons {
   row-gap: 10px;
@@ -5502,6 +5523,9 @@ form {
     margin: unset;
   }
 }
+.our-opening .card-body {
+  color: #808b9e;
+}
 @media (max-width: 767px) {
   .our-opening .card-body .btn {
     width: 100%;
@@ -5630,21 +5654,15 @@ form {
   overflow-x: hidden;
   position: relative;
 }
-@media (max-width: 1023px) {
-  .direction-template .template-shares--swiper .shares--item {
-    height: 100%;
-  }
-}
-@media (max-width: 767px) {
-  .direction-template .template-shares--swiper .shares--item {
-    height: auto;
-  }
+.direction-template .template-shares--swiper .swiper-slide {
+  height: auto;
 }
 .direction-template .template-shares--swiper .shares--item .inner {
   padding: 40px 30px;
   border-radius: 24px;
   display: block;
   background: #3da6d3;
+  height: 100%;
 }
 @media (max-width: 1199px) {
   .direction-template .template-shares--swiper .shares--item .inner {
@@ -5704,7 +5722,7 @@ form {
   z-index: 3;
 }
 .offices-top .offices-anchor--swiper .city-pin {
-  font-weight: 600;
+  font-weight: 500;
   display: flex;
   gap: 8px;
   color: #808b9e;
@@ -5930,6 +5948,9 @@ form {
   .offices-direction .offices-direction--descrp .btn {
     width: 100%;
   }
+}
+.offices-direction .offices-direction--descrp p {
+  font-size: 18px;
 }
 .offices-direction .offices-direction--body {
   min-width: 0;

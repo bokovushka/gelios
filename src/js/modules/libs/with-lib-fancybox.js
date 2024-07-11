@@ -38,3 +38,10 @@ Fancybox.bind('[data-fancybox="media--gallery-1"]', fancyboxSettings);
 Fancybox.bind('[data-fancybox="media--gallery-2"]', fancyboxSettings);
 Fancybox.bind('[data-fancybox="media--gallery-3"]', fancyboxSettings);
 
+Fancybox.bind('[data-fancybox="offices-direction--gallery-1"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="offices-direction--gallery-2"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="offices-direction--gallery-3"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="offices-direction--gallery-4"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="offices-direction--gallery-5"]', fancyboxSettings);
+Fancybox.bind('[data-fancybox="offices-direction--gallery-6"]', fancyboxSettings);
+

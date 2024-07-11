@@ -228,7 +228,7 @@ h6,
 	}
 }
 p {
-	font-size: 20px;
+	font-size: 18px;
 	line-height: 140%;
 	&.font-m,
 	.seo & {
@@ -315,7 +315,9 @@ p {
 	&.btn-blue,
 	&.btn-white,
 	&.btn-outline-white,
-	&.btn-outline-blue {
+	&.btn-outline-blue,
+	&.btn-reception,
+	&.btn-read-more--check-up {
 		font-size: 20px;
 		line-height: 120%;
 	}
