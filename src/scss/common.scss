@@ -2197,3 +2197,31 @@ form {
 		background: $blue;
 	}
 }
+
+//scroll
+.os-scrollbar-vertical .os-scrollbar-track:before {
+	background: $light-blue;
+	border-radius: 24px;
+	.our-directions & {
+		background-color: #73c4fd;
+	}
+}
+.os-scrollbar.os-scrollbar-track-interactive .os-scrollbar-track,
+.os-scrollbar.os-scrollbar-handle-interactive .os-scrollbar-handle {
+	background: $blue;
+	border-radius: 24px;
+	.our-directions & {
+		background-color: #f4f4f4;
+	}
+}
+
+[data-overlayscrollbars-viewport]:not([data-overlayscrollbars]) {
+	position: static;
+	&:focus {
+		overflow: visible !important;
+	}
+}
+
+[data-overlayscrollbars-viewport~="overflowYHidden"] {
+	padding-right: 0 !important;
+}
