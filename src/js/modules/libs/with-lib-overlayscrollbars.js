@@ -6,7 +6,7 @@ import {
 } from 'overlayscrollbars';
 
 document.addEventListener('DOMContentLoaded', function () {
-	const elements = document.querySelectorAll('.simplebar-overflow');
+	const elements = document.querySelectorAll('.os-scrollbar-overflow');
 	elements.forEach(element => {
 		OverlayScrollbars(element, {});
 	});

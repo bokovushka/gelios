@@ -1006,3 +1006,7 @@
 		overflow: visible !important;
 	}
 }
+
+[data-overlayscrollbars-viewport~="overflowYHidden"] {
+	padding-right: 0 !important;
+}
