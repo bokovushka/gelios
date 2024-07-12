@@ -2719,7 +2719,7 @@ form {
   -webkit-overflow-scrolling: touch;
   padding-right: 16px;
   font-weight: 500;
-  color: #65738a;
+  color: #808b9e;
 }
 @media (max-width: 1023px) {
   .seo .content {
@@ -5670,16 +5670,6 @@ form {
 @media (max-width: 1199px) {
   .direction-template .template-shares--swiper .shares--item .inner {
     padding: 15px;
-  }
-}
-@media (max-width: 1023px) {
-  .direction-template .template-shares--swiper .shares--item .inner {
-    height: 100%;
-  }
-}
-@media (max-width: 767px) {
-  .direction-template .template-shares--swiper .shares--item .inner {
-    height: auto;
   }
 }
 .direction-template .template-shares--swiper .shares--item .inner .wrap-img {

@@ -1667,7 +1667,7 @@ form {
 		-webkit-overflow-scrolling: touch;
 		padding-right: 16px;
 		font-weight: 500;
-		color: #65738a;
+		color: $grey;
 		@include md-max {
 			max-height: 420px;
 		}

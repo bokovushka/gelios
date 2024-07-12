@@ -2396,12 +2396,6 @@
 				@include lg-max {
 					padding: 15px;
 				}
-				@include md-max {
-					height: 100%;
-				}
-				@include sm-max {
-					height: auto;
-				}
 				.wrap-img {
 					border-radius: 16px;
 					height: 335px;
