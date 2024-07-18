@@ -137,6 +137,10 @@
 			@include md-max {
 				min-height: 150px;
 				text-align: center;
+				justify-content: flex-start;
+				.quantity {
+					padding-top: 20px;
+				}
 			}
 		}
 	}
@@ -1877,6 +1881,7 @@
 		// }
 		p {
 			font-size: 18px;
+			margin-bottom: 10px;
 		}
 	}
 	.doctor-directions-list {
@@ -2324,6 +2329,12 @@
 .doctor-features-nav {
 	.nav-item {
 		width: 100%;
+		&:not(:last-child) {
+			margin-bottom: 4px;
+			@include md-max {
+				margin-bottom: 8px;
+			}
+		}
 		.nav-link {
 			width: 100%;
 			border-radius: 8px;
