@@ -1,16 +1,16 @@
-<svg width="82.000000" height="82.000000" viewBox="0 0 82 82" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="64.000000" height="64.000000" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 	<desc>
 			Created with Pixso.
 	</desc>
 	<defs>
-		<clipPath id="clip45_4181">
-			<rect id="icon" width="82.000000" height="82.000000" fill="white" fill-opacity="0"/>
+		<clipPath id="clip13_4300">
+			<rect id="icon" rx="-0.500000" width="63.000000" height="63.000000" transform="translate(0.500000 0.500000)" fill="white" fill-opacity="0"/>
 		</clipPath>
 	</defs>
-	<g clip-path="url(#clip45_4181)">
-		<rect id="Medico/Line/Wheelchair" width="82.000000" height="82.000000" fill="#FFFFFF" fill-opacity="0"/>
-		<path id="Vector" d="M31 71.72C19.95 71.72 11 62.76 11 51.72C11 40.67 19.95 31.72 31 31.72C42.04 31.72 51 40.67 51 51.72C51 62.76 42.04 71.72 31 71.72Z" stroke="#3DA6D3" stroke-opacity="1.000000" stroke-width="7.000000"/>
-		<path id="Vector" d="M61.24 71.72C58.87 71.72 56.96 69.8 56.96 67.43C56.96 65.07 58.87 63.16 61.24 63.16C63.6 63.16 65.51 65.07 65.51 67.43C65.51 69.8 63.6 71.72 61.24 71.72Z" stroke="#3DA6D3" stroke-opacity="1.000000" stroke-width="7.000000"/>
-		<path id="Vector" d="M61.23 62.78L61.23 56.27L61.23 42.33C61.23 42.06 61.01 41.83 60.73 41.83L55.67 41.83L48.39 41.83M55.67 41.83L55.67 27.33C55.67 26.51 55 25.83 54.17 25.83L26.32 25.83M26.32 32.15L26.32 25.83L26.32 12C26.32 11.44 25.87 11 25.32 11L18.87 11M61.23 56.27L69 56.27" stroke="#3DA6D3" stroke-opacity="1.000000" stroke-width="7.000000"/>
+	<g clip-path="url(#clip13_4300)">
+		<rect id="Medico/Line/Wheelchair" rx="-0.500000" width="63.000000" height="63.000000" transform="translate(0.500000 0.500000)" fill="#FFFFFF" fill-opacity="0"/>
+		<path id="Vector" d="M24.19 55.97C15.57 55.97 8.58 48.98 8.58 40.36C8.58 31.74 15.57 24.75 24.19 24.75C32.81 24.75 39.8 31.74 39.8 40.36C39.8 48.98 32.81 55.97 24.19 55.97Z" stroke="#3DA6D3" stroke-opacity="1.000000" stroke-width="4.000000"/>
+		<path id="Vector" d="M47.79 55.97C45.95 55.97 44.45 54.48 44.45 52.63C44.45 50.79 45.95 49.29 47.79 49.29C49.64 49.29 51.13 50.79 51.13 52.63C51.13 54.48 49.64 55.97 47.79 55.97Z" stroke="#3DA6D3" stroke-opacity="1.000000" stroke-width="4.000000"/>
+		<path id="Vector" d="M47.79 49L47.79 43.92L47.79 33.15C47.79 32.88 47.57 32.65 47.29 32.65L43.45 32.65L37.77 32.65M43.45 32.65L43.45 21.66C43.45 20.83 42.78 20.16 41.95 20.16L20.54 20.16M20.54 25.09L20.54 20.16L20.54 9.58C20.54 9.03 20.09 8.58 19.54 8.58L14.73 8.58M47.79 43.92L53.85 43.92" stroke="#3DA6D3" stroke-opacity="1.000000" stroke-width="4.000000" stroke-linecap="round"/>
 	</g>
 </svg>

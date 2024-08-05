@@ -556,7 +556,7 @@ pre code {
 }
 
 .container {
-  max-width: 1310px;
+  max-width: 1305px;
 }
 
 .row {
@@ -6494,7 +6494,7 @@ a.close.disabled {
 }
 @media (min-width: 1200px) {
   .modal-xl {
-    max-width: 1285px;
+    max-width: 1280px;
   }
 }
 .tooltip {
