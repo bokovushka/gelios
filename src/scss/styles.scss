@@ -15,7 +15,7 @@
 			position: absolute;
 			left: -125px;
 			top: 125px;
-			background: $blue;
+			background: rgb(61 166 211 / 80%);
 			filter: blur(85px);
 			transform: translate3d(0, 0, 0);
 			-webkit-backface-visibility: hidden;
@@ -1718,13 +1718,7 @@
 			width: calc(100% - 1px);
 		}
 		> .row {
-			row-gap: 25px;
-			@include md-max {
-				row-gap: 20px;
-			}
-			@include xs-max {
-				row-gap: 15px;
-			}
+			row-gap: 15px;
 		}
 		.offices-direction & {
 			height: 100%;
@@ -1822,7 +1816,7 @@
 						// flex-direction: column-reverse;
 						align-items: center;
 						justify-content: center;
-						font-size: 24px;
+						font-size: 20px;
 						background: $white;
 						text-align: center;
 						@include md-max {

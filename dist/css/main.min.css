@@ -507,7 +507,8 @@ main.show {
 .header-main .navbar-brand {
   max-width: 120px;
   width: 100%;
-  margin-right: 40px;
+  margin-right: 39px;
+  margin-left: 10px;
 }
 .header-main .navbar-brand img {
   height: auto;
@@ -1069,7 +1070,7 @@ main.show {
 }
 .footer ul li a {
   color: #ffffff;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 140%;
 }
 .footer ul li a:hover {
@@ -3241,7 +3242,7 @@ form {
   position: absolute;
   left: -125px;
   top: 125px;
-  background: #3da6d3;
+  background: rgba(61, 166, 211, 0.8);
   filter: blur(85px);
   transform: translate3d(0, 0, 0);
   -webkit-backface-visibility: hidden;
@@ -4941,17 +4942,7 @@ form {
   }
 }
 .category-directions .category-directions--list > .row {
-  row-gap: 25px;
-}
-@media (max-width: 1023px) {
-  .category-directions .category-directions--list > .row {
-    row-gap: 20px;
-  }
-}
-@media (max-width: 575px) {
-  .category-directions .category-directions--list > .row {
-    row-gap: 15px;
-  }
+  row-gap: 15px;
 }
 .offices-direction .category-directions .category-directions--list {
   height: 100%;
@@ -5061,7 +5052,7 @@ form {
 .category-direction-column-item .category-directions .category-directions--list .directions-item .content .link {
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 20px;
   background: #ffffff;
   text-align: center;
 }
