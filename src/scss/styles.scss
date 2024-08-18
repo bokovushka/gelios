@@ -115,7 +115,7 @@
 .section-top-5 {
 	.backdrop {
 		@include lg-min {
-			min-height: 510px;
+			min-height: 570px;
 			display: flex;
 			align-items: end;
 		}
@@ -138,12 +138,17 @@
 				-moz-transform: translate3d(0, 0, 0);
 			}
 		}
+		.content {
+			@include xl-min {
+				width: 55%;
+			}
+		}
 	}
 }
 
 .section-progress {
 	.section-progress--item {
-		min-height: 230px;
+		min-height: 190px;
 		height: 100%;
 		align-content: center;
 		display: flex;
@@ -391,13 +396,11 @@
 		.category {
 			row-gap: 15px;
 			.btn {
-				font-size: 20px;
+				font-size: 18px;
 				font-weight: 600;
 				line-height: 120%;
+				padding: 0.75rem 1.5rem;
 				@include md-max {
-					font-size: 22px;
-					padding-left: 24px;
-					padding-right: 24px;
 					width: 100%;
 				}
 			}
@@ -431,9 +434,18 @@
 		}
 		.wrap-img {
 			border-radius: 24px;
-			height: 270px;
+			height: 290px;
 			overflow: hidden;
 			position: relative;
+			@include xxl-min {
+				width: 270px;
+			}
+			@include xl-max {
+				width: 250px;
+			}
+			@include lg-max {
+				width: 100%;
+			}
 			.contacts & {
 				@include lg-max {
 					height: 220px;
@@ -490,6 +502,14 @@
 				@include transition(all 0.3s ease 0s);
 			}
 			.contacts & {
+				a {
+					color: $grey;
+				}
+			}
+		}
+		.email,
+		.phone {
+			.contacts & {
 				color: $grey;
 				&::before {
 					filter: brightness(0) saturate(100%) invert(59%) sepia(15%) saturate(414%) hue-rotate(179deg)
@@ -535,7 +555,7 @@
 		}
 	}
 	.buttons {
-		row-gap: 15px;
+		row-gap: 20px;
 	}
 	.contacts & {
 		.map {
@@ -603,6 +623,9 @@
 				// 	background-color: $blue;
 				// 	border-radius: 24px;
 				// }
+				[data-overlayscrollbars-viewport]:not([data-overlayscrollbars]) {
+					line-height: 135%;
+				}
 			}
 		}
 	}
@@ -725,6 +748,9 @@
 	}
 }
 .news-head {
+	.field .select2-container .select2-selection .select2-selection__arrow b::after {
+		transform: rotate(-90deg);
+	}
 	.row-gap {
 		row-gap: 40px;
 	}
@@ -976,12 +1002,12 @@
 		&::before {
 			content: "";
 			display: block;
-			width: 95%;
-			height: 200%;
+			width: 85%;
+			height: 70%;
 			position: absolute;
 			left: -15%;
-			top: -40%;
-			background: $blue;
+			top: 40%;
+			background: rgb(61 166 211 / 80%);
 			filter: blur(75px);
 			transform: translate3d(0, 0, 0);
 			-webkit-backface-visibility: hidden;
@@ -1033,7 +1059,7 @@
 		}
 	}
 	.content-wrap {
-		padding: 32px;
+		padding: 30px;
 		border-radius: 24px;
 		background: $white;
 		height: 100%;
@@ -1052,6 +1078,12 @@
 				min-height: auto;
 			}
 		}
+		// .section-top-6 & {
+		// 	min-height: 500px;
+		// 	@include md-max {
+		// 		min-height: auto;
+		// 	}
+		// }
 		.direction-template & {
 			padding: 0;
 			@include sm-max {
@@ -1286,7 +1318,7 @@
 		font-size: 18px;
 		font-weight: 500;
 		line-height: 140%;
-		padding: 8px 0;
+		padding: 3px 0;
 		border-bottom: 2px solid $blue;
 		@include md-max {
 			padding: 8px 16px 16px 16px;
@@ -1298,7 +1330,7 @@
 			}
 		}
 		.price {
-			padding: 10px 24px 10px 24px;
+			padding: 10px 32px 10px 32px;
 			@include md-max {
 				padding: 10px 0;
 			}
@@ -1819,6 +1851,10 @@
 						font-size: 20px;
 						background: $white;
 						text-align: center;
+						flex-direction: column;
+						position: relative;
+						padding-top: 60px;
+						padding-bottom: 60px;
 						@include md-max {
 							row-gap: 10px;
 						}
@@ -1860,9 +1896,12 @@
 						background: $blue;
 						border-radius: 8px;
 						padding: 4px;
-						position: relative;
+						// position: relative;
 						border: 2px solid transparent;
 						@include transition(0.3s ease-out 0s);
+						position: absolute;
+						right: 20px;
+						bottom: 20px;
 						&::before {
 							content: "";
 							position: absolute;
@@ -1908,7 +1947,7 @@
 		width: max-content;
 	}
 	.content {
-		max-height: 350px;
+		max-height: 335px;
 		overflow-y: auto;
 		overflow-x: hidden;
 		-webkit-overflow-scrolling: touch;
@@ -1930,14 +1969,15 @@
 		// }
 		p {
 			font-size: 18px;
-			margin-bottom: 10px;
+			margin-bottom: 0;
 		}
 	}
 	.doctor-directions-list {
 		display: flex;
 		align-items: center;
 		flex-wrap: wrap;
-		gap: 5px;
+		column-gap: 4px;
+		row-gap: 8px;
 		.item {
 			border-radius: 64px;
 			padding: 8px 16px;
@@ -1948,6 +1988,8 @@
 		}
 	}
 	.btn {
+		padding-right: 2.5rem;
+		padding-left: 2.5rem;
 		@include md-max {
 			width: 100%;
 		}

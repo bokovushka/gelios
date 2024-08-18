@@ -1294,7 +1294,7 @@ form {
 		}
 		+ .breadcrumb-item {
 			padding-left: 0;
-			margin-left: 4px;
+			margin-left: 0;
 			word-break: break-word;
 			hyphens: auto;
 			&::before {
@@ -1306,7 +1306,7 @@ form {
 				border: none;
 				width: 24px;
 				height: 24px;
-				margin-right: 4px;
+				margin-right: 0.5;
 				margin-top: -4px;
 				position: relative;
 				background: url(../img/icons/icons.svg#i-arrow-small-down) no-repeat center;
