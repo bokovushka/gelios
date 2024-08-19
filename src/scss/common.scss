@@ -41,6 +41,9 @@ input {
 }
 
 //typografy
+.container-max {
+	max-width: 1440px;
+}
 .rounded-sm,
 .rounded,
 .rounded-lg {
@@ -335,7 +338,7 @@ p {
 	&.btn-default-white {
 		&:not(:disabled) {
 			&:hover {
-				border: 1px solid rgb(231, 243, 255);
+				border: 2px solid rgb(231, 243, 255);
 				background: rgba(255, 255, 255, 0.12);
 				color: $white;
 			}
@@ -344,11 +347,11 @@ p {
 				color: $white;
 			}
 			&:active {
-				border: 1px solid rgb(231, 243, 255);
+				border: 2px solid rgb(231, 243, 255);
 				background: rgba(255, 255, 255, 0.24);
 			}
 			&:focus {
-				border: 1px solid rgb(0, 175, 255);
+				border: 2px solid rgb(0, 175, 255);
 				background: unset;
 				color: #00afff;
 			}
@@ -388,7 +391,7 @@ p {
 	&.btn-blue {
 		&:not(:disabled) {
 			&:hover {
-				border: 1px solid #008cc7;
+				border: 2px solid #008cc7;
 				background: #008cc7;
 				color: $white;
 			}
@@ -397,11 +400,11 @@ p {
 				color: $white;
 			}
 			&:active {
-				border: 1px solid #0f68ba;
+				border: 2px solid #0f68ba;
 				background: #0f68ba;
 			}
 			&:focus {
-				border: 1px solid #0f68ba;
+				border: 2px solid #0f68ba;
 				background: #0f68ba;
 				color: $white;
 			}
@@ -418,9 +421,9 @@ p {
 		&:not(:disabled) {
 			color: $blue;
 			background: $white;
-			border: 1px solid $white;
+			border: 2px solid $white;
 			&:hover {
-				border: 1px solid #008cc7;
+				border: 2px solid #008cc7;
 				background: #008cc7;
 				color: $white;
 			}
@@ -429,11 +432,11 @@ p {
 				color: $white;
 			}
 			&:active {
-				border: 1px solid #0f68ba;
+				border: 2px solid #0f68ba;
 				background: #0f68ba;
 			}
 			&:focus {
-				border: 1px solid #0f68ba;
+				border: 2px solid #0f68ba;
 				background: #0f68ba;
 				color: $white;
 			}
@@ -449,10 +452,10 @@ p {
 	&.btn-outline-white {
 		&:not(:disabled) {
 			color: $white;
-			border: 1px solid $white;
+			border: 2px solid $white;
 			background: transparent;
 			&:hover {
-				border: 1px solid #008cc7;
+				border: 2px solid #008cc7;
 				background: #008cc7;
 				color: $white;
 			}
@@ -461,11 +464,11 @@ p {
 				color: $white;
 			}
 			&:active {
-				border: 1px solid #0f68ba;
+				border: 2px solid #0f68ba;
 				background: #0f68ba;
 			}
 			&:focus {
-				border: 1px solid #0f68ba;
+				border: 2px solid #0f68ba;
 				background: #0f68ba;
 				color: $white;
 			}
@@ -481,10 +484,10 @@ p {
 	&.btn-outline-blue {
 		&:not(:disabled) {
 			color: $blue;
-			border: 1px solid $blue;
+			border: 2px solid $blue;
 			background: transparent;
 			&:hover {
-				border: 1px solid #008cc7;
+				border: 2px solid #008cc7;
 				background: #008cc7;
 				color: $white;
 			}
@@ -493,11 +496,11 @@ p {
 				color: $white;
 			}
 			&:active {
-				border: 1px solid #0f68ba;
+				border: 2px solid #0f68ba;
 				background: #0f68ba;
 			}
 			&:focus {
-				border: 1px solid #0f68ba;
+				border: 2px solid #0f68ba;
 				background: #0f68ba;
 				color: $white;
 			}
@@ -513,7 +516,7 @@ p {
 	&.btn-default-orange {
 		&:not(:disabled) {
 			&:hover {
-				border: 1px solid #fa6c59;
+				border: 2px solid #fa6c59;
 				background: rgb(250, 108, 89);
 				color: $white;
 			}
@@ -522,11 +525,11 @@ p {
 				color: $white;
 			}
 			&:active {
-				border: 1px solid #e74934;
+				border: 2px solid #e74934;
 				background: rgb(231, 73, 52);
 			}
 			&:focus {
-				border: 1px solid rgb(4, 25, 66);
+				border: 2px solid rgb(4, 25, 66);
 				background: rgb(247, 78, 55);
 				color: $white;
 			}
@@ -1292,6 +1295,9 @@ form {
 		line-height: 140%;
 		position: relative;
 		display: inline;
+		.i-home {
+			margin-bottom: 2px;
+		}
 		&.active {
 			color: $grey;
 		}
@@ -1366,7 +1372,7 @@ form {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	gap: 10px;
+	gap: 11px;
 	top: unset !important;
 	bottom: unset !important;
 	left: unset !important;

@@ -75,8 +75,8 @@
 	.swiper-pagination {
 		position: absolute;
 		justify-content: end;
-		bottom: 24px !important;
-		padding-right: 24px;
+		bottom: 34px !important;
+		padding-right: 34px;
 		@include md-max {
 			padding-right: 18px;
 			bottom: 18px !important;
@@ -265,7 +265,7 @@
 			position: absolute;
 			left: -120px;
 			top: 30px;
-			background: $blue;
+			background: rgb(61 166 211 / 80%);
 			filter: blur(75px);
 			transform: translate3d(0, 0, 0);
 			-webkit-backface-visibility: hidden;
@@ -286,7 +286,7 @@
 		}
 	}
 	.backdrop-small {
-		min-height: 575px;
+		min-height: 515px;
 		@include lg-max {
 			height: auto;
 			min-height: 180px;
@@ -439,6 +439,9 @@
 			position: relative;
 			@include xxl-min {
 				width: 270px;
+				.contacts & {
+					height: 290px;
+				}
 			}
 			@include xl-max {
 				width: 250px;
@@ -467,6 +470,9 @@
 				display: flex;
 				align-items: center;
 				gap: 4px;
+				.contacts & {
+					font-size: 24px;
+				}
 				&::before {
 					content: "";
 					display: block;
@@ -474,9 +480,16 @@
 					height: 20px;
 					background: url(../img/icons/icons.svg#i-map-pin) 50% 50% no-repeat;
 					background-size: 100%;
+					.contacts & {
+						width: 24px;
+						height: 24px;
+					}
 				}
 				.contacts & {
 					color: $blue;
+					background: $white;
+					line-height: 120%;
+					top: 17px;
 					&::before {
 						filter: brightness(0) saturate(100%) invert(63%) sepia(100%) saturate(1319%) hue-rotate(167deg)
 							brightness(88%) contrast(87%);
@@ -522,6 +535,7 @@
 		}
 		.city-pin {
 			color: $blue;
+			line-height: 120%;
 			&::before {
 				background: url(../img/icons/icons.svg#i-map-pin) 50% 50% no-repeat;
 				background-size: 100%;
@@ -555,7 +569,7 @@
 		}
 	}
 	.buttons {
-		row-gap: 20px;
+		row-gap: 16px;
 	}
 	.contacts & {
 		.map {
@@ -608,7 +622,7 @@
 				padding-right: 25px;
 				overflow-y: auto;
 				-webkit-overflow-scrolling: touch;
-				height: 125px;
+				height: 135px;
 				font-weight: 500;
 				@include md-max {
 					height: 200px;
@@ -624,7 +638,7 @@
 				// 	border-radius: 24px;
 				// }
 				[data-overlayscrollbars-viewport]:not([data-overlayscrollbars]) {
-					line-height: 135%;
+					line-height: 145%;
 				}
 			}
 		}
