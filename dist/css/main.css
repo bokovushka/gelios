@@ -1857,6 +1857,9 @@ p:last-child {
 .btn-clear-filter:not(:disabled):active, .btn-clear-filter:not(:disabled):focus {
   color: #ff0000 !important;
 }
+.btn.btn-fz-20 {
+  font-size: 20px;
+}
 
 .btn-review-add-pic {
   background: #bad9ff;
@@ -3656,7 +3659,7 @@ form {
 }
 .offices--item .inner .wrap-img {
   border-radius: 24px;
-  height: 290px;
+  height: 270px;
   overflow: hidden;
   position: relative;
 }
@@ -3688,7 +3691,7 @@ form {
 .offices--item .inner .wrap-img .city-label {
   position: absolute;
   background: #edeef1;
-  padding: 4px 8px;
+  padding: 4px 6px;
   border-radius: 8px;
   top: 16px;
   left: 16px;
@@ -3697,13 +3700,13 @@ form {
   line-height: 140%;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 .offices--item .inner .wrap-img .city-label::before {
   content: "";
   display: block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: url(../img/icons/icons.svg#i-map-pin) 50% 50% no-repeat;
   background-size: 100%;
 }
@@ -4976,7 +4979,6 @@ form {
   overflow-y: auto;
   overflow-x: hidden;
   width: calc(100% - 1px);
-  padding-right: 10px;
 }
 .category-direction-column-item .category-directions .category-directions--list {
   max-height: 560px;

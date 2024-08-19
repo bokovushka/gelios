@@ -434,7 +434,7 @@
 		}
 		.wrap-img {
 			border-radius: 24px;
-			height: 290px;
+			height: 270px;
 			overflow: hidden;
 			position: relative;
 			@include xxl-min {
@@ -457,7 +457,7 @@
 			.city-label {
 				position: absolute;
 				background: #edeef1;
-				padding: 4px 8px;
+				padding: 4px 6px;
 				border-radius: 8px;
 				top: 16px;
 				left: 16px;
@@ -466,12 +466,12 @@
 				line-height: 140%;
 				display: flex;
 				align-items: center;
-				gap: 8px;
+				gap: 4px;
 				&::before {
 					content: "";
 					display: block;
-					width: 24px;
-					height: 24px;
+					width: 20px;
+					height: 20px;
 					background: url(../img/icons/icons.svg#i-map-pin) 50% 50% no-repeat;
 					background-size: 100%;
 				}
@@ -1757,7 +1757,6 @@
 			overflow-y: auto;
 			overflow-x: hidden;
 			width: calc(100% - 1px);
-			padding-right: 10px;
 		}
 		.category-direction-column-item & {
 			max-height: calc(170px * 3 + 25px * 2);
