@@ -3501,7 +3501,7 @@ form {
 .shares-top .backdrop::before {
   content: "";
   display: block;
-  width: 65%;
+  width: 85%;
   height: 150%;
   position: absolute;
   left: -120px;
@@ -4248,11 +4248,11 @@ form {
 .section-top-2 .backdrop::before {
   content: "";
   display: block;
-  width: 85%;
-  height: 70%;
+  width: 95%;
+  height: 370%;
   position: absolute;
   left: -15%;
-  top: 40%;
+  top: -160%;
   background: rgba(61, 166, 211, 0.8);
   filter: blur(75px);
   transform: translate3d(0, 0, 0);
@@ -4274,11 +4274,14 @@ form {
   .section-top-2 .backdrop::before {
     width: 125%;
     left: -60%;
+    height: 75%;
+    top: 45%;
     filter: blur(75px);
   }
 }
 @media (max-width: 767px) {
   .section-top-2 .backdrop::before {
+    width: 105%;
     left: -40%;
   }
 }
@@ -5076,6 +5079,7 @@ form {
 }
 .category-direction-column-item .category-directions .category-directions--list .directions-item .content span {
   color: #3da6d3;
+  font-size: 22px;
 }
 .category-directions .category-directions--list .directions-item .content .link {
   display: block;
@@ -5096,7 +5100,6 @@ form {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  text-align: center;
   background: #edf4ff;
 }
 .category-direction-column-item .category-directions .category-directions--list .directions-item .content .link {
@@ -5153,11 +5156,14 @@ form {
   background: #3da6d3;
   border-radius: 8px;
   padding: 4px;
+  position: relative;
   border: 2px solid transparent;
   -webkit-transition: 0.3s ease-out 0s;
   -moz-transition: 0.3s ease-out 0s;
   -o-transition: 0.3s ease-out 0s;
   transition: 0.3s ease-out 0s;
+}
+.category-direction-column-item .category-directions .category-directions--list .directions-item .content .link .i-link {
   position: absolute;
   right: 20px;
   bottom: 20px;

@@ -260,7 +260,7 @@
 		&::before {
 			content: "";
 			display: block;
-			width: 65%;
+			width: 85%;
 			height: 150%;
 			position: absolute;
 			left: -120px;
@@ -1016,11 +1016,11 @@
 		&::before {
 			content: "";
 			display: block;
-			width: 85%;
-			height: 70%;
+			width: 95%;
+			height: 370%;
 			position: absolute;
 			left: -15%;
-			top: 40%;
+			top: -160%;
 			background: rgb(61 166 211 / 80%);
 			filter: blur(75px);
 			transform: translate3d(0, 0, 0);
@@ -1038,9 +1038,12 @@
 			@include md-max {
 				width: 125%;
 				left: -60%;
+				height: 75%;
+				top: 45%;
 				filter: blur(75px);
 			}
 			@include sm-max {
+				width: 105%;
 				left: -40%;
 			}
 		}
@@ -1837,6 +1840,7 @@
 					width: 100%;
 					.category-direction-column-item & {
 						color: $blue;
+						font-size: 22px;
 					}
 				}
 				.link {
@@ -1854,7 +1858,7 @@
 						flex-direction: row;
 						align-items: center;
 						justify-content: space-between;
-						text-align: center;
+						// text-align: center;
 						background: $light-blue;
 					}
 					.category-direction-column-item & {
@@ -1909,12 +1913,14 @@
 						background: $blue;
 						border-radius: 8px;
 						padding: 4px;
-						// position: relative;
+						position: relative;
 						border: 2px solid transparent;
 						@include transition(0.3s ease-out 0s);
-						position: absolute;
-						right: 20px;
-						bottom: 20px;
+						.category-direction-column-item & {
+							position: absolute;
+							right: 20px;
+							bottom: 20px;
+						}
 						&::before {
 							content: "";
 							position: absolute;
