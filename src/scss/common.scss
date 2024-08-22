@@ -1965,6 +1965,11 @@ form {
 		// 	opacity: 1;
 		// }
 	}
+	&.plyr--stopped {
+		.plyr__controls {
+			display: none;
+		}
+	}
 	.plyr__control--overlaid {
 		width: 60px;
 		height: 60px;

@@ -2964,6 +2964,9 @@ form {
   opacity: 1;
   cursor: pointer;
 }
+.plyr--video.plyr--stopped .plyr__controls {
+  display: none;
+}
 .plyr--video .plyr__control--overlaid {
   width: 60px;
   height: 60px;
