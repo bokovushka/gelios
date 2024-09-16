@@ -806,7 +806,7 @@ main.show {
     color: #3da6d3;
   }
   .header-main .header-main--desk .push-menu .push-menu--nav .item a:hover {
-    background: #edf4ff;
+    background: #e0ecff;
     color: #3da6d3;
   }
   .header-main .header-main--desk .push-menu .push-menu--nav .item a:active {
@@ -5851,9 +5851,13 @@ form {
 .offices-top .offices-anchor--swiper .swiper-wrapper {
   z-index: 3;
 }
+.offices-top .offices-anchor--swiper .swiper-slide {
+  padding-bottom: 1px;
+}
 .offices-top .offices-anchor--swiper .city-pin {
   font-weight: 500;
   display: flex;
+  justify-content: center;
   gap: 8px;
   color: #808b9e;
   border: 2px solid #808b9e;

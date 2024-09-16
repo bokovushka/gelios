@@ -2571,9 +2571,13 @@
 		.swiper-wrapper {
 			z-index: 3;
 		}
+		.swiper-slide {
+			padding-bottom: 1px;
+		}
 		.city-pin {
 			font-weight: 500;
 			display: flex;
+			justify-content: center;
 			gap: 8px;
 			color: $grey;
 			border: 2px solid $grey;
