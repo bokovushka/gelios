@@ -2870,3 +2870,13 @@
 		}
 	}
 }
+.price--consultation {
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 140%;
+	padding: 4px 16px;
+	border-radius: 40px;
+	color: $white;
+	background: $blue;
+	width: max-content;
+}
