@@ -2791,7 +2791,7 @@
 			height: 24px;
 			background: url(../img/icons/icons.svg#i-arrow-btn) 50% 50% no-repeat;
 			background-size: 100%;
-			transform: rotate(360deg);
+			transform: rotate(315deg);
 			filter: unset;
 			@include transition(all 0.3s ease 0s);
 			.our-directions & {
@@ -2803,7 +2803,7 @@
 	&.btn-nav-forward {
 		.icon {
 			&::before {
-				transform: rotate(90deg);
+				transform: rotate(135deg);
 			}
 		}
 	}
