@@ -6064,7 +6064,7 @@ form {
   height: 24px;
   background: url(../img/icons/icons.svg#i-arrow-btn) 50% 50% no-repeat;
   background-size: 100%;
-  transform: rotate(90deg);
+  transform: rotate(360deg);
   filter: unset;
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
@@ -6073,6 +6073,9 @@ form {
 }
 .our-directions .btn-nav-direction .icon::before {
   filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(2%) hue-rotate(140deg) brightness(109%) contrast(101%);
+}
+.btn-nav-direction.btn-nav-forward .icon::before {
+  transform: rotate(90deg);
 }
 
 .offices-direction .offices-direction--descrp .btn {
@@ -6105,6 +6108,7 @@ form {
 }
 .offices-direction .push-menu .push-menu--nav .nav-toggle.back-visible .btn-nav-back {
   display: flex;
+  flex-direction: row-reverse;
 }
 .offices-direction .push-menu .push-menu--nav .btn-nav-back {
   display: none;
