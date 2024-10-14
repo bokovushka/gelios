@@ -499,6 +499,11 @@
 								display: flex;
 							}
 						}
+						a {
+							.nav-title {
+								color: $blue;
+							}
+						}
 						.nav-back {
 							display: none;
 							align-items: center;
@@ -627,8 +632,8 @@
 							color: $black;
 							&.heading {
 								font-size: 20px;
-								background: $light-blue;
-								color: $blue;
+								// background: $light-blue;
+								// color: $blue;
 							}
 							&:hover {
 								background: #e0ecff;

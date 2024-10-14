@@ -658,6 +658,9 @@ main.show {
   .header-main .header-main--desk .push-menu .push-menu--nav .nav-toggle.back-visible .nav-back {
     display: flex;
   }
+  .header-main .header-main--desk .push-menu .push-menu--nav .nav-toggle a .nav-title {
+    color: #3da6d3;
+  }
   .header-main .header-main--desk .push-menu .push-menu--nav .nav-toggle .nav-back {
     display: none;
     align-items: center;
@@ -802,8 +805,6 @@ main.show {
   }
   .header-main .header-main--desk .push-menu .push-menu--nav .item a.heading {
     font-size: 20px;
-    background: #edf4ff;
-    color: #3da6d3;
   }
   .header-main .header-main--desk .push-menu .push-menu--nav .item a:hover {
     background: #e0ecff;
